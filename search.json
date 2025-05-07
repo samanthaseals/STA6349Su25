@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Tentative Schedule",
+    "section": "",
+    "text": "Week 1: 06/17 & 06/19\n\n\n\n\n\n\nTuesday, 06/17/25\n\nLecture:\n\nProbability theory\n\nHomework:\n\nProblems\n\nDeliverables:\n\nProbability theory (due M 06/23)\nGet to know you (due M 06/23)\n\n\n\n\nThursday, 06/19/25\n\nLecture:\n\nDiscrete random variables\nContinuous random variables\n\nHomework:\n\nProblems\n\nDeliverables:\n\nRandom variables (due M 06/23)\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2: 06/24 & 06/26\n\n\n\n\n\n\nTuesday, 06/24\n\nDeliverables:\n\nAssignment 1: Random Variables (due M 06/31)\n\n\n\n\nThursday, 06/28\n\nLecture:\n\nThinking Like a Bayesian\nThe Beta-Binomial Model\n\nHomework:\n\nProblems\n\nDeliverables:\n\nBeta-Binomial (due M 06/31)\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3: 07/01 & 07/03\n\n\n\n\n\n\nTuesday, 07/01\n\nLecture:\n\nConjugate families\nBalance and sequentiality\n\nHomework:\n\nProblems\n\nDeliverables:\n\nConjugate families (due M 07/07)\n\n\n\n\nThursday, 07/03\n\nDeliverables:\n\nAssignment 2: Conjugate families (due M 07/07)\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4: 07/08 & 07/10\n\n\n\n\n\n\nTuesday, 07/08\n\nLecture:\n\nApproximating the posterior\nPosterior inference and prediction\n\nHomework:\n\nProblems\n\nDeliverables:\n\nDeliverable (due M 07/14)\n\n\n\n\nThursday, 07/10\n\nDeliverables:\n\nRecording of project 1 presentation (due T 07/15)\nEvaluation of other groups (due M 07/19)\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5: 07/15 & 07/17\n\n\n\n\n\n\nTuesday, 07/15\n\nLecture:\n\nSimple normal regression\nEvaluating regression models\nCategorical predictors\nMultiple predictors\n\nHomework:\n\nProblems\n\nDeliverables:\n\nRegression for continuous outcomes (due M 07/21)\n\n\n\n\nThursday, 07/17\n\nLecture:\n\nPoisson and negative binomial regressions\nLogistic regression\n\nHomework:\n\nProblems\n\nDeliverables:\n\nRegression for count and categorical outcomes (due M 07/21)\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6: 07/22 & 07/24\n\n\n\n\n\n\nTuesday, 07/22\n\nDeliverables:\n\nAssignment: regression (due M 07/28)\n\n\n\n\nThursday, 07/24\n\nDeliverables:\n\nCheck in for project 2 (due M 07/28)\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7: 07/29 & 07/31\n\n\n\n\n\n\nTuesday, 07/29\n\nDeliverables:\n\n.qmd and .html files for the slides of your group’s presentation (due M 08/04)\n\n\n\n\nThursday, 07/31\n\nIn class presentations!\n\nGroup 1\nGroup 2\nGroup 3\nGroup 4\nGroup 5\n\nDeliverables:\n\nEvaluation of other presentations (due M 08/04)\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8: 08/05 & 08/07\n\n\n\n\n\n\nTuesday, 08/05\n\nDr. Seals is out of town at JSM 2025.\nFinal Exam on Canvas\n\nEach student has 3 hours to complete the exam.\nOnce you open the exam, the timer will continue running.\nThe exam is open note/resources.\n\n\n\n\nThursday, 08/07\n\nDr. Seals is on her way back from JSM 2025.\nCatch up\n\nPlease use this class time to catch up with anything you need to catch up with."
+  },
+  {
+    "objectID": "files/slides/test.html#test",
+    "href": "files/slides/test.html#test",
+    "title": "Untitled",
+    "section": "Test",
+    "text": "Test\ntest\n\\[y = mx+b\\]"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STA6349 - Applied Bayesian Analysis - Summer 2025",
+    "section": "",
+    "text": "Welcome to Applied Bayesian Analysis for Summer 2025!\nEach class meeting will be split between lecture and practice. Attending live is not necessary (with the exception of 07/31), but it is your responsibility to keep up with the assigned work.\nThe final exam will be available on Canvas on Tuesday, August 5, 2025.\nThis project was supported by the 2023 BATS program, funded by NSF IUSE: EHR program with award numbers 2215879, 2215920, and 2215709."
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Abbreviated Syllabus",
+    "section": "",
+    "text": "Note: this is an abbreviated syllabus. The full syllabus is available through Classmate and/or Canvas.\n\nInstructor Information\n\nDr. Samantha Seals\nOffice: 4/344\n\n\n\nMeeting Times and Location\n\nTR 2:00 pm–4:40 pm\n\n2:00 pm–3:15 pm: Lecture\n3:30 pm–4:30 pm: Daily practice\n\nPhysical classroom: 4/406\nZoom classroom: see Canvas or full syllabus for link\n\n\n\nOffice Hours\n\nMonday: 2:00–4:00 pm (Central)\nWednesday: 2:00–4:00 pm (Central)\nOther times by appointment\n\n\n\nGrading and Evaluation\nThe course grade will be determined as follows:\n\nDaily practice (25%): Each lecture day, students will complete an activity using Quarto and R. The resulting .html file should be submitted to the designated dropbox on Canvas by 11:59 pm on the specified date (see Canvas).\nAssignments (25%): Every module will finish with an assignment to demonstrate the knowledge gained. These will be like the daily practice, but putting together. The resulting .html file should be submitted to the designated dropbox on Canvas by 11:59 pm on the specified date (see Canvas).\nProjects (25%): There are two group projects in this course. The first project will result in a recorded presentation while the second project will result in a live presentation. Students are required to attend class during live presentations on July 31, 2025.\nFinal Exam (25%): The final exam will be a timed, concepts-based exam. While there may be some calculations needed, you will not be processing raw data. The final exam will be on Canvas on August 7, 2025. All students will have 3 hours to complete the exam.\n\n\n\nLate Policy\nAssigments have due dates, however, the dropboxes will not close until the end of the semester. All students are automatically granted “extensions” without question.\nNote that if there is not a submission when I go to grade (after the initial deadline), I will assign a zero (0) and request that you submit the assignment when you are able to. This is only for record keeping purposes. There is no penalty for submitting late and a full grade will be given upon review of your submission.\nExtensions are not available for daily practices, projects, or the final exam."
+  }
+]
