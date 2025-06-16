@@ -9,9 +9,6 @@ format: html
 
 - **Lecture:** 
     - Probability theory
-- **Deliverables:**
-    - Probability theory (due M 06/23)
-    - Get to know you (due M 06/23)
     
 #### **Thursday, 06/19/25**
 
