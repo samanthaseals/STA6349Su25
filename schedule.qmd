@@ -8,12 +8,7 @@ format: html
 #### **Tuesday, 06/17/25**
 
 - **Lecture:** 
-    - Probability Theory: <a href="files/slides/STA6349-06-17-probability.html">html (view)</a> &  
-<a href="https://github.com/samanthaseals/STA6349Su25/blob/main/files/slides/STA6349-06-17-probability.qmd">qmd (code)</a>
-    
-    
-    
-    [slides]() & [.qmd](https://github.com/samanthaseals/STA6349Su25/blob/main/files/slides/STA6349-06-17-probability.qmd)
+    - Probability Theory: <a href="files/slides/STA6349-06-17-probability.html">html (view)</a> & <a href="https://github.com/samanthaseals/STA6349Su25/blob/main/files/slides/STA6349-06-17-probability.qmd">qmd (code)</a>
     
 #### **Thursday, 06/19/25**
 
@@ -26,7 +21,7 @@ format: html
 #### **Tuesday, 06/24**
 
 - **Lecture:** 
-    - Random Variables and Their Distributions: [slides]() & [.qmd](https://github.com/samanthaseals/STA6349Su25/blob/main/files/slides/STA6349-06-19-random-variables.qmd)
+    - Random Variables and Their Distributions: <a href="files/slides/STA6349-06-24-probability.html">html (view)</a> &  <a href="https://github.com/samanthaseals/STA6349Su25/blob/main/files/slides/STA6349-06-24-probability.qmd">qmd (code)</a>
 
 #### **Thursday, 06/28**
 
