@@ -162,17 +162,15 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="grading-and-evaluation">Grading and Evaluation</h3>
 <p>The course grade will be determined as follows:</p>
 <ol type="1">
-<li>Daily practice (25%): Each lecture day, students will complete an activity using Quarto and R. The resulting .html file should be submitted to the designated dropbox on Canvas by 11:59 pm on the specified date (see Canvas).</li>
 <li>Assignments (25%): Every module will finish with an assignment to demonstrate the knowledge gained. These will be like the daily practice, but putting together. The resulting .html file should be submitted to the designated dropbox on Canvas by 11:59 pm on the specified date (see Canvas).</li>
-<li>Projects (25%): There are two group projects in this course. The first project will result in a <em>recorded</em> presentation while the second project will result in a <em>live</em> presentation. Students are required to attend class during live presentations on July 31, 2025.</li>
-<li>Final Exam (25%): The final exam will be a timed, concepts-based exam. While there may be some calculations needed, you will not be processing raw data. The final exam will be <u><em>on Canvas</em></u> on August 7, 2025. All students will have 3 hours to complete the exam.</li>
+<li>Projects (50%): There are two group projects in this course. The first project will result in a <em>recorded</em> presentation while the second project will result in a <em>live</em> presentation. Students are required to attend class during live presentations on July 31, 2025.</li>
+<li>Final Exam (25%): The final exam will be a timed, concepts-based exam. While there may be some calculations needed, you will not be processing raw data. The final exam will be <u><em>on Canvas</em></u> on August 5, 2025. All students will have 3 hours to complete the exam.</li>
 </ol>
 </section>
 <section id="late-policy" class="level3">
 <h3 class="anchored" data-anchor-id="late-policy">Late Policy</h3>
-<p>Assigments have due dates, however, the dropboxes will not close until the end of the semester. All students are automatically granted “extensions” without question.</p>
-<p>Note that if there is not a submission when I go to grade (after the initial deadline), I will assign a zero (0) and request that you submit the assignment when you are able to. This is only for record keeping purposes. There is no penalty for submitting late and a full grade will be given upon review of your submission.</p>
-<p><strong>Extensions are <em>not available</em> for daily practices, projects, or the final exam.</strong></p>
+<p>Assigments have due dates, however, the dropboxes will not close until the end of the semester. All students are automatically granted “extensions” without question. Note that if there is not a submission when I go to grade (after the initial deadline), I will assign a zero (0) and request that you submit the assignment when you are able to. This is only for record keeping purposes. There is no penalty for submitting late and a full grade will be given upon review of your submission.</p>
+<p><strong>Extensions are <em>not available</em> for projects or the final exam.</strong></p>
 
 
 </section>
@@ -268,7 +266,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/samanthaseals\.github\.io\/STA6349Su25\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
