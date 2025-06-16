@@ -1,0 +1,140 @@
+---
+title: "Tentative Schedule"
+format: html
+---
+
+::: {.callout-tip title="Week 1: 06/17 & 06/19" collapse="true" open="true"}
+
+#### **Tuesday, 06/17/25**
+
+- **Lecture:** 
+    - Probability theory
+- **Deliverables:**
+    - Probability theory (due M 06/23)
+    - Get to know you (due M 06/23)
+    
+#### **Thursday, 06/19/25**
+
+- **No class: Juneteenth Holiday**
+
+:::
+
+::: {.callout-tip title="Week 2: 06/24 & 06/26" collapse="true" open="true"}
+
+#### **Tuesday, 06/24**
+
+- **Lecture:** 
+    - Random Variables and Their Distributions
+
+#### **Thursday, 06/28**
+
+- **Deliverables:**
+    - Assignment 1: Random Variables (due M 06/31)
+  
+
+:::
+
+::: {.callout-tip title="Week 3: 07/01 & 07/03" collapse="true" open="true"}
+
+#### **Tuesday, 07/01**
+
+- **Lecture:**
+    - Thinking Like a Bayesian
+    - The Beta-Binomial Model
+
+#### **Thursday, 07/03**
+
+- **Lecture:**
+    - Conjugate families
+    - Balance and sequentiality
+
+:::
+
+::: {.callout-tip title="Week 4: 07/08 & 07/10" collapse="true" open="true"}
+
+#### **Tuesday, 07/08**
+
+- **Deliverables:**
+    - Assignment 2: Conjugate families (due M 07/07)
+
+#### **Thursday, 07/10**
+
+- **Lecture:**
+    - Approximating the posterior
+    - Posterior inference and prediction
+
+:::
+
+::: {.callout-tip title="Week 5: 07/15 & 07/17" collapse="true" open="true"}
+
+#### **Tuesday, 07/15**
+
+- **Project 1, in class work/planning**
+- **Deliverables:**
+    - Recording of project 1 presentation (due M 07/21)
+    - Evaluation of other groups (due M 07/19)
+
+#### **Thursday, 07/17**
+
+- **Lecture:**
+    - Simple normal regression
+    - Evaluating regression models
+    - Categorical predictors
+    - Multiple predictors
+
+:::
+
+::: {.callout-tip title="Week 6: 07/22 & 07/24" collapse="true" open="true"}
+
+#### **Tuesday, 07/22**
+
+- **Lecture:**
+    - Poisson and negative binomial regressions
+    - Logistic regression
+
+#### **Thursday, 07/24**
+
+- **Deliverables:**
+    - Assignment: regression (due M 07/28)
+    
+:::
+
+::: {.callout-tip title="Week 7: 07/29 & 07/31" collapse="true" open="true"}
+
+#### **Tuesday, 07/29**
+
+- **Project 2, in class work/planning**
+    - You will present in class on Thursday.
+
+#### **Thursday, 07/31**
+
+- **In class presentations!**
+    - Group 1
+    - Group 2
+    - Group 3
+    - Group 4
+    - Group 5
+- **Deliverables:**
+    - Evaluation of other presentations (due M 08/04)
+
+:::
+
+::: {.callout-tip title="Week 8: 08/05 & 08/07" collapse="true" open="true"}
+
+#### **Tuesday, 08/05**
+
+- Dr. Seals is out of town at [JSM 2025](https://ww2.amstat.org/meetings/jsm/2025/).
+- **Final Exam on Canvas**
+    - Each student has 3 hours to complete the exam.
+    - Once you open the exam, the timer will continue running.
+    - The exam is open note/resources.
+
+#### **Thursday, 08/07**
+
+- Dr. Seals is on her way back from [JSM 2025](https://ww2.amstat.org/meetings/jsm/2025/).
+- **Catch up**
+    - Please use this class time to catch up with anything you need to catch up with.
+
+:::
+
+

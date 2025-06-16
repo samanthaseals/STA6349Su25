@@ -1,0 +1,783 @@
+---
+title: "Random Variables and their Distributions"
+subtitle: "June 24, 2025<br>Tuesday"
+execute:
+  echo: true
+  warning: false
+  message: false
+format: 
+  revealjs:
+    theme: default
+    css: mlp2.css
+    self-contained: true
+    slide-number: true
+    footer: "STA6349 - Applied Bayesian Analysis - Summer 2025"
+    width: 1600
+    height: 900
+    df-print: paged
+    html-math-method: katex
+    code-fold: false
+    code-tools: false
+    incremental: false
+editor: source
+---
+
+
+## **Introduction**
+
+- The first few lectures come from [Mathematical Statistics with Applications](https://www.cengage.com/c/mathematical-statistics-with-applications-7e-wackerly/9780495110811/), by Wackerly.
+    - We must understand the underlying probability and random variable theory before moving into the Bayesian world.
+    
+- We will be covering the following chapters:
+    - Chapter 2: probability theory
+    - <font color = "#965dc7">Chapter 3: discrete random variables</font>
+    - <font color = "#965dc7">Chapter 4: continuous random variables</font>
+
+## 3.1: Basic Definitions
+
+- **Discrete random variable**: a variable that can assume only a finite or countably infinite number of distinct values. 
+
+- **Probability distribution of a random variable**: collection of probabilities for each value of the random variable.
+
+- Notation:
+    - Uppercase letter (e.g., $Y$) denotes a random variable.
+    - Lowercase letter (e.g., $y$) denotes a particular value that the random variable may assume.
+        - The specific observed value, $y$, is not random.
+
+## 3.2: Probability Distributions for Discrete RV
+
+- **Probability function for $\boldsymbol Y$**: sum of the the probabilities of all sample points in $S$ that are assigned the value $y$
+    - $P[Y = y] = p(y)$: the probability that $Y$ takes on the value $y$.
+    
+- **Probability distribution for $\boldsymbol Y$**: a formula, table, or graph that provides $p(y) \ \forall \ y$.
+
+- **Theorem**:
+    - For any discrete probability distribution, the following must be true:
+        - $0 \le p(y) \le 1 \  \forall \ y$
+        - $\sum_y p(y) = 1 \ \forall \ p(y) > 0$.
+
+## 3.3: Expected Values
+
+- **Expected value**: Let $Y$ be a discrete random variable with probability function $p(y)$. Then the *expected value* of $Y$, $E[Y]$, is defined to be
+
+$$
+E(Y) = \sum_{y} y p(y)
+$$
+
+- When $p(y)$ is an accurate characterization of the population frequency distribution, then the expected value is the population mean.
+
+$$
+E[Y] = \mu
+$$
+
+## 3.3: Expected Values
+
+- **Theorem**: 
+
+    - Let $Y$ be a discrete random variable with probability function $p(y)$ and $g(Y)$ be a real-valued function of $Y$ (i.e., a *transformed* variable). Then the expected value of $g(Y)$ is given by
+    
+$$
+E[g(Y)] = \sum_{y} g(y) p(y)
+$$
+
+## 3.3: Expected Values
+
+- **Variance**: if $Y$ is a random variable with mean $E[Y] = \mu$, the variance of a random variable $Y$ is defined to be the expected value of $(Y-\mu)^2$.
+
+$$
+V[Y] = E\left[ (Y-\mu)^2 \right]
+$$
+
+- If $p(y)$ is an accurate characterization of the population frequency distribution, then $V(Y)$ is the population variance,
+
+$$
+V[Y] = \sigma^2
+$$
+
+- *Standard deviation*: the positive square root of $V[Y]$.
+
+## 3.3: Expected Values 
+
+- The probability distribution for a random variable $Y$ is given below. 
+
+![](images/W03-L1-a.png){fig-align="center" width="50%"} 
+
+- Find the mean, variance, and standard deviation of $Y$.
+
+<!-- 
+![](images/W03-L1-b.png){fig-align="center"} 
+-->
+
+## **3.3: Expected Values**
+
+- **Theorem**: 
+
+    - Let $Y$ be a discrete random variable with probability function $p(y)$ and $c$ be a constant. Then, 
+    
+$$E(c) = c$$
+    
+- **Theorem**:
+
+    - Let $Y$ be a discrete random variable with probability function $p(y)$, $g(Y)$ be a function of $Y$, and $c$ be a constant. Then,
+    
+$$E[cg(Y)] = cE[g(Y)]$$
+
+- **Theorem**:
+
+    - Let $Y$ be a discrete random variable with probability function $p(y)$, and $g_1(Y), g_2(Y), ..., g_k(Y)$ be $k$ functions of $Y$. Then,
+    
+$$E[g_1(Y) + g_2(Y) + ... + g_k(Y)] = E[g_1(Y)] + E[g_2(Y)] + ... + E[g_k(Y)]$$    
+
+
+## **3.3: Expected Values** 
+
+- Putting the previous theorems into one:
+
+- **Theorem**:
+
+    - Let $Y$ be a discrete random variable with probability function $p(y)$ and mean $E[Y] = \mu$. Then,
+    
+$$V[Y] = \sigma^2 = E\left[(Y-\mu)^2\right] = E\left[Y^2\right] - \mu^2 $$    
+
+## **3.3: Expected Values** 
+
+- The probability distribution for a random variable $Y$ is given below. 
+
+![](images/W03-L1-a.png){fig-align="center" width="40%"} 
+
+- Use the previous theorem to find $V[Y]$ and compare to our previous answer.
+
+    - Recall that $\mu=1.75$.
+
+## **3.3: Expected Values** 
+
+- Let $Y$ be a random variable with $p(y)$ in the table below.
+
+![](images/W03-L1-b.png){fig-align="center"} 
+
+- Find
+    - $E[Y]$ <br><br>
+    - $E[1/Y]$ <br><br>
+    - $E\left[Y^2-1\right]$ <br><br>
+    - $V[Y]$
+    
+## **3.3: Expected Values** 
+
+- $E[Y]$ <br><br><br><br><br>
+- $E[1/Y]$ <br><br><br><br><br>
+- $E\left[Y^2-1\right]$ <br><br><br><br><br>
+- $V[Y]$    
+
+## **3.4: Binomial Probability Distribution**
+
+- *Binomial experiment*:
+
+    1. The experiment consists of a fixed number, $n$, of identical trials.
+    
+    2. Each trial results in one of two outcomes: success ($S$) or failure ($F$).
+    
+    3. The probability of success on a single trial is equal to some value $p$ and remains the same from trial to trial. 
+    
+        - The probability of failure is equal to $q = (1-p)$.
+        
+    4. The trials are independent.
+    
+    5. The random variable of interest is $Y$, the number of successes observed during the $n$ trials.
+
+## **3.4: Binomial Probability Distribution**
+
+- **Binomial Distribution**
+
+    - A random variable $Y$ is said to have a *binomial distribution* based on $n$ trials with success probability $p$ [iff](https://en.wikipedia.org/wiki/If_and_only_if)
+    
+$$
+p(y) = {n \choose y}p^y q^{n-y}, \text{ where } y = 0, 1, 2, ..., n, \text{ and } 0 \le p \le1
+$$
+
+- **Theorem**:
+
+    - Let $Y$ be a binomial random variable based on n trials and success probability $p$. Then
+    
+$$
+E[Y] = \mu = np \ \ \ \text{and} \ \ \ V[Y] = \sigma^2 = npq
+$$
+
+- See Wackerly pg. 107 for derivation.
+
+```{r}
+#| echo: false
+
+# CREATE DATA FOR GRAPHING #
+
+library(tidyverse)
+n10 <- tibble(success = 0:10) %>%
+  mutate(p10 = dbinom(success, size=10, prob=.10),
+         p25 = dbinom(success, size=10, prob=.25),
+         p50 = dbinom(success, size=10, prob=.50),
+         p75 = dbinom(success, size=10, prob=.75),
+         p90 = dbinom(success, size=10, prob=.90))
+n25 <- tibble(success = 0:25) %>% mutate(p50 = dbinom(success, size=25, prob=.50))
+n50 <- tibble(success = 0:50) %>% mutate(p50 = dbinom(success, size=50, prob=.50))
+n100 <- tibble(success = 0:100) %>% mutate(p50 = dbinom(success, size=100, prob=.50))
+```
+
+## **3.4: Binomial Probability Distribution** 
+
+$p=0.10$
+
+<center>
+```{r}
+#| echo: false
+(g1 <- n10 %>% ggplot(aes(x = as.factor(success), y = p10)) +
+    geom_bar(stat = "identity") +
+    labs(x="Number of Successes", y = "p(y)") +
+    ylim(min = 0, max = 0.4) +
+    theme_bw())
+```
+</center>
+
+## **3.4: Binomial Probability Distribution**
+
+$p=0.25$
+
+<center>
+```{r}
+#| echo: false
+(g2 <- n10 %>% ggplot(aes(x = as.factor(success), y = p25)) +
+    geom_bar(stat = "identity") +
+    labs(x="Number of Successes", y = "p(y)") +
+    ylim(min = 0, max = 0.4) +
+    theme_bw())
+```
+</center>
+
+## **3.4: Binomial Probability Distribution**
+
+$p=0.50$
+
+<center>
+```{r}
+#| echo: false
+n10 %>% ggplot(aes(x = as.factor(success), y = p50)) +
+  geom_bar(stat = "identity") +
+  labs(x="Number of Successes", y = "p(y)") +
+  ylim(min = 0, max = 0.4) +
+  theme_bw()
+```
+</center>
+
+## **3.4: Binomial Probability Distribution**
+
+$p=0.75$
+
+<center>
+```{r}
+#| echo: false
+(g3 <- n10 %>% ggplot(aes(x = as.factor(success), y = p75)) +
+    geom_bar(stat = "identity") +
+    labs(x="Number of Successes", y = "p(y)") +
+    ylim(min = 0, max = 0.4) +
+    theme_bw())
+```
+</center>
+
+## **3.4: Binomial Probability Distribution**
+
+$p=0.90$
+
+<center>
+```{r}
+#| echo: false
+(g4 <- n10 %>% ggplot(aes(x = as.factor(success), y = p90)) +
+    geom_bar(stat = "identity") +
+    labs(x="Number of Successes", y = "p(y)") +
+    ylim(min = 0, max = 0.4) +
+    theme_bw())
+```
+</center>
+
+## **3.4: Binomial Probability Distribution**
+
+- What do you notice when comparing distributions under $p$ vs. $1-p$?
+
+<center>
+```{r}
+#| echo: false
+library(ggpubr)
+
+ggarrange(g1, g4, g2, g3, ncol=2, nrow=2)
+```
+</center>
+
+## **3.4: Binomial Probability Distribution**
+
+- What do you notice as $n$ increases?
+
+<center>
+```{r}
+#| echo: false
+g1 <- n10 %>% ggplot(aes(x = as.factor(success), y = p50)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Number of Successes", 
+       y = "p(y)", 
+       title = "n = 10") +
+  ylim(min = 0, max = 0.25) +
+  theme_bw()
+
+g2 <- n25 %>% ggplot(aes(x = as.factor(success), y = p50)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Number of Successes", 
+       y = "p(y)", 
+       title = "n = 25") +
+  ylim(min = 0, max = 0.25) +
+  theme_bw()
+
+g3 <- n50 %>% ggplot(aes(x = as.factor(success), y = p50)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Number of Successes", 
+       y = "p(y)", 
+       title = "n = 50") +
+  ylim(min = 0, max = 0.25) +
+  theme_bw()
+
+g4 <- n100 %>% ggplot(aes(x = as.factor(success), y = p50)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Number of Successes", 
+       y = "p(y)", 
+       title = "n = 100") +
+  ylim(min = 0, max = 0.25) +
+  theme_bw()
+
+ggarrange(g1, g2, g3, g4, ncol=2, nrow=2)
+```
+</center>
+
+## **3.4: Binomial Probability Distribution**
+
+- The manufacturer of a low-calorie dairy drink wishes to compare the taste appeal of a new formula (formula $B$) with that of the standard formula (formula $A$). Each of four judges is given three glasses in random order, two containing formula $A$ and the other containing formula $B$. Each judge is asked to state which glass he or she most enjoyed. Suppose that the two formulas are equally attractive. Let $Y$ be the number of judges stating a preference for the new formula.
+
+    a. Find the probability function for $Y$. <br><br><br>
+    
+    b. What is the probability that at least three of the four judges state a preference for the new formula?<br><br><br>
+    
+    c. Find the expected value of $Y$.<br><br><br>
+    
+    d. Find the variance of $Y$.
+  
+<!-- 
+![](images/W03-L1-b.png){fig-align="center"} 
+-->
+
+## **3.8: Poisson Probability Distribution**
+
+- The Poisson probability distribution often provides a good model for the probability distribution of the number $Y$ of rare events that occur in space, time, volume, or any other dimension. 
+
+- **Poisson Distribution**:
+
+    - A random variable $Y$ is said to have a *Poisson probability distribution* [iff](https://en.wikipedia.org/wiki/If_and_only_if)
+    
+$$
+p(y) = \frac{\lambda^y}{y!}e^{-\lambda}, \text{ where } y=0,1,2,..., \text{ and } \lambda > 0
+$$
+
+- **Theorem**
+
+  - If $Y$ is a random variable with a Poisson distribution with parameter $\lambda$, then
+  
+$$
+E[Y] = \mu = \lambda \text{ and } V[Y] = \sigma^2 = \lambda
+$$
+
+- See Wackerly pg. 134 for derivation.
+  
+<!-- 
+![](images/W03-L1-b.png){fig-align="center"} 
+-->
+
+## **3.8: Poisson Probability Distribution**
+
+- Customers arrive at a checkout counter in a department store according to a Poisson distribution at an average of seven per hour. During a given hour, what are the probabilities that
+
+    a. no more than three customers arrive? <br><br><br><br><br>
+
+    b. at least two customers arrive? <br><br><br><br><br>
+
+    c. exactly five customers arrive? <br><br><br><br><br>
+
+
+## **Homework**
+
+- 3.6
+- 3.10
+- 3.15
+- 3.22
+- 3.34
+- 3.60
+- 3.128
+- 3.129
+- 3.136
+
+
+
+## **Introduction**  
+
+- The first few lectures come from [Mathematical Statistics with Applications](https://www.cengage.com/c/mathematical-statistics-with-applications-7e-wackerly/9780495110811/), by Wackerly.
+    - We must understand the underlying probability and random variable theory before moving into the Bayesian world.
+
+- We will be covering the following chapters:
+    - Chapter 2: probability theory
+    - Chapter 3: discrete random variables
+    - <font color = "#965dc7">Chapter 4: continuous random variables</font>
+
+## **4.2: Probability Distributions for Continuous RV**  
+
+- *Distribution function*: 
+
+    - Let $Y$ denote any random variable. The *distribution function* of $Y$, denoted by $F(y)$, is such that 
+    
+$$F(y) = P[Y \le y] \text{ for } -\infty < y < \infty$$
+
+- **Theorem**: Properties of a Distribution Function
+    - If $F(y)$ is a distribution function, then
+        - $F(-\infty) 	\equiv \underset{y \to -\infty}{\lim} F(y) = 0$
+        - $F(\infty) 	\equiv \underset{y \to \infty}{\lim} F(y) = 1$
+        - $F(y)$ is a nondecreasing function of $y$.
+            - If $y_1$ and $y_2$ are any values such that $y_1 < y_2$, then $F(y_1) \le F(y_2)$.
+            
+- Note: To be rigorous, if $F(y)$ is a valid distribution function, then $F(y)$ also must be right continuous.            
+            
+## **4.2: Probability Distributions for Continuous RV**  
+
+- *Continuous random variable*: 
+    - A random variable $Y$ with distribution function $F(y)$ is said to be *continuous* if $F(y)$ is continuous for $-\infty < y < \infty$.
+        - Note: To be mathematically precise, we also need the first derivative of $F(y)$ to exist and be continuous.
+    
+- If $Y$ is a continuous random variable, then for any real number $y$, $P[Y = y] = 0$.
+    - i.e., we must remember to find the probability of an interval.
+    
+![](images/W04-L1-a.png){fig-align="center"}     
+    
+## **4.2: Probability Distributions for Continuous RV**      
+    
+- *Probability density function*: 
+
+    - Let $F(y)$ be the cumulative density function for a continuous random variable, $Y$. Then 
+    
+$$p[Y = y] = f(y) = \frac{dF(y)}{dy} = F'(y).$$
+    
+- **Theorem**: Properties of a Density Function
+    - If $f(y)$ is a density function for a continuous random variable, then 
+        - $f(y) \ge 0 \ \forall y, \ -\infty < y < \infty$.
+        - $\int_{-\infty}^{\infty} f(y) dy = 1$.    
+
+## **4.2: Probability Distributions for Continuous RV**  
+
+- *Cumulative density function*: 
+
+    - Let $f(y)$ be the probability density function for a continuous random variable, $Y$. Then 
+    
+$$P[Y \le y] = F(y) = \int_{-\infty}^y f(t) dt, \text{ for } y \in {\rm I\!R}.$$ 
+    
+![](images/W04-L1-b.png){fig-align="center"}   
+
+## **4.2: Probability Distributions for Continuous RV**    
+
+- Suppose that 
+$$
+F(x) = 
+\begin{cases}
+  0, & y < 0 \\
+  y, & 0 \leq y \leq 1 \\
+  1, & y > 1 
+\end{cases}
+$$
+
+- Find the probability density function for $Y$.
+
+## 4.2: Probability Distributions for Continuous RV   
+
+- **Theorem**
+
+    - If the random variable $Y$ has density function $f(y)$ and $a < b$, then the probability that $Y$ falls in the interval $[a, b]$ is
+    
+$$
+P[a \le Y \le b] = \int_a^b f(y) dy.
+$$
+
+<center>
+![](images/W04-L1-c.png){fig-align="center" width="50%"} 
+</center>
+
+## **4.2: Probability Distributions for Continuous RV**    
+
+- Given $f(y) = cy^2$, where $0 \le y \le 2$ and $f(y)=0$ elsewhere, 
+
+    a. Find the value of $c$ for which $f(y)$ is a valid density function. <br><br><br><br><br><br><br><br>
+    
+    b. Find $P[1 \le Y \le 2]$. 
+
+## **4.3: Expected Values for Continuous RV**   
+
+- *Expected value*: 
+
+    - The expected value of a continuous variable $Y$ is
+    
+$$
+E[Y] = \int_{-\infty}^{\infty} y f(y) \ dy
+$$
+
+- This is the continuous version of the expected mean for a discrete random variable,
+
+$$
+E[Y] = \sum_y y p(y)
+$$
+
+## **4.3: Expected Values for Continuous RV**   
+
+- **Theorem**: 
+
+    - Let $g(Y)$ be a function of $Y$; then the expected value of $g(Y)$ is given by
+    
+$$
+E\left[ g(Y) \right] = \int_{-\infty}^{\infty} g(y) f(y) \ dy
+$$
+
+- **Theorem**:
+    - Let $c$ be a constant and let $g(Y)$, $g_1(Y)$, $g_2(Y)$, ..., $g_k(Y)$ be functions of a continuous random variable, $Y$. Then the following results hold:
+        - $E[c] = c$
+        - $E\left[cg(Y)] = cE[g(Y)\right]$
+        - $E\left[g_1(Y)+g_2(Y)+...+g_k(Y)\right] = E\left[ g_1(Y) \right] + E\left[ g_2(Y) \right] + ... + E\left[ g_k(Y) \right]$
+
+## **4.3: Expected Values for Continuous RV**   
+
+- In a previous example, we determined that $f(y) = \frac{3}{8}y^2$ for $0 \le y \le 2$ and $f(y) = 0$ elsewhere is a valid density function.
+
+- If the random variable $Y$ has this density function, find $\mu = E[y]$ and $\sigma^2 = V[Y]$
+
+## **4.4: Uniform Probability Distribution**  
+
+- **Uniform Distribution**
+
+![](images/W04-L2-a.png){fig-align="center"} 
+
+## **4.4: Uniform Probability Distribution**  
+
+- **Uniform Distribution**
+
+    - If $\theta_1 < \theta_2$, a random variable $Y$ is said to have a *uniform distribution* on the interval $(\theta_1, \theta_2)$  [iff](https://en.wikipedia.org/wiki/If_and_only_if)
+    
+$$
+f(y) = \begin{cases} 
+      \frac{1}{\theta_2 - \theta_1}, & \theta_1 \le y \le \theta_2 \\
+      0, & \text{elsewhere}
+\end{cases}
+$$
+
+- **Theorem**:
+
+    - If $\theta_1 < \theta_2$ and $Y$ is a random variable uniformly distributed on the interval $(\theta_1, \theta_2)$, then
+    
+$$
+E[Y] = \mu = \frac{\theta_1+\theta_2}{2} \ \ \ \text{and} \ \ \ V[Y] = \sigma^2 = \frac{(\theta_2-\theta_1)^2}{12}
+$$
+
+- See Wackerly pg. 176 for derivation.
+
+## **4.4: Uniform Probability Distribution**  
+
+- The change in depth of a river from one day to the next, measured in feet, at a specific location is a random variable, $Y$, with the following density function:
+
+$$
+f(y) = \begin{cases} 
+      k, & -2 \le y \le 2 \\
+      0, & \text{elsewhere}
+\end{cases}
+$$
+
+a. Determine the value of $k$. <br><br><br><br><br><br>
+
+b. Find the distribution function for $Y$. 
+
+## **4.4: Uniform Probability Distribution**  
+
+- The change in depth of a river from one day to the next, measured in feet, at a specific location is a random variable, $Y$, with the following density function:
+
+$$
+f(y) = \begin{cases} 
+      k, & -2 \le y \le 2 \\
+      0, & \text{elsewhere}
+\end{cases}
+$$
+
+c. What is the mean of the distribution? <br><br><br><br><br><br>
+
+d. What is the variance of the distribution?
+
+## **4.5: Normal Probability Distribution**  
+
+- **Normal Distribution**
+
+![](images/W04-L2-b.png){fig-align="center"} 
+
+
+## **4.5: Normal Probability Distribution**  
+
+- **Normal Distribution**
+
+    - A random variable $Y$ is said to have a *normal distribution* [iff](https://en.wikipedia.org/wiki/If_and_only_if), for $\sigma > 0$ and $-\infty < \mu < \infty$,
+    
+$$
+f(y) = \frac{1}{\sigma \sqrt{2\pi}} e^{-(y-\mu)^2/(2\sigma^2)}
+$$
+
+- **Theorem**:
+
+    - If $Y$ is a random variable normally distributed with parameters $\mu$ and $\sigma$, then
+    
+$$
+E[Y] = \mu =  \ \ \ \text{and} \ \ \ V[Y] = \sigma^2 
+$$
+
+## **4.5: Normal Probability Distribution**
+
+- The weekly amount of money spent on maintenance and repairs by a company was observed over a long period of time to be approximately normally distributed with mean \$400 and standard deviation \$20. 
+
+a. If \$450 is budgeted for next week, what is the probability that the actual costs will exceed the budgeted amount? <br><br><br><br><br><br>
+
+b. How much should be budgeted for weekly repairs and maintenance to provide that the probability the budgeted amount will be exceeded in a given week is only 0.10?
+
+## **4.6: Gamma Probability Distribution** 
+
+- **Gamma Distribution**
+
+![](images/W04-L2-c.png){fig-align="center"} 
+
+## **4.6: Gamma Probability Distribution** 
+
+- **Gamma Distribution**
+
+    - A random variable $Y$ is said to have a *gamma distribution* with parameters $\alpha > 0$ and $\beta > 0$ [iff](https://en.wikipedia.org/wiki/If_and_only_if), 
+    
+$$
+f(y) = \begin{cases} 
+      \frac{y^{\alpha-1} e^{-y/\beta}}{\beta^{\alpha} \Gamma(\alpha)}, & 0 \le y < \infty \\
+      0, & \text{elsewhere}
+\end{cases}
+$$
+
+- Note that $\Gamma(\alpha) = \int_{0}^{\infty} y^{\alpha-1} e^{-y} \ dy$.
+
+- **Theorem**:
+
+    - If $Y$  has a gamma distribution with parameters $\alpha$ and $\beta$, then
+    
+$$
+E[Y] = \mu = \alpha\beta \ \ \ \text{and} \ \ \ V[Y] = \sigma^2  = \alpha\beta^2
+$$
+
+- See Wackerly pg. 187 for derivation.
+
+## **4.6: Gamma Probability Distribution** 
+
+- Annual incomes for heads of household in a section of a city have approximately a gamma distribution with $\alpha=20$ and $\beta=1000$.
+
+    a. What is $f(y)$?<br><br><br><br>
+    
+    b. What is the mean of $Y$?<br><br><br><br>
+    
+    c. What is the variance of $Y$?<br><br><br><br>
+    
+    d. What proportion of heads of households in this section of the city have incomes in excess of $30,000?
+    
+## **4.7: Beta Probability Distribution** 
+
+- **Beta Distribution**
+
+![](images/W04-L2-d.png){fig-align="center"} 
+
+## **4.7: Beta Probability Distribution** 
+
+- **Beta Distribution**
+
+    - A random variable $Y$ is said to have a *beta distribution* with parameters $\alpha > 0$ and $\beta > 0$ [iff](https://en.wikipedia.org/wiki/If_and_only_if), 
+    
+$$
+f(y) = \begin{cases} 
+      \frac{y^{\alpha-1}(1-y)^{\beta-1}}{B(\alpha,\beta)}, & 0 \le y \le 1 \\
+      0, & \text{elsewhere}
+\end{cases}
+$$
+
+- Note that $B(\alpha,\beta) = \int_0^1 y^{\alpha-1}(1-y)^{\beta-1} \ dy = \frac{\Gamma(\alpha) \Gamma(\beta)}{\Gamma(\alpha+\beta)}.$
+
+- **Theorem**:
+
+    - If $Y$  has a beta distribution with parameters $\alpha > 0$ and $\beta > 0$, then
+    
+$$
+E[Y] = \mu = \frac{\alpha}{\alpha+\beta} \ \ \ \text{and} \ \ \ V[Y] = \sigma^2  = \frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}
+$$
+
+## **4.7: Beta Probability Distribution** 
+
+- The percentage of impurities per batch in a chemical product is a random variable $Y$ with density function
+
+$$
+f(y) = \begin{cases} 
+      12y^2(1-y), & 0 \le y \le 1 \\
+      0, & \text{elsewhere}
+\end{cases}
+$$
+
+- A batch with more than 40% impurities cannot be sold.
+
+a. Use [integration](https://www.wolframalpha.com/calculators/integral-calculator/) to determine the probability that a randomly selected batch cannot be sold because of excessive impurities. <br><br><br><br><br>
+
+b. Use `R` to find the answer to part (a).
+
+## **4.7: Beta Probability Distribution** 
+
+- The percentage of impurities per batch in a chemical product is a random variable $Y$ with density function
+
+$$
+f(y) = \begin{cases} 
+      12y^2(1-y), & 0 \le y \le 1 \\
+      0, & \text{elsewhere}
+\end{cases}
+$$
+
+- A batch with more than 40% impurities cannot be sold.
+
+c. Find the mean of the percentage of impurities in a randomly selected batch of the chemical. <br><br><br><br><br>
+
+c. Find the variance of the percentage of impurities in a randomly selected batch of the chemical.
+
+
+## **Homework**  
+
+::: {layout="[ 0.5, -0.05, 0.45 ]"}
+
+:::: {#first-column}
+- 4.11
+- 4.14
+- 4.17
+- 4.21
+- 4.28
+- 4.45
+- 4.46
+- 4.48
+- 4.68
+::::
+
+:::: {#second-column}
+- 4.69
+- 4.70
+- 4.97
+- 4.98
+- 4.102
+- 4.124
+- 4.125
+- 4.128
+- 4.131
+::::
+:::

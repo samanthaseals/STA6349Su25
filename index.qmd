@@ -1,0 +1,12 @@
+---
+title: "STA6349 - Applied Bayesian Analysis - Summer 2025"
+format: html
+---
+
+Welcome to Applied Bayesian Analysis for Summer 2025! 
+
+Each class meeting will be split between lecture and practice. Attending live is not necessary (with the exception of 07/31), but it is your responsibility to keep up with the assigned work.
+
+**The final exam will be available on Canvas on Tuesday, August 5, 2025.**
+
+This project was supported by the 2023 [BATS program](https://www.stat.uci.edu/bayes-bats/), funded by NSF IUSE: EHR program with award numbers 2215879, 2215920, and 2215709.
