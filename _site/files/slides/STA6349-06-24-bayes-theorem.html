@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tentative Schedule – STA6349 - Applied Bayesian Analysis - Summer 2025</title>
+<title>Introduction to Bayes’ Theorem – STA6349 - Applied Bayesian Analysis - Summer 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-530bf8e59df25186f8bffdc63bad3503.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-530bf8e59df25186f8bffdc63bad3503.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,18 +67,47 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">STA6349 - Applied Bayesian Analysis - Summer 2025</span>
     </a>
   </div>
@@ -89,11 +118,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./syllabus.html"> 
+    <a class="nav-link" href="../../syllabus.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./schedule.html" aria-current="page"> 
+    <a class="nav-link" href="../../schedule.html"> 
 <span class="menu-text">Schedule</span></a>
   </li>  
 </ul>
@@ -107,13 +136,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="STA6349-06-24-bayes-theorem.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tentative Schedule</h1>
+<h1 class="title">Introduction to Bayes’ Theorem</h1>
+<p class="subtitle lead">June 24, 2025<br>Tuesday</p>
 </div>
 
 
@@ -130,290 +161,126 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-tip callout-titled" title="Week 1: 06/17 &amp; 06/19" open="true">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Week 1: 06/17 &amp; 06/19
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<section id="tuesday-061725" class="level4">
-<h4 class="anchored" data-anchor-id="tuesday-061725"><strong>Tuesday, 06/17/25</strong></h4>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <ul>
-<li><strong>Lecture:</strong>
+<li><p>Last week we began with covering probaiblity theory.</p></li>
+<li><p>Today we will continue talking about conditional probability, Bayes’ Theorem, and its application.</p></li>
+<li><p>After formal lecture, we will have an “introduction to R and Quarto” informal lecture.</p></li>
+</ul>
+</section>
+<section id="conditional-probability" class="level2">
+<h2 class="anchored" data-anchor-id="conditional-probability">Conditional Probability</h2>
 <ul>
-<li>Probability Theory: <a href="files/slides/STA6349-06-17-probability.html">html (view)</a> &amp; <a href="https://github.com/samanthaseals/STA6349Su25/blob/main/files/slides/STA6349-06-17-probability.qmd">qmd (code)</a></li>
+<li><em>Conditional probability</em> of an event <span class="math inline">\(A\)</span> given that an event <span class="math inline">\(B\)</span> has occurred is as follows</li>
+</ul>
+<p><span class="math display">\[
+P[A|B] = \frac{P[A \cap B]}{P[B]},
+\]</span></p>
+<ul>
+<li><p>so long as <span class="math inline">\(P[B] &gt; 0\)</span>.</p></li>
+<li><p>Algebraically equivalent,</p></li>
+</ul>
+<p><span class="math display">\[
+P[A \cap B] = P[A|B] \times P[B] \ \ \ \ \ \&amp; \ \ \ \ \ P[B] = \frac{P[A \cap B]}{P[A|B]}
+\]</span></p>
+</section>
+<section id="conditional-probability-1" class="level2">
+<h2 class="anchored" data-anchor-id="conditional-probability-1">Conditional Probability</h2>
+<ul>
+<li><p>Initech employees sometimes forget TPS cover sheets. In fact, those in charge claim that 30% of TPS reports are missing their cover sheet.</p></li>
+<li><p>Milton is famous for forgetting his cover sheets – when a cover sheet is missing, Milton is the responsible employee 60% of the time.</p></li>
+<li><p>What is the proability that a cover sheet is missing and Milton was the author?</p></li>
+</ul>
+</section>
+<section id="conditional-probability-2" class="level2">
+<h2 class="anchored" data-anchor-id="conditional-probability-2">Conditional Probability</h2>
+<ul>
+<li><p>Initech employees are also late – 40% of the employees were late during the last quarter.</p></li>
+<li><p>Looking at individual employee records, we can see that Peter is late to work 80% of the time.</p></li>
+<li><p>If an employee shows up late, what is the probability that the employee in question is Peter?</p></li>
+</ul>
+</section>
+<section id="bayes-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="bayes-theorem">Bayes’ Theorem</h2>
+<ul>
+<li>The general idea of Bayes’ Theorem (and Bayesian analysis in general) is that we will update our beliefs based on new evidence.</li>
+</ul>
+<p><span class="math display">\[\text{current belief} \to \text{new evidence} \to \text{new belief}\]</span></p>
+<ul>
+<li><strong>Bayes’ Theorem:</strong></li>
+</ul>
+<p><span class="math display">\[P[A|B] = \frac{P[B|A]\times P[A]}{P[B]}\]</span></p>
+</section>
+<section id="bayes-theorem-1" class="level2">
+<h2 class="anchored" data-anchor-id="bayes-theorem-1">Bayes’ Theorem</h2>
+<ul>
+<li><strong>Bayes’ Theorem:</strong></li>
+</ul>
+<p><span class="math display">\[P[A|B] = \frac{P[B|A]\times P[A]}{P[B]}\]</span></p>
+<ul>
+<li>where
+<ul>
+<li><span class="math inline">\(P[A|B]\)</span> = posterior probability = probability that hypothesis A is true given the evidence B.</li>
+<li><span class="math inline">\(P[B|A]\)</span> = likelihood = the probability of observing evidence B given that hypothesis A is true.</li>
+<li><span class="math inline">\(P[A]\)</span> = prior probability = our initial belief about the probability of hypothesis A being true without considering new evidence.</li>
+<li><span class="math inline">\(P[B]\)</span> = evidence probability = the overall probability of observing evidence B.</li>
 </ul></li>
 </ul>
 </section>
-<section id="thursday-061925" class="level4">
-<h4 class="anchored" data-anchor-id="thursday-061925"><strong>Thursday, 06/19/25</strong></h4>
+<section id="bayes-theorem-2" class="level2">
+<h2 class="anchored" data-anchor-id="bayes-theorem-2">Bayes’ Theorem</h2>
 <ul>
-<li><strong>No class: Juneteenth Holiday</strong></li>
+<li>Initech leadership wants to revisit the missing cover sheet problem. They’ve discovered:
+<ul>
+<li>Milton is assigned 10% of TPS reports and forgets cover sheets 80% of the time.</li>
+<li>Peter is assigned 70% of TPS reports and forgets cover sheets 10% of the time.</li>
+<li>Samir is assigned 20% of TPS reports and forgets cover sheets 30% of the time.</li>
+</ul></li>
+<li>What is the probability that Milton forgot a cover sheet, given that one was missing?</li>
 </ul>
 </section>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Week 2: 06/24 &amp; 06/26" open="true">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Week 2: 06/24 &amp; 06/26
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<section id="tuesday-0624" class="level4">
-<h4 class="anchored" data-anchor-id="tuesday-0624"><strong>Tuesday, 06/24</strong></h4>
+<section id="bayes-theorem-3" class="level2">
+<h2 class="anchored" data-anchor-id="bayes-theorem-3">Bayes’ Theorem</h2>
 <ul>
-<li><strong>Lecture:</strong>
+<li><p>Initech has two departments: Accounting and Engineering.</p></li>
+<li><p>60% of TPS reports come from Accounting.</p>
 <ul>
-<li>Random Variables and Their Distributions: <a href="files/slides/STA6349-06-24-random-variables.html">html (view)</a> &amp; <a href="https://github.com/samanthaseals/STA6349Su25/blob/main/files/slides/STA6349-06-24-random-variables.qmd">qmd (code)</a></li>
+<li>In the Accounting Department, Milton writes 25% of Accounting TPS reports but forgets the cover sheet 90% of the time, while other Accounting employees forget the TPS cover sheet 15% of the time.</li>
 </ul></li>
+<li><p>40% of TPS reports come from Engineering.</p>
+<ul>
+<li>In the Engineering Department, Peter writes 50% of Engineering TPS reports but forgets the cover sheet 20% of the time, while other Engineering employees forget the cover sheet 5% of the time.</li>
+</ul></li>
+<li><p>If a TPS report is found without a cover sheet, what is the probability that Milton was the author?</p></li>
 </ul>
 </section>
-<section id="thursday-0628" class="level4">
-<h4 class="anchored" data-anchor-id="thursday-0628"><strong>Thursday, 06/28</strong></h4>
+<section id="bayes-theorem-4" class="level2">
+<h2 class="anchored" data-anchor-id="bayes-theorem-4">Bayes’ Theorem</h2>
 <ul>
-<li><strong>Deliverables:</strong>
-<ul>
-<li>Assignment 1: Random Variables (due M 06/31)</li>
-</ul></li>
+<li>If a TPS report is found without a cover sheet, what is the probability that Milton was the author?</li>
 </ul>
 </section>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Week 3: 07/01 &amp; 07/03" open="true">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Week 3: 07/01 &amp; 07/03
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<section id="tuesday-0701" class="level4">
-<h4 class="anchored" data-anchor-id="tuesday-0701"><strong>Tuesday, 07/01</strong></h4>
+<section id="bayes-theorem-5" class="level2">
+<h2 class="anchored" data-anchor-id="bayes-theorem-5">Bayes’ Theorem</h2>
 <ul>
-<li><strong>Lecture:</strong>
-<ul>
-<li>Thinking Like a Bayesian</li>
-<li>The Beta-Binomial Model</li>
-</ul></li>
+<li><p>Your turn!</p></li>
+<li><p>If a TPS report is found without a cover sheet, what is the probability that Peter was the author?</p></li>
 </ul>
 </section>
-<section id="thursday-0703" class="level4">
-<h4 class="anchored" data-anchor-id="thursday-0703"><strong>Thursday, 07/03</strong></h4>
+<section id="wrap-up" class="level2">
+<h2 class="anchored" data-anchor-id="wrap-up">Wrap Up</h2>
 <ul>
-<li><strong>Lecture:</strong>
+<li><p>No additional homework than what was in the slides from last week.</p></li>
+<li><p>This is “only” the first portion of class today.</p></li>
+<li><p>We will take a 15 minute break, then return for an Introduction to R, RStudio, and Quarto.</p>
 <ul>
-<li>Conjugate families</li>
-<li>Balance and sequentiality</li>
+<li>See .qmd file on Canvas for today’s activity.</li>
 </ul></li>
 </ul>
-</section>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Week 4: 07/08 &amp; 07/10" open="true">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Week 4: 07/08 &amp; 07/10
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<section id="tuesday-0708" class="level4">
-<h4 class="anchored" data-anchor-id="tuesday-0708"><strong>Tuesday, 07/08</strong></h4>
-<ul>
-<li><strong>Deliverables:</strong>
-<ul>
-<li>Assignment 2: Conjugate families (due M 07/07)</li>
-</ul></li>
-</ul>
-</section>
-<section id="thursday-0710" class="level4">
-<h4 class="anchored" data-anchor-id="thursday-0710"><strong>Thursday, 07/10</strong></h4>
-<ul>
-<li><strong>Lecture:</strong>
-<ul>
-<li>Approximating the posterior</li>
-<li>Posterior inference and prediction</li>
-</ul></li>
-</ul>
-</section>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Week 5: 07/15 &amp; 07/17" open="true">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Week 5: 07/15 &amp; 07/17
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<section id="tuesday-0715" class="level4">
-<h4 class="anchored" data-anchor-id="tuesday-0715"><strong>Tuesday, 07/15</strong></h4>
-<ul>
-<li><strong>Project 1, in class work/planning</strong></li>
-<li><strong>Deliverables:</strong>
-<ul>
-<li>Recording of project 1 presentation (due M 07/21)</li>
-<li>Evaluation of other groups (due M 07/19)</li>
-</ul></li>
-</ul>
-</section>
-<section id="thursday-0717" class="level4">
-<h4 class="anchored" data-anchor-id="thursday-0717"><strong>Thursday, 07/17</strong></h4>
-<ul>
-<li><strong>Lecture:</strong>
-<ul>
-<li>Simple normal regression</li>
-<li>Evaluating regression models</li>
-<li>Categorical predictors</li>
-<li>Multiple predictors</li>
-</ul></li>
-</ul>
-</section>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Week 6: 07/22 &amp; 07/24" open="true">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Week 6: 07/22 &amp; 07/24
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<section id="tuesday-0722" class="level4">
-<h4 class="anchored" data-anchor-id="tuesday-0722"><strong>Tuesday, 07/22</strong></h4>
-<ul>
-<li><strong>Lecture:</strong>
-<ul>
-<li>Poisson and negative binomial regressions</li>
-<li>Logistic regression</li>
-</ul></li>
-</ul>
-</section>
-<section id="thursday-0724" class="level4">
-<h4 class="anchored" data-anchor-id="thursday-0724"><strong>Thursday, 07/24</strong></h4>
-<ul>
-<li><strong>Deliverables:</strong>
-<ul>
-<li>Assignment: regression (due M 07/28)</li>
-</ul></li>
-</ul>
-</section>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Week 7: 07/29 &amp; 07/31" open="true">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Week 7: 07/29 &amp; 07/31
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<section id="tuesday-0729" class="level4">
-<h4 class="anchored" data-anchor-id="tuesday-0729"><strong>Tuesday, 07/29</strong></h4>
-<ul>
-<li><strong>Project 2, in class work/planning</strong>
-<ul>
-<li>You will present in class on Thursday.</li>
-</ul></li>
-</ul>
-</section>
-<section id="thursday-0731" class="level4">
-<h4 class="anchored" data-anchor-id="thursday-0731"><strong>Thursday, 07/31</strong></h4>
-<ul>
-<li><strong>In class presentations!</strong>
-<ul>
-<li>Group 1</li>
-<li>Group 2</li>
-<li>Group 3</li>
-<li>Group 4</li>
-<li>Group 5</li>
-</ul></li>
-<li><strong>Deliverables:</strong>
-<ul>
-<li>Evaluation of other presentations (due M 08/04)</li>
-</ul></li>
-</ul>
-</section>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Week 8: 08/05 &amp; 08/07" open="true">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Week 8: 08/05 &amp; 08/07
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<section id="tuesday-0805" class="level4">
-<h4 class="anchored" data-anchor-id="tuesday-0805"><strong>Tuesday, 08/05</strong></h4>
-<ul>
-<li>Dr.&nbsp;Seals is out of town at <a href="https://ww2.amstat.org/meetings/jsm/2025/">JSM 2025</a>.</li>
-<li><strong>Final Exam on Canvas</strong>
-<ul>
-<li>Each student has 3 hours to complete the exam.</li>
-<li>Once you open the exam, the timer will continue running.</li>
-<li>The exam is open note/resources.</li>
-</ul></li>
-</ul>
-</section>
-<section id="thursday-0807" class="level4">
-<h4 class="anchored" data-anchor-id="thursday-0807"><strong>Thursday, 08/07</strong></h4>
-<ul>
-<li>Dr.&nbsp;Seals is on her way back from <a href="https://ww2.amstat.org/meetings/jsm/2025/">JSM 2025</a>.</li>
-<li><strong>Catch up</strong>
-<ul>
-<li>Please use this class time to catch up with anything you need to catch up with.</li>
-</ul></li>
-</ul>
-</section>
-</div>
-</div>
-</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

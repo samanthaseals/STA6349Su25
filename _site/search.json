@@ -10,8 +10,8 @@
     "objectID": "files/slides/STA6349-06-17-probability.html#introduction",
     "href": "files/slides/STA6349-06-17-probability.html#introduction",
     "title": "Introduction to Probability",
-    "section": "Introduction",
-    "text": "Introduction\n\nThe first few lectures come from Mathematical Statistics with Applications, by Wackerly.\n\nWe must understand the underlying probability and random variable theory before moving into the Bayesian world.\n\nWe will be covering the following chapters:\n\nChapter 2: probability theory\nChapter 3: discrete random variables\nChapter 4: continuous random variables"
+    "section": "",
+    "text": "The first few lectures come from Mathematical Statistics with Applications, by Wackerly.\n\nWe must understand the underlying probability and random variable theory before moving into the Bayesian world.\n\nWe will be covering the following chapters:\n\nChapter 2: probability theory\nChapter 3: discrete random variables\nChapter 4: continuous random variables"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#probability-and-inference",
@@ -32,77 +32,77 @@
     "href": "files/slides/STA6349-06-17-probability.html#review-of-set-notation",
     "title": "Introduction to Probability",
     "section": "2.3: Review of Set Notation",
-    "text": "2.3: Review of Set Notation\n\nSuppose the elements a_1, a_2, and a_3 are in the set A. A = \\left\\{ a_1, a_2, a_3 \\right\\}\n\nNotation: capital letters \\to sets of points.\n\nWe can denote the set of all elements under consideration with S, the universal set."
+    "text": "2.3: Review of Set Notation\n\nSuppose the elements \\(a_1\\), \\(a_2\\), and \\(a_3\\) are in the set \\(A\\). \\[A = \\left\\{ a_1, a_2, a_3 \\right\\}\\]\n\nNotation: capital letters \\(\\to\\) sets of points.\n\nWe can denote the set of all elements under consideration with \\(S\\), the universal set."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-1",
     "href": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-1",
     "title": "Introduction to Probability",
     "section": "2.3: Review of Set Notation",
-    "text": "2.3: Review of Set Notation\n\nA \\subset B:\n\nFor any two sets A and B, we say that A is a subset of B if every point in A is also in B."
+    "text": "2.3: Review of Set Notation\n\n\\(A \\subset B\\):\n\nFor any two sets \\(A\\) and \\(B\\), we say that \\(A\\) is a subset of \\(B\\) if every point in \\(A\\) is also in \\(B\\)."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-2",
     "href": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-2",
     "title": "Introduction to Probability",
     "section": "2.3: Review of Set Notation",
-    "text": "2.3: Review of Set Notation\n\nA \\cup B:\n\nThe union of A and B is the set of all points in either A or B.\ni.e., the union has all points that are in at least one of the sets."
+    "text": "2.3: Review of Set Notation\n\n\\(A \\cup B\\):\n\nThe union of \\(A\\) and \\(B\\) is the set of all points in either \\(A\\) or \\(B\\).\ni.e., the union has all points that are in at least one of the sets."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-3",
     "href": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-3",
     "title": "Introduction to Probability",
     "section": "2.3: Review of Set Notation",
-    "text": "2.3: Review of Set Notation\n\nA \\cap B:\n\nThe intersection of A and B is the set of all points in both A and B.\ni.e., the intersection is where the two sets overlap."
+    "text": "2.3: Review of Set Notation\n\n\\(A \\cap B\\):\n\nThe intersection of \\(A\\) and \\(B\\) is the set of all points in both \\(A\\) and \\(B\\).\ni.e., the intersection is where the two sets overlap."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-4",
     "href": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-4",
     "title": "Introduction to Probability",
     "section": "2.3: Review of Set Notation",
-    "text": "2.3: Review of Set Notation\n\n\\bar{A} or A^c:\n\nThe complement of A is the set of points that are in S, but not in A.\nA \\cup \\bar{A} = S."
+    "text": "2.3: Review of Set Notation\n\n\\(\\bar{A}\\) or \\(A^c\\):\n\nThe complement of \\(A\\) is the set of points that are in \\(S\\), but not in \\(A\\).\n\\(A \\cup \\bar{A} = S\\)."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-5",
     "href": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-5",
     "title": "Introduction to Probability",
     "section": "2.3: Review of Set Notation",
-    "text": "2.3: Review of Set Notation\n\nA \\cap B = \\emptyset:\n\nA and B, are said to be disjoint or mutually exclusive when they have no points in common.\nRelated: for any set A, we know that A and \\bar{A} are mutually exclusive."
+    "text": "2.3: Review of Set Notation\n\n\\(A \\cap B = \\emptyset\\):\n\n\\(A\\) and \\(B\\), are said to be disjoint or mutually exclusive when they have no points in common.\nRelated: for any set \\(A\\), we know that \\(A\\) and \\(\\bar{A}\\) are mutually exclusive."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-6",
     "href": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-6",
     "title": "Introduction to Probability",
     "section": "2.3: Review of Set Notation",
-    "text": "2.3: Review of Set Notation\n\nFast forwarding through set algebra, we need to know these distributive laws:\n\n\n\\begin{align*}\nA \\cap (B \\cup C) &= (A \\cap B) \\cup (A \\cap C) \\\\\nA \\cup (B \\cap C) &= (A \\cup B) \\cap (A \\cup C) \\\\\n(A \\cap B)^c &= A^c \\cup B^c \\\\\n(A \\cup B)^c &= A^c \\cap B^c\n\\end{align*}"
+    "text": "2.3: Review of Set Notation\n\nFast forwarding through set algebra, we need to know these distributive laws:\n\n\\[\n\\begin{align*}\nA \\cap (B \\cup C) &= (A \\cap B) \\cup (A \\cap C) \\\\\nA \\cup (B \\cap C) &= (A \\cup B) \\cap (A \\cup C) \\\\\n(A \\cap B)^c &= A^c \\cup B^c \\\\\n(A \\cup B)^c &= A^c \\cap B^c\n\\end{align*}\n\\]"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-7",
     "href": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-7",
     "title": "Introduction to Probability",
     "section": "2.3: Review of Set Notation",
-    "text": "2.3: Review of Set Notation\n\nSuppose two dice are tossed and the numbers on the upper faces are observed.\nLet S denote the set of all possible pairs that can be observed.\n\ne.g., (2, 3) indicates that a 2 was observed on the first die and a 3 on the second.\n\nWhat are the observations in S?"
+    "text": "2.3: Review of Set Notation\n\nSuppose two dice are tossed and the numbers on the upper faces are observed.\nLet \\(S\\) denote the set of all possible pairs that can be observed.\n\ne.g., (2, 3) indicates that a 2 was observed on the first die and a 3 on the second.\n\nWhat are the observations in \\(S\\)?"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-8",
     "href": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-8",
     "title": "Introduction to Probability",
     "section": "2.3: Review of Set Notation",
-    "text": "2.3: Review of Set Notation\n\nDefine the following subsets of S and list their points:\n\nA: The number on the second die is even. \nB: The sum of the two numbers is even. \nC: At least one number in the pair is odd."
+    "text": "2.3: Review of Set Notation\n\nDefine the following subsets of \\(S\\) and list their points:\n\n\\(A\\): The number on the second die is even. \n\\(B\\): The sum of the two numbers is even. \n\\(C\\): At least one number in the pair is odd."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-9",
     "href": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-9",
     "title": "Introduction to Probability",
     "section": "2.3: Review of Set Notation",
-    "text": "2.3: Review of Set Notation\n\nList the points in the following:\n\nA \\cup B \nA \\cap B \nA \\cap C \nB \\cup C"
+    "text": "2.3: Review of Set Notation\n\nList the points in the following:\n\n\\(A \\cup B\\) \n\\(A \\cap B\\) \n\\(A \\cap C\\) \n\\(B \\cup C\\)"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-10",
     "href": "files/slides/STA6349-06-17-probability.html#review-of-set-notation-10",
     "title": "Introduction to Probability",
     "section": "2.3: Review of Set Notation",
-    "text": "2.3: Review of Set Notation\n\nList the points in the following:\n\nA \\cup B^c\nA^c \\cap B\nA \\cap C^c\nB \\cup C^c"
+    "text": "2.3: Review of Set Notation\n\nList the points in the following:\n\n\\(A \\cup B^c\\)\n\\(A^c \\cap B\\)\n\\(A \\cap C^c\\)\n\\(B \\cup C^c\\)"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#a-probabilistic-model-for-an-experiment",
@@ -116,70 +116,70 @@
     "href": "files/slides/STA6349-06-17-probability.html#a-probabilistic-model-for-an-experiment-1",
     "title": "Introduction to Probability",
     "section": "2.4: A Probabilistic Model for an Experiment",
-    "text": "2.4: A Probabilistic Model for an Experiment\n\nEvents: the outcomes possible in an experiment.\n\nNotation: capital leters\nExamples for bacteria observation:\n\nA: Exactly 110 bacteria are present.\nB: More than 200 bacteria are present.\nC: The number of bacteria present is between 100 and 300."
+    "text": "2.4: A Probabilistic Model for an Experiment\n\nEvents: the outcomes possible in an experiment.\n\nNotation: capital leters\nExamples for bacteria observation:\n\n\\(A\\): Exactly 110 bacteria are present.\n\\(B\\): More than 200 bacteria are present.\n\\(C\\): The number of bacteria present is between 100 and 300."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#a-probabilistic-model-for-an-experiment-2",
     "href": "files/slides/STA6349-06-17-probability.html#a-probabilistic-model-for-an-experiment-2",
     "title": "Introduction to Probability",
     "section": "2.4: A Probabilistic Model for an Experiment",
-    "text": "2.4: A Probabilistic Model for an Experiment\n\nSample space, S: the set consisting of all possible sample points.\nThe following Venn diagram shows an example of six simple events in S,"
+    "text": "2.4: A Probabilistic Model for an Experiment\n\nSample space, \\(S\\): the set consisting of all possible sample points.\nThe following Venn diagram shows an example of six simple events in \\(S\\),"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#a-probabilistic-model-for-an-experiment-3",
     "href": "files/slides/STA6349-06-17-probability.html#a-probabilistic-model-for-an-experiment-3",
     "title": "Introduction to Probability",
     "section": "2.4: A Probabilistic Model for an Experiment",
-    "text": "2.4: A Probabilistic Model for an Experiment\n\nCompound event: A collection of sample points in a discrete sample space, S.\ne.g., suppose we define two events, A and B,"
+    "text": "2.4: A Probabilistic Model for an Experiment\n\nCompound event: A collection of sample points in a discrete sample space, \\(S\\).\ne.g., suppose we define two events, \\(A\\) and \\(B\\),"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#a-probabilistic-model-for-an-experiment-4",
     "href": "files/slides/STA6349-06-17-probability.html#a-probabilistic-model-for-an-experiment-4",
     "title": "Introduction to Probability",
     "section": "2.4: A Probabilistic Model for an Experiment",
-    "text": "2.4: A Probabilistic Model for an Experiment\n\nSuppose S is a sample space associated with an experiment. To every event A in S (i.e., A \\subset S), we assign a number, P[A], called the probability of A, such that the follow axioms hold:\n\nAxiom 1: P[A] \\ge 0.\nAxiom 2: P[S] = 1.\nAxiom 3: If A_1, A_2, ..., A_n form a sequence of pairwise mutually exclusive (A_i \\cap A_j = \\emptyset if i \\ne j) events in S, then P[A_1 \\cup A_2 \\cup \\ ... \\cup \\ A_n] = \\sum_{i=1}^n P[A_i]"
+    "text": "2.4: A Probabilistic Model for an Experiment\n\nSuppose \\(S\\) is a sample space associated with an experiment. To every event \\(A\\) in \\(S\\) (i.e., \\(A \\subset S\\)), we assign a number, \\(P[A]\\), called the probability of \\(A\\), such that the follow axioms hold:\n\nAxiom 1: \\(P[A] \\ge 0\\).\nAxiom 2: \\(P[S] = 1\\).\nAxiom 3: If \\(A_1, A_2, ..., A_n\\) form a sequence of pairwise mutually exclusive (\\(A_i \\cap A_j = \\emptyset\\) if \\(i \\ne j\\)) events in \\(S\\), then \\[P[A_1 \\cup A_2 \\cup \\ ... \\cup \\ A_n] = \\sum_{i=1}^n P[A_i] \\]"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#a-probabilistic-model-for-an-experiment-5",
     "href": "files/slides/STA6349-06-17-probability.html#a-probabilistic-model-for-an-experiment-5",
     "title": "Introduction to Probability",
     "section": "2.4: A Probabilistic Model for an Experiment",
-    "text": "2.4: A Probabilistic Model for an Experiment\n\nSuppose a sample space consists of five simple events, E_1, E_2, E_3, E_4, and E_5.\n\nIf P[E_1] = P[E_2] = 0.15, P[E_3] = 0.4, and P[E_4] = 2P[E_5], find the probabilities of E_4 and E_5."
+    "text": "2.4: A Probabilistic Model for an Experiment\n\nSuppose a sample space consists of five simple events, \\(E_1\\), \\(E_2\\), \\(E_3\\), \\(E_4\\), and \\(E_5\\).\n\nIf \\(P[E_1] = P[E_2] = 0.15\\), \\(P[E_3] = 0.4\\), and \\(P[E_4] = 2P[E_5]\\), find the probabilities of \\(E_4\\) and \\(E_5\\)."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#a-probabilistic-model-for-an-experiment-6",
     "href": "files/slides/STA6349-06-17-probability.html#a-probabilistic-model-for-an-experiment-6",
     "title": "Introduction to Probability",
     "section": "2.4: A Probabilistic Model for an Experiment",
-    "text": "2.4: A Probabilistic Model for an Experiment\n\nSuppose a sample space consists of five simple events, E_1, E_2, E_3, E_4, and E_5.\n\nIf P[E_1] = 3P[E_2] = 0.3, find the probabilities of the remaining simple events if you know that the remaining simple events are equally probable."
+    "text": "2.4: A Probabilistic Model for an Experiment\n\nSuppose a sample space consists of five simple events, \\(E_1\\), \\(E_2\\), \\(E_3\\), \\(E_4\\), and \\(E_5\\).\n\nIf \\(P[E_1] = 3P[E_2] = 0.3\\), find the probabilities of the remaining simple events if you know that the remaining simple events are equally probable."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#calculating-the-probability-of-an-event",
     "href": "files/slides/STA6349-06-17-probability.html#calculating-the-probability-of-an-event",
     "title": "Introduction to Probability",
     "section": "2.5: Calculating the Probability of an Event",
-    "text": "2.5: Calculating the Probability of an Event\n\nThe following are steps used to find the probability of an event:\n\nDefine the experiment and clearly determine how to describe one simple event.\nDefine S: list the simple events associated with the experiment.\nAssign reasonable probabilities to the sample points in S; remember that P[E_i] \\ge 0 and \\sum_i P[E_i] = 1.\nDefine the event of interest, A, as a specific collection of sample points.\nFind P[A] by summing the probabilities of the sample points in A."
+    "text": "2.5: Calculating the Probability of an Event\n\nThe following are steps used to find the probability of an event:\n\nDefine the experiment and clearly determine how to describe one simple event.\nDefine \\(S\\): list the simple events associated with the experiment.\nAssign reasonable probabilities to the sample points in \\(S\\); remember that \\(P[E_i] \\ge 0\\) and \\(\\sum_i P[E_i] = 1\\).\nDefine the event of interest, \\(A\\), as a specific collection of sample points.\nFind \\(P[A]\\) by summing the probabilities of the sample points in \\(A\\)."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#calculating-the-probability-of-an-event-1",
     "href": "files/slides/STA6349-06-17-probability.html#calculating-the-probability-of-an-event-1",
     "title": "Introduction to Probability",
     "section": "2.5: Calculating the Probability of an Event",
-    "text": "2.5: Calculating the Probability of an Event\n\nSuppose we toss a balanced coin three times. Find the probability that 2/3 tosses result in heads.\n\nDefine the experiment and clearly determine how to describe one simple event.\nDefine S: list the simple events associated with the experiment."
+    "text": "2.5: Calculating the Probability of an Event\n\nSuppose we toss a balanced coin three times. Find the probability that 2/3 tosses result in heads.\n\nDefine the experiment and clearly determine how to describe one simple event.\nDefine \\(S\\): list the simple events associated with the experiment."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#calculating-the-probability-of-an-event-2",
     "href": "files/slides/STA6349-06-17-probability.html#calculating-the-probability-of-an-event-2",
     "title": "Introduction to Probability",
     "section": "2.5: Calculating the Probability of an Event",
-    "text": "2.5: Calculating the Probability of an Event\n\nSuppose we toss a balanced coin three times. Find the probability that 2/3 tosses result in heads.\n\nDefine S: list the simple events associated with the experiment.\nAssign reasonable probabilities to the sample points in S; remember that P[E_i] \\ge 0 and \\sum_i P[E_i] = 1."
+    "text": "2.5: Calculating the Probability of an Event\n\nSuppose we toss a balanced coin three times. Find the probability that 2/3 tosses result in heads.\n\nDefine \\(S\\): list the simple events associated with the experiment.\nAssign reasonable probabilities to the sample points in \\(S\\); remember that \\(P[E_i] \\ge 0\\) and \\(\\sum_i P[E_i] = 1\\)."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#calculating-the-probability-of-an-event-3",
     "href": "files/slides/STA6349-06-17-probability.html#calculating-the-probability-of-an-event-3",
     "title": "Introduction to Probability",
     "section": "2.5: Calculating the Probability of an Event",
-    "text": "2.5: Calculating the Probability of an Event\n\nSuppose we toss a balanced coin three times. Find the probability that 2/3 tosses result in heads.\n\nDefine the event of interest, A, as a specific collection of sample points.\nFind P[A] by summing the probabilities of the sample points in A."
+    "text": "2.5: Calculating the Probability of an Event\n\nSuppose we toss a balanced coin three times. Find the probability that 2/3 tosses result in heads.\n\nDefine the event of interest, \\(A\\), as a specific collection of sample points.\nFind \\(P[A]\\) by summing the probabilities of the sample points in \\(A\\)."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#section",
@@ -193,21 +193,21 @@
     "href": "files/slides/STA6349-06-17-probability.html#tools-for-counting-sample-points",
     "title": "Introduction to Probability",
     "section": "2.6: Tools for Counting Sample Points",
-    "text": "2.6: Tools for Counting Sample Points\n\nLet us discuss some results from combinatorial theory.\nWe want to be able to count the total number of sample points in the sample space, S.\nSometimes we use this method to efficiently find probabilities.\n\nIf a sample space contains N equiprobable sample points and an event A contains exactly n_a sample points, then\n\n\n\nP[A] = \\frac{n_a}{N}"
+    "text": "2.6: Tools for Counting Sample Points\n\nLet us discuss some results from combinatorial theory.\nWe want to be able to count the total number of sample points in the sample space, \\(S\\).\nSometimes we use this method to efficiently find probabilities.\n\nIf a sample space contains \\(N\\) equiprobable sample points and an event \\(A\\) contains exactly \\(n_a\\) sample points, then\n\n\n\\[\nP[A] = \\frac{n_a}{N}    \n\\]"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#tools-for-counting-sample-points-1",
     "href": "files/slides/STA6349-06-17-probability.html#tools-for-counting-sample-points-1",
     "title": "Introduction to Probability",
     "section": "2.6: Tools for Counting Sample Points",
-    "text": "2.6: Tools for Counting Sample Points\n\nTheorem:\n\nWith m elements a_1, a_2, …, a_m and n elements b_1, b_2, …, b_n, it is possible for form mn = m \\times n pairs containing one element from each group."
+    "text": "2.6: Tools for Counting Sample Points\n\nTheorem:\n\nWith \\(m\\) elements \\(a_1\\), \\(a_2\\), …, \\(a_m\\) and \\(n\\) elements \\(b_1\\), \\(b_2\\), …, \\(b_n\\), it is possible for form \\(mn = m \\times n\\) pairs containing one element from each group."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#tools-for-counting-sample-points-2",
     "href": "files/slides/STA6349-06-17-probability.html#tools-for-counting-sample-points-2",
     "title": "Introduction to Probability",
     "section": "2.6: Tools for Counting Sample Points",
-    "text": "2.6: Tools for Counting Sample Points\n\nConsider an experiment that consists of recording the birthday for each of 20 randomly selected persons.\nIgnoring leap years and assuming that there are only 365 possible distinct birthdays, find the number of points in the sample space S for this experiment."
+    "text": "2.6: Tools for Counting Sample Points\n\nConsider an experiment that consists of recording the birthday for each of 20 randomly selected persons.\nIgnoring leap years and assuming that there are only 365 possible distinct birthdays, find the number of points in the sample space \\(S\\) for this experiment."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#tools-for-counting-sample-points-3",
@@ -221,14 +221,14 @@
     "href": "files/slides/STA6349-06-17-probability.html#tools-for-counting-sample-points-4",
     "title": "Introduction to Probability",
     "section": "2.6: Tools for Counting Sample Points",
-    "text": "2.6: Tools for Counting Sample Points\n\nPermutation: an ordered arrangement of r distinct objects, P_r^n.\n\n\nP_r^n = \\frac{n!}{(n-r)!}\n\n\nCombination: the number of subsets formed from n objects taken r at a time, C_r^n or {n \\choose r}.\n\n\nC_r^n = {n \\choose r} = \\frac{P_r^n}{r!} = \\frac{n!}{r(n-r)!}"
+    "text": "2.6: Tools for Counting Sample Points\n\nPermutation: an ordered arrangement of \\(r\\) distinct objects, \\(P_r^n\\).\n\n\\[\nP_r^n = \\frac{n!}{(n-r)!}\n\\]\n\nCombination: the number of subsets formed from \\(n\\) objects taken \\(r\\) at a time, \\(C_r^n\\) or \\({n \\choose r}\\).\n\n\\[\nC_r^n = {n \\choose r} = \\frac{P_r^n}{r!} = \\frac{n!}{r(n-r)!}\n\\]"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#tools-for-counting-sample-points-5",
     "href": "files/slides/STA6349-06-17-probability.html#tools-for-counting-sample-points-5",
     "title": "Introduction to Probability",
     "section": "2.6: Tools for Counting Sample Points",
-    "text": "2.6: Tools for Counting Sample Points\n\nRemember, factorials are defined as follows:\n\n\nn! = n \\times (n-1) \\times (n-2) \\times ... \\times 2 \\times 1\n\n\nWith special factorials:\n\n\n\\begin{align*}\n1! &= 1 \\\\\n0! &= 1\n\\end{align*}"
+    "text": "2.6: Tools for Counting Sample Points\n\nRemember, factorials are defined as follows:\n\n\\[\nn! = n \\times (n-1) \\times (n-2) \\times ... \\times 2 \\times 1\n\\]\n\nWith special factorials:\n\n\\[\n\\begin{align*}\n1! &= 1 \\\\\n0! &= 1\n\\end{align*}\n\\]"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#tools-for-counting-sample-points-6",
@@ -242,14 +242,14 @@
     "href": "files/slides/STA6349-06-17-probability.html#tools-for-counting-sample-points-7",
     "title": "Introduction to Probability",
     "section": "2.6: Tools for Counting Sample Points",
-    "text": "2.6: Tools for Counting Sample Points\n\nA company orders supplies from M distributors and wishes to place n orders (n&lt;M). Assume that the company places the orders in a manner that allows every distributor an equal chance of obtaining any one order and there is no restriction on the number of orders that can be placed with any distributor. Find the probability that a particular distributor gets exactly k orders (k \\le n)."
+    "text": "2.6: Tools for Counting Sample Points\n\nA company orders supplies from \\(M\\) distributors and wishes to place \\(n\\) orders \\((n&lt;M).\\) Assume that the company places the orders in a manner that allows every distributor an equal chance of obtaining any one order and there is no restriction on the number of orders that can be placed with any distributor. Find the probability that a particular distributor gets exactly \\(k\\) orders \\((k \\le n)\\)."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#conditional-prob.-and-independence-of-events",
     "href": "files/slides/STA6349-06-17-probability.html#conditional-prob.-and-independence-of-events",
     "title": "Introduction to Probability",
     "section": "2.7: Conditional Prob. and Independence of Events",
-    "text": "2.7: Conditional Prob. and Independence of Events\n\nConditional probability of an event A given that an event B has occurred is as follows\n\n\nP[A|B] = \\frac{P[A \\cap B]}{P[B]},\n\n\nso long as P[B] &gt; 0.\nAlgebraically equivalent,\n\n\nP[A \\cap B] = P[A|B] \\times P[B] \\ \\ \\ \\ \\ \\& \\ \\ \\ \\ \\ P[B] = \\frac{P[A \\cap B]}{P[A|B]}"
+    "text": "2.7: Conditional Prob. and Independence of Events\n\nConditional probability of an event \\(A\\) given that an event \\(B\\) has occurred is as follows\n\n\\[\nP[A|B] = \\frac{P[A \\cap B]}{P[B]},\n\\]\n\nso long as \\(P[B] &gt; 0\\).\nAlgebraically equivalent,\n\n\\[\nP[A \\cap B] = P[A|B] \\times P[B] \\ \\ \\ \\ \\ \\& \\ \\ \\ \\ \\ P[B] = \\frac{P[A \\cap B]}{P[A|B]}\n\\]"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#conditional-prob.-and-independence-of-events-1",
@@ -263,42 +263,42 @@
     "href": "files/slides/STA6349-06-17-probability.html#conditional-prob.-and-independence-of-events-2",
     "title": "Introduction to Probability",
     "section": "2.7: Conditional Prob. and Independence of Events",
-    "text": "2.7: Conditional Prob. and Independence of Events\n\nTwo events A and B are said to be independent events if any of the following holds:\n\n\n\\begin{align*}\nP[A|B] &= P[A] \\\\\nP[B|A] &= P[B] \\\\\nP[A \\cap B] &= P[A] P[B]\n\\end{align*}\n\n\nOtherwise, we say that A and B are dependent events."
+    "text": "2.7: Conditional Prob. and Independence of Events\n\nTwo events \\(A\\) and \\(B\\) are said to be independent events if any of the following holds:\n\n\\[\n\\begin{align*}\nP[A|B] &= P[A] \\\\\nP[B|A] &= P[B] \\\\\nP[A \\cap B] &= P[A] P[B]\n\\end{align*}\n\\]\n\nOtherwise, we say that \\(A\\) and \\(B\\) are dependent events."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#conditional-prob.-and-independence-of-events-3",
     "href": "files/slides/STA6349-06-17-probability.html#conditional-prob.-and-independence-of-events-3",
     "title": "Introduction to Probability",
     "section": "2.7: Conditional Prob. and Independence of Events",
-    "text": "2.7: Conditional Prob. and Independence of Events\n\nConsider the following events in the toss of a single die:\n\nA: Observe an odd number.\nB: Observe an even number.\nC: Observe a 1 or 2.\n\nAre A and B independent events? \nAre A and C independent events?"
+    "text": "2.7: Conditional Prob. and Independence of Events\n\nConsider the following events in the toss of a single die:\n\n\\(A\\): Observe an odd number.\n\\(B\\): Observe an even number.\n\\(C\\): Observe a 1 or 2.\n\nAre \\(A\\) and \\(B\\) independent events? \nAre \\(A\\) and \\(C\\) independent events?"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#two-laws-of-probability",
     "href": "files/slides/STA6349-06-17-probability.html#two-laws-of-probability",
     "title": "Introduction to Probability",
     "section": "2.8: Two Laws of Probability",
-    "text": "2.8: Two Laws of Probability\n\nTheorem: The Multiplicative Law of Probability\n\nThe probability of the intersection of two events A and B is\n\n\n\\begin{align*}P[A\\cap B] &= P[A] P[B|A] \\\\ &= P[B] P[A|B]\\end{align*}\n\nNote that if A and B are independent, then\n\nP[A \\cap B] = P[A] P[B]"
+    "text": "2.8: Two Laws of Probability\n\nTheorem: The Multiplicative Law of Probability\n\nThe probability of the intersection of two events \\(A\\) and \\(B\\) is\n\n\n\\[\\begin{align*}P[A\\cap B] &= P[A] P[B|A] \\\\ &= P[B] P[A|B]\\end{align*}\\]\n\nNote that if \\(A\\) and \\(B\\) are independent, then\n\n\\[P[A \\cap B] = P[A] P[B]\\]"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#two-laws-of-probability-1",
     "href": "files/slides/STA6349-06-17-probability.html#two-laws-of-probability-1",
     "title": "Introduction to Probability",
     "section": "2.8: Two Laws of Probability",
-    "text": "2.8: Two Laws of Probability\n\nTheorem: The Additive Law of Probability\n\nThe probability of the union of two events A and B is\n\n\nP[A \\cup B] = P[A] + P[B] - P[A \\cap B] \n\nNote that if A and B are mutually exclusive, then P[A \\cap B] = 0 and\n\nP[A \\cup B] = P[A] + P[B]"
+    "text": "2.8: Two Laws of Probability\n\nTheorem: The Additive Law of Probability\n\nThe probability of the union of two events \\(A\\) and \\(B\\) is\n\n\n\\[P[A \\cup B] = P[A] + P[B] - P[A \\cap B] \\]\n\nNote that if \\(A\\) and \\(B\\) are mutually exclusive, then \\(P[A \\cap B] = 0\\) and\n\n\\[P[A \\cup B] = P[A] + P[B]\\]"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#two-laws-of-probability-2",
     "href": "files/slides/STA6349-06-17-probability.html#two-laws-of-probability-2",
     "title": "Introduction to Probability",
     "section": "2.8: Two Laws of Probability",
-    "text": "2.8: Two Laws of Probability\n\nTheorem: The Complement Rule\n\nIf A is an event, then\n\n\n\n\\begin{align*}\nP[A] + P[A^c] &= 1 \\\\\nP[A] &= 1 - P[A^c] \\\\\nP[A^c] &= 1 - P[A] \\\\\n\\end{align*}"
+    "text": "2.8: Two Laws of Probability\n\nTheorem: The Complement Rule\n\nIf \\(A\\) is an event, then\n\n\n\\[\n\\begin{align*}\nP[A] + P[A^c] &= 1 \\\\\nP[A] &= 1 - P[A^c] \\\\\nP[A^c] &= 1 - P[A] \\\\\n\\end{align*}\n\\]"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#calculating-the-probability-of-an-event-4",
     "href": "files/slides/STA6349-06-17-probability.html#calculating-the-probability-of-an-event-4",
     "title": "Introduction to Probability",
     "section": "2.9: Calculating the Probability of an Event",
-    "text": "2.9: Calculating the Probability of an Event\nThe steps used to define the probability of an event:\n\nDefine the experiment.\nVisualize the nature of the sample points. Identify a few to clarify your thinking.\nWrite an equation expressing the event of interest (A) as a composition of two or more events, using usions, intersections, and/or complements. Make certain that event A and the event implied by the compsotion represnt the sameset of sample points.\nApply the additive and multiplicative laws of probability in the compositions obtained in step 3 to find P[A]."
+    "text": "2.9: Calculating the Probability of an Event\nThe steps used to define the probability of an event:\n\nDefine the experiment.\nVisualize the nature of the sample points. Identify a few to clarify your thinking.\nWrite an equation expressing the event of interest (\\(A\\)) as a composition of two or more events, using usions, intersections, and/or complements. Make certain that event \\(A\\) and the event implied by the compsotion represnt the sameset of sample points.\nApply the additive and multiplicative laws of probability in the compositions obtained in step 3 to find \\(P[A]\\)."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#calculating-the-probability-of-an-event-5",
@@ -312,28 +312,28 @@
     "href": "files/slides/STA6349-06-17-probability.html#the-law-of-total-probability-and-bayes-rule",
     "title": "Introduction to Probability",
     "section": "2.10: The Law of Total Probability and Bayes’ Rule",
-    "text": "2.10: The Law of Total Probability and Bayes’ Rule\n\nPartition:\n\nFor some positive integer k, let the sets B_1, B_2, ..., B_k be such that\n\nS = B_1 \\cup B_2 \\cup ... \\cup B_k\nB_1 \\cap B_j = \\emptyset, for i \\ne j\n\nThen the collection of sets \\{B_1, B_2, ..., B_k\\} is said to be a partition of S."
+    "text": "2.10: The Law of Total Probability and Bayes’ Rule\n\nPartition:\n\nFor some positive integer \\(k\\), let the sets \\(B_1, B_2, ..., B_k\\) be such that\n\n\\(S = B_1 \\cup B_2 \\cup ... \\cup B_k\\)\n\\(B_1 \\cap B_j = \\emptyset\\), for \\(i \\ne j\\)\n\nThen the collection of sets \\(\\{B_1, B_2, ..., B_k\\}\\) is said to be a partition of \\(S\\)."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#the-law-of-total-probability-and-bayes-rule-1",
     "href": "files/slides/STA6349-06-17-probability.html#the-law-of-total-probability-and-bayes-rule-1",
     "title": "Introduction to Probability",
     "section": "2.10: The Law of Total Probability and Bayes’ Rule",
-    "text": "2.10: The Law of Total Probability and Bayes’ Rule\n\nWe also know that if A is any subset of S and \\{B_1, B_2, ..., B_k\\} is a partition of S, A can be decomposed:\n\n\nA = (A \\cap B_1) \\cup (A \\cap B_2) \\cup \\ ... \\ \\cup (A \\cap B_k)"
+    "text": "2.10: The Law of Total Probability and Bayes’ Rule\n\nWe also know that if \\(A\\) is any subset of \\(S\\) and \\(\\{B_1, B_2, ..., B_k\\}\\) is a partition of \\(S\\), \\(A\\) can be decomposed:\n\n\\[\nA = (A \\cap B_1) \\cup (A \\cap B_2) \\cup \\ ... \\ \\cup (A \\cap B_k)\n\\]"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#the-law-of-total-probability-and-bayes-rule-2",
     "href": "files/slides/STA6349-06-17-probability.html#the-law-of-total-probability-and-bayes-rule-2",
     "title": "Introduction to Probability",
     "section": "2.10: The Law of Total Probability and Bayes’ Rule",
-    "text": "2.10: The Law of Total Probability and Bayes’ Rule\n\nTheorem:\n\nAssume that \\{ B_1, B_2, ..., B_k \\} is a partition of S such that P[B_i] &gt; 0 for i = 1, 2, ..., k. Then for any event A,\n\n\n\nP[A] = \\sum_{i=1}^k P[A|B_i] P[B_i]"
+    "text": "2.10: The Law of Total Probability and Bayes’ Rule\n\nTheorem:\n\nAssume that \\(\\{ B_1, B_2, ..., B_k \\}\\) is a partition of \\(S\\) such that \\(P[B_i] &gt; 0\\) for \\(i = 1, 2, ..., k\\). Then for any event \\(A\\),\n\n\n\\[\nP[A] = \\sum_{i=1}^k P[A|B_i] P[B_i]\n\\]"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#the-law-of-total-probability-and-bayes-rule-3",
     "href": "files/slides/STA6349-06-17-probability.html#the-law-of-total-probability-and-bayes-rule-3",
     "title": "Introduction to Probability",
     "section": "2.10: The Law of Total Probability and Bayes’ Rule",
-    "text": "2.10: The Law of Total Probability and Bayes’ Rule\n\nTheorem: Bayes’ Rule\n\nAssume that \\{ B_1, B_2, ..., B_k \\} is a partition of S such that P[B_i] &gt; 0 for i = 1, 2, ..., k. Then\n\n\n\n\\begin{align*}\nP[B_j | A] &= \\frac{P[B_j \\cap A]}{P[A]} \\\\\n&= \\frac{P[B_j \\cap A]}{P[A \\cap B_1] + ... + P[A \\cap B_k]} \\\\\n&= \\frac{P[B_j] \\times P[A|B_j]}{P[B_1]\\times P[A|B_1] + ... + P[B_k] \\times P[A|B_k]} \\\\\n&= \\frac{P[B_j] \\times P[A|B_j] }{\\sum_{i=1}^k P[A|B_i] \\times P[B_i]}\n\\end{align*}"
+    "text": "2.10: The Law of Total Probability and Bayes’ Rule\n\nTheorem: Bayes’ Rule\n\nAssume that \\(\\{ B_1, B_2, ..., B_k \\}\\) is a partition of \\(S\\) such that \\(P[B_i] &gt; 0\\) for \\(i = 1, 2, ..., k\\). Then\n\n\n\\[\n\\begin{align*}\nP[B_j | A] &= \\frac{P[B_j \\cap A]}{P[A]} \\\\\n&= \\frac{P[B_j \\cap A]}{P[A \\cap B_1] + ... + P[A \\cap B_k]} \\\\\n&= \\frac{P[B_j] \\times P[A|B_j]}{P[B_1]\\times P[A|B_1] + ... + P[B_k] \\times P[A|B_k]} \\\\\n&= \\frac{P[B_j] \\times P[A|B_j] }{\\sum_{i=1}^k P[A|B_i] \\times P[B_i]}\n\\end{align*}\n\\]"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#the-law-of-total-probability-and-bayes-rule-4",
@@ -368,7 +368,7 @@
     "href": "files/slides/STA6349-06-17-probability.html#the-law-of-total-probability-and-bayes-rule-8",
     "title": "Introduction to Probability",
     "section": "2.10: The Law of Total Probability and Bayes’ Rule",
-    "text": "2.10: The Law of Total Probability and Bayes’ Rule\n\nLet D be the event that a person has a rare disease with an incidence rate of 1% in the population. i.e., P[D]=0.01. Suppose a machine is used to diagnose the disease. Let C be the eventt aht the disease is confirmed as the diagnosis. Suppose that the probaiblity of the machine falsely confirming the disease when one doesn’t have it (aka, a false positive) is P[C|D^c] = 0.15. Further, the probability that the machine correctly confirms the disease is P[C|D]=0.95.\nNow, suppose that the machine confirms that a person has the disease. What is the probability that the person actually has the disease? i.e., find P[D|C]."
+    "text": "2.10: The Law of Total Probability and Bayes’ Rule\n\nLet \\(D\\) be the event that a person has a rare disease with an incidence rate of 1% in the population. i.e., \\(P[D]=0.01\\). Suppose a machine is used to diagnose the disease. Let \\(C\\) be the eventt aht the disease is confirmed as the diagnosis. Suppose that the probaiblity of the machine falsely confirming the disease when one doesn’t have it (aka, a false positive) is \\(P[C|D^c] = 0.15\\). Further, the probability that the machine correctly confirms the disease is \\(P[C|D]=0.95\\).\nNow, suppose that the machine confirms that a person has the disease. What is the probability that the person actually has the disease? i.e., find \\(P[D|C]\\)."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#the-law-of-total-probability-and-bayes-rule-9",
@@ -382,21 +382,21 @@
     "href": "files/slides/STA6349-06-17-probability.html#numerical-events-and-random-variables",
     "title": "Introduction to Probability",
     "section": "2.11: Numerical Events and Random Variables",
-    "text": "2.11: Numerical Events and Random Variables\n\nRandom variable:\n\nA real-valued function for which the domain is a sample space.\n\nLet Y denote a variable to be measured in an experiment.\n\nBecause the value of Y will vary depending on the outcome of the experiment, it is called a random variable.\nEach point in the sample space will be assigned a real number denoting the value of Y.\n\nThat is, it may vary from one sample point to another."
+    "text": "2.11: Numerical Events and Random Variables\n\nRandom variable:\n\nA real-valued function for which the domain is a sample space.\n\nLet \\(Y\\) denote a variable to be measured in an experiment.\n\nBecause the value of \\(Y\\) will vary depending on the outcome of the experiment, it is called a random variable.\nEach point in the sample space will be assigned a real number denoting the value of \\(Y\\).\n\nThat is, it may vary from one sample point to another."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#numerical-events-and-random-variables-1",
     "href": "files/slides/STA6349-06-17-probability.html#numerical-events-and-random-variables-1",
     "title": "Introduction to Probability",
     "section": "2.11: Numerical Events and Random Variables",
-    "text": "2.11: Numerical Events and Random Variables\n\nDefine an experiment as tossing two coins and observing the results. Let Y equal the number of heads obtained.\n\nIdentify the sample points in S. \nAssign a value to each sample point"
+    "text": "2.11: Numerical Events and Random Variables\n\nDefine an experiment as tossing two coins and observing the results. Let \\(Y\\) equal the number of heads obtained.\n\nIdentify the sample points in S. \nAssign a value to each sample point"
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#numerical-events-and-random-variables-2",
     "href": "files/slides/STA6349-06-17-probability.html#numerical-events-and-random-variables-2",
     "title": "Introduction to Probability",
     "section": "2.11: Numerical Events and Random Variables",
-    "text": "2.11: Numerical Events and Random Variables\n\nDefine an experiment as tossing two coins and observing the results. Let Y equal the number of heads obtained.\n\nIdentify the sample points associated with each value of the random variable Y. \nCompute the probabilities for each value of Y."
+    "text": "2.11: Numerical Events and Random Variables\n\nDefine an experiment as tossing two coins and observing the results. Let \\(Y\\) equal the number of heads obtained.\n\nIdentify the sample points associated with each value of the random variable \\(Y\\). \nCompute the probabilities for each value of \\(Y\\)."
   },
   {
     "objectID": "files/slides/STA6349-06-17-probability.html#homework",
@@ -416,148 +416,148 @@
     "objectID": "files/slides/STA6349-06-24-random-variables.html#introduction",
     "href": "files/slides/STA6349-06-24-random-variables.html#introduction",
     "title": "Random Variables and their Distributions",
-    "section": "Introduction",
-    "text": "Introduction\n\nThe first few lectures come from Mathematical Statistics with Applications, by Wackerly.\n\nWe must understand the underlying probability and random variable theory before moving into the Bayesian world.\n\nWe will be covering the following chapters:\n\nChapter 2: probability theory\nChapter 3: discrete random variables\nChapter 4: continuous random variables"
+    "section": "",
+    "text": "The first few lectures come from Mathematical Statistics with Applications, by Wackerly.\n\nWe must understand the underlying probability and random variable theory before moving into the Bayesian world.\n\nWe will be covering the following chapters:\n\nChapter 2: probability theory\nChapter 3: discrete random variables\nChapter 4: continuous random variables"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#basic-definitions",
     "href": "files/slides/STA6349-06-24-random-variables.html#basic-definitions",
     "title": "Random Variables and their Distributions",
     "section": "3.1: Basic Definitions",
-    "text": "3.1: Basic Definitions\n\nDiscrete random variable: a variable that can assume only a finite or countably infinite number of distinct values.\nProbability distribution of a random variable: collection of probabilities for each value of the random variable.\nNotation:\n\nUppercase letter (e.g., Y) denotes a random variable.\nLowercase letter (e.g., y) denotes a particular value that the random variable may assume.\n\nThe specific observed value, y, is not random."
+    "text": "3.1: Basic Definitions\n\nDiscrete random variable: a variable that can assume only a finite or countably infinite number of distinct values.\nProbability distribution of a random variable: collection of probabilities for each value of the random variable.\nNotation:\n\nUppercase letter (e.g., \\(Y\\)) denotes a random variable.\nLowercase letter (e.g., \\(y\\)) denotes a particular value that the random variable may assume.\n\nThe specific observed value, \\(y\\), is not random."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#probability-distributions-for-discrete-rv",
     "href": "files/slides/STA6349-06-24-random-variables.html#probability-distributions-for-discrete-rv",
     "title": "Random Variables and their Distributions",
     "section": "3.2: Probability Distributions for Discrete RV",
-    "text": "3.2: Probability Distributions for Discrete RV\n\nProbability function for \\boldsymbol Y: sum of the the probabilities of all sample points in S that are assigned the value y\n\nP[Y = y] = p(y): the probability that Y takes on the value y.\n\nProbability distribution for \\boldsymbol Y: a formula, table, or graph that provides p(y) \\ \\forall \\ y.\nTheorem:\n\nFor any discrete probability distribution, the following must be true:\n\n0 \\le p(y) \\le 1 \\  \\forall \\ y\n\\sum_y p(y) = 1 \\ \\forall \\ p(y) &gt; 0."
+    "text": "3.2: Probability Distributions for Discrete RV\n\nProbability function for \\(\\boldsymbol Y\\): sum of the the probabilities of all sample points in \\(S\\) that are assigned the value \\(y\\)\n\n\\(P[Y = y] = p(y)\\): the probability that \\(Y\\) takes on the value \\(y\\).\n\nProbability distribution for \\(\\boldsymbol Y\\): a formula, table, or graph that provides \\(p(y) \\ \\forall \\ y\\).\nTheorem:\n\nFor any discrete probability distribution, the following must be true:\n\n\\(0 \\le p(y) \\le 1 \\  \\forall \\ y\\)\n\\(\\sum_y p(y) = 1 \\ \\forall \\ p(y) &gt; 0\\)."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#expected-values-for-discrete-rv",
     "href": "files/slides/STA6349-06-24-random-variables.html#expected-values-for-discrete-rv",
     "title": "Random Variables and their Distributions",
     "section": "3.3: Expected Values for Discrete RV",
-    "text": "3.3: Expected Values for Discrete RV\n\nExpected value: Let Y be a discrete random variable with probability function p(y). Then the expected value of Y, E[Y], is defined to be\n\n\nE(Y) = \\sum_{y} y p(y)\n\n\nWhen p(y) is an accurate characterization of the population frequency distribution, then the expected value is the population mean.\n\n\nE[Y] = \\mu"
+    "text": "3.3: Expected Values for Discrete RV\n\nExpected value: Let \\(Y\\) be a discrete random variable with probability function \\(p(y)\\). Then the expected value of \\(Y\\), \\(E[Y]\\), is defined to be\n\n\\[\nE(Y) = \\sum_{y} y p(y)\n\\]\n\nWhen \\(p(y)\\) is an accurate characterization of the population frequency distribution, then the expected value is the population mean.\n\n\\[\nE[Y] = \\mu\n\\]"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#expected-values-for-discrete-rv-1",
     "href": "files/slides/STA6349-06-24-random-variables.html#expected-values-for-discrete-rv-1",
     "title": "Random Variables and their Distributions",
     "section": "3.3: Expected Values for Discrete RV",
-    "text": "3.3: Expected Values for Discrete RV\n\nTheorem:\n\nLet Y be a discrete random variable with probability function p(y) and g(Y) be a real-valued function of Y (i.e., a transformed variable). Then the expected value of g(Y) is given by\n\n\n\nE[g(Y)] = \\sum_{y} g(y) p(y)"
+    "text": "3.3: Expected Values for Discrete RV\n\nTheorem:\n\nLet \\(Y\\) be a discrete random variable with probability function \\(p(y)\\) and \\(g(Y)\\) be a real-valued function of \\(Y\\) (i.e., a transformed variable). Then the expected value of \\(g(Y)\\) is given by\n\n\n\\[\nE[g(Y)] = \\sum_{y} g(y) p(y)\n\\]"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#expected-values-for-discrete-rv-2",
     "href": "files/slides/STA6349-06-24-random-variables.html#expected-values-for-discrete-rv-2",
     "title": "Random Variables and their Distributions",
     "section": "3.3: Expected Values for Discrete RV",
-    "text": "3.3: Expected Values for Discrete RV\n\nVariance: if Y is a random variable with mean E[Y] = \\mu, the variance of a random variable Y is defined to be the expected value of (Y-\\mu)^2.\n\n\nV[Y] = E\\left[ (Y-\\mu)^2 \\right]\n\n\nIf p(y) is an accurate characterization of the population frequency distribution, then V(Y) is the population variance,\n\n\nV[Y] = \\sigma^2\n\n\nStandard deviation: the positive square root of V[Y]."
+    "text": "3.3: Expected Values for Discrete RV\n\nVariance: if \\(Y\\) is a random variable with mean \\(E[Y] = \\mu\\), the variance of a random variable \\(Y\\) is defined to be the expected value of \\((Y-\\mu)^2\\).\n\n\\[\nV[Y] = E\\left[ (Y-\\mu)^2 \\right]\n\\]\n\nIf \\(p(y)\\) is an accurate characterization of the population frequency distribution, then \\(V(Y)\\) is the population variance,\n\n\\[\nV[Y] = \\sigma^2\n\\]\n\nStandard deviation: the positive square root of \\(V[Y]\\)."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#expected-values",
     "href": "files/slides/STA6349-06-24-random-variables.html#expected-values",
     "title": "Random Variables and their Distributions",
     "section": "3.3: Expected Values",
-    "text": "3.3: Expected Values\n\nThe probability distribution for a random variable Y is given below.\n\n\n\n\ny\np(y)\n\n\n\n\n0\n1/8\n\n\n1\n1/4\n\n\n2\n3/8\n\n\n3\n1/4\n\n\n\n\nFind the mean of Y."
+    "text": "3.3: Expected Values\n\nThe probability distribution for a random variable \\(Y\\) is given below.\n\n\n\n\n\\(y\\)\n\\(p(y)\\)\n\n\n\n\n0\n1/8\n\n\n1\n1/4\n\n\n2\n3/8\n\n\n3\n1/4\n\n\n\n\nFind the mean of \\(Y\\)."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#expected-values-1",
     "href": "files/slides/STA6349-06-24-random-variables.html#expected-values-1",
     "title": "Random Variables and their Distributions",
     "section": "3.3: Expected Values",
-    "text": "3.3: Expected Values\n\nThe probability distribution for a random variable Y is given below.\n\n\n\n\ny\np(y)\n\n\n\n\n0\n1/8\n\n\n1\n1/4\n\n\n2\n3/8\n\n\n3\n1/4\n\n\n\n\nFind the variance and standard deviation of Y."
+    "text": "3.3: Expected Values\n\nThe probability distribution for a random variable \\(Y\\) is given below.\n\n\n\n\n\\(y\\)\n\\(p(y)\\)\n\n\n\n\n0\n1/8\n\n\n1\n1/4\n\n\n2\n3/8\n\n\n3\n1/4\n\n\n\n\nFind the variance and standard deviation of \\(Y\\)."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#expected-values-2",
     "href": "files/slides/STA6349-06-24-random-variables.html#expected-values-2",
     "title": "Random Variables and their Distributions",
     "section": "3.3: Expected Values",
-    "text": "3.3: Expected Values\n\nTheorem:\n\nLet Y be a discrete random variable with probability function p(y) and c be a constant. Then,\n\n\nE(c) = c\n\nTheorem:\n\nLet Y be a discrete random variable with probability function p(y), g(Y) be a function of Y, and c be a constant. Then,\n\n\nE[cg(Y)] = cE[g(Y)]"
+    "text": "3.3: Expected Values\n\nTheorem:\n\nLet \\(Y\\) be a discrete random variable with probability function \\(p(y)\\) and \\(c\\) be a constant. Then,\n\n\n\\[E(c) = c\\]\n\nTheorem:\n\nLet \\(Y\\) be a discrete random variable with probability function \\(p(y)\\), \\(g(Y)\\) be a function of \\(Y\\), and \\(c\\) be a constant. Then,\n\n\n\\[E[cg(Y)] = cE[g(Y)]\\]"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#expected-values-3",
     "href": "files/slides/STA6349-06-24-random-variables.html#expected-values-3",
     "title": "Random Variables and their Distributions",
     "section": "3.3: Expected Values",
-    "text": "3.3: Expected Values\n\nTheorem:\n\nLet Y be a discrete random variable with probability function p(y), and g_1(Y), g_2(Y), ..., g_k(Y) be k functions of Y. Then,\n\n\nE[g_1(Y) + g_2(Y) + ... + g_k(Y)] = E[g_1(Y)] + E[g_2(Y)] + ... + E[g_k(Y)]\n\nWhy do we need these theorems? To get here –\nTheorem:\n\nLet Y be a discrete random variable with probability function p(y) and mean E[Y] = \\mu. Then,\n\n\nV[Y] = \\sigma^2 = E\\left[(Y-\\mu)^2\\right] = E\\left[Y^2\\right] - \\mu^2"
+    "text": "3.3: Expected Values\n\nTheorem:\n\nLet \\(Y\\) be a discrete random variable with probability function \\(p(y)\\), and \\(g_1(Y), g_2(Y), ..., g_k(Y)\\) be \\(k\\) functions of \\(Y\\). Then,\n\n\n\\[E[g_1(Y) + g_2(Y) + ... + g_k(Y)] = E[g_1(Y)] + E[g_2(Y)] + ... + E[g_k(Y)]\\]\n\nWhy do we need these theorems? To get here –\nTheorem:\n\nLet \\(Y\\) be a discrete random variable with probability function \\(p(y)\\) and mean \\(E[Y] = \\mu\\). Then,\n\n\n\\[V[Y] = \\sigma^2 = E\\left[(Y-\\mu)^2\\right] = E\\left[Y^2\\right] - \\mu^2 \\]"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#expected-values-4",
     "href": "files/slides/STA6349-06-24-random-variables.html#expected-values-4",
     "title": "Random Variables and their Distributions",
     "section": "3.3: Expected Values",
-    "text": "3.3: Expected Values\n\nThe probability distribution for a random variable Y is given below.\n\n\n\n\ny\np(y)\n\n\n\n\n0\n1/8\n\n\n1\n1/4\n\n\n2\n3/8\n\n\n3\n1/4\n\n\n\n\nUse the previous theorem to find V[Y] and compare to our previous answer.\n\nRecall that \\mu=1.75."
+    "text": "3.3: Expected Values\n\nThe probability distribution for a random variable \\(Y\\) is given below.\n\n\n\n\n\\(y\\)\n\\(p(y)\\)\n\n\n\n\n0\n1/8\n\n\n1\n1/4\n\n\n2\n3/8\n\n\n3\n1/4\n\n\n\n\nUse the previous theorem to find \\(V[Y]\\) and compare to our previous answer.\n\nRecall that \\(\\mu=1.75\\)."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#binomial-probability-distribution",
     "href": "files/slides/STA6349-06-24-random-variables.html#binomial-probability-distribution",
     "title": "Random Variables and their Distributions",
     "section": "3.4: Binomial Probability Distribution",
-    "text": "3.4: Binomial Probability Distribution\n\nBinomial experiment:\n\nThe experiment consists of a fixed number, n, of identical trials.\nEach trial results in one of two outcomes: success (S) or failure (F).\nThe probability of success on a single trial is equal to some value p and remains the same from trial to trial.\n\nThe probability of failure is equal to q = (1-p).\n\nThe trials are independent.\nThe random variable of interest is Y, the number of successes observed during the n trials."
+    "text": "3.4: Binomial Probability Distribution\n\nBinomial experiment:\n\nThe experiment consists of a fixed number, \\(n\\), of identical trials.\nEach trial results in one of two outcomes: success (\\(S\\)) or failure (\\(F\\)).\nThe probability of success on a single trial is equal to some value \\(p\\) and remains the same from trial to trial.\n\nThe probability of failure is equal to \\(q = (1-p)\\).\n\nThe trials are independent.\nThe random variable of interest is \\(Y\\), the number of successes observed during the \\(n\\) trials."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#binomial-probability-distribution-1",
     "href": "files/slides/STA6349-06-24-random-variables.html#binomial-probability-distribution-1",
     "title": "Random Variables and their Distributions",
     "section": "3.4: Binomial Probability Distribution",
-    "text": "3.4: Binomial Probability Distribution\n\nA random variable Y is said to have a binomial distribution based on n trials with success probability p iff\n\n\np(y) = {n \\choose y}p^y q^{n-y}, \\text{ where } y = 0, 1, 2, ..., n, \\text{ and } 0 \\le p \\le1\n\n\nLet Y be a binomial random variable based on n trials and success probability p. Then\n\n\nE[Y] = \\mu = np \\ \\ \\ \\text{and} \\ \\ \\ V[Y] = \\sigma^2 = npq\n\n\nSee Wackerly pg. 107 for derivation."
+    "text": "3.4: Binomial Probability Distribution\n\nA random variable \\(Y\\) is said to have a binomial distribution based on \\(n\\) trials with success probability \\(p\\) iff\n\n\\[\np(y) = {n \\choose y}p^y q^{n-y}, \\text{ where } y = 0, 1, 2, ..., n, \\text{ and } 0 \\le p \\le1\n\\]\n\nLet \\(Y\\) be a binomial random variable based on n trials and success probability \\(p\\). Then\n\n\\[\nE[Y] = \\mu = np \\ \\ \\ \\text{and} \\ \\ \\ V[Y] = \\sigma^2 = npq\n\\]\n\nSee Wackerly pg. 107 for derivation."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#binomial-probability-distribution-2",
     "href": "files/slides/STA6349-06-24-random-variables.html#binomial-probability-distribution-2",
     "title": "Random Variables and their Distributions",
     "section": "3.4: Binomial Probability Distribution",
-    "text": "3.4: Binomial Probability Distribution\n\nWe can use R to find information related to the binomial distribution.\n\nP[X = x]: dbinom(x, size, prob)\nP[X \\le x]: pbinom(q, size, prob)\nP[X &gt; x]: pbinom(q, size, prob, lower.tail = FALSE)\n\nIn the functions,\n\nx or q is the value of X we are interested in\nsize is the sample size (n)\nprob is the probability of success, \\pi\nlower.tail has two options:\n\nTRUE (default) returns P[X \\le x]\nFALSE returns P[X &gt; x]"
+    "text": "3.4: Binomial Probability Distribution\n\nWe can use R to find information related to the binomial distribution.\n\n\\(P[X = x]\\): dbinom(x, size, prob)\n\\(P[X \\le x]\\): pbinom(q, size, prob)\n\\(P[X &gt; x]\\): pbinom(q, size, prob, lower.tail = FALSE)\n\nIn the functions,\n\nx or q is the value of \\(X\\) we are interested in\nsize is the sample size (\\(n\\))\nprob is the probability of success, \\(\\pi\\)\nlower.tail has two options:\n\nTRUE (default) returns \\(P[X \\le x]\\)\nFALSE returns \\(P[X &gt; x]\\)"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#binomial-probability-distribution-3",
     "href": "files/slides/STA6349-06-24-random-variables.html#binomial-probability-distribution-3",
     "title": "Random Variables and their Distributions",
     "section": "3.4: Binomial Probability Distribution",
-    "text": "3.4: Binomial Probability Distribution\n\nThe manufacturer of a dairy drink wishes to compare a new formula (B) with that of the standard formula (A). Each of four judges perform a blinded taste test and report which glass he or she most enjoyed. Suppose that the two formulas are equally attractive.\n\nWhat is the probability distribution? \nWhat is the mean of the distribution? \nWhat is the variance of the distribution?"
+    "text": "3.4: Binomial Probability Distribution\n\nThe manufacturer of a dairy drink wishes to compare a new formula (\\(B\\)) with that of the standard formula (\\(A\\)). Each of four judges perform a blinded taste test and report which glass he or she most enjoyed. Suppose that the two formulas are equally attractive.\n\nWhat is the probability distribution? \nWhat is the mean of the distribution? \nWhat is the variance of the distribution?"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#binomial-probability-distribution-4",
     "href": "files/slides/STA6349-06-24-random-variables.html#binomial-probability-distribution-4",
     "title": "Random Variables and their Distributions",
     "section": "3.4: Binomial Probability Distribution",
-    "text": "3.4: Binomial Probability Distribution\n\nThe manufacturer of a dairy drink wishes to compare a new formula (B) with that of the standard formula (A). Each of four judges perform a blinded taste test and report which glass he or she most enjoyed. Suppose that the two formulas are equally attractive.\nUse R to find:\n\nP[X = 2]\nP[X &gt; 2]\nP[X &lt; 4]"
+    "text": "3.4: Binomial Probability Distribution\n\nThe manufacturer of a dairy drink wishes to compare a new formula (\\(B\\)) with that of the standard formula (\\(A\\)). Each of four judges perform a blinded taste test and report which glass he or she most enjoyed. Suppose that the two formulas are equally attractive.\nUse R to find:\n\n\\(P[X = 2]\\)\n\\(P[X &gt; 2]\\)\n\\(P[X &lt; 4]\\)"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#binomial-probability-distribution-5",
     "href": "files/slides/STA6349-06-24-random-variables.html#binomial-probability-distribution-5",
     "title": "Random Variables and their Distributions",
     "section": "3.4: Binomial Probability Distribution",
-    "text": "3.4: Binomial Probability Distribution\n\nThe manufacturer of a dairy drink wishes to compare a new formula (B) with that of the standard formula (A). Each of four judges perform a blinded taste test and report which glass he or she most enjoyed. Suppose that the two formulas are equally attractive.\nUse R to find:\n\nP[X = 2]\n\n\n\ndbinom(x = 2, size = 4, prob = 0.5)\n\n[1] 0.375"
+    "text": "3.4: Binomial Probability Distribution\n\nThe manufacturer of a dairy drink wishes to compare a new formula (\\(B\\)) with that of the standard formula (\\(A\\)). Each of four judges perform a blinded taste test and report which glass he or she most enjoyed. Suppose that the two formulas are equally attractive.\nUse R to find:\n\n\\(P[X = 2]\\)\n\n\n\ndbinom(x = 2, size = 4, prob = 0.5)\n\n[1] 0.375"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#binomial-probability-distribution-6",
     "href": "files/slides/STA6349-06-24-random-variables.html#binomial-probability-distribution-6",
     "title": "Random Variables and their Distributions",
     "section": "3.4: Binomial Probability Distribution",
-    "text": "3.4: Binomial Probability Distribution\n\nThe manufacturer of a dairy drink wishes to compare a new formula (B) with that of the standard formula (A). Each of four judges perform a blinded taste test and report which glass he or she most enjoyed. Suppose that the two formulas are equally attractive.\nUse R to find:\n\nP[X &gt; 2]\n\n\n\npbinom(q = 2, size = 4, prob = 0.5, lower.tail = FALSE)\n\n[1] 0.3125"
+    "text": "3.4: Binomial Probability Distribution\n\nThe manufacturer of a dairy drink wishes to compare a new formula (\\(B\\)) with that of the standard formula (\\(A\\)). Each of four judges perform a blinded taste test and report which glass he or she most enjoyed. Suppose that the two formulas are equally attractive.\nUse R to find:\n\n\\(P[X &gt; 2]\\)\n\n\n\npbinom(q = 2, size = 4, prob = 0.5, lower.tail = FALSE)\n\n[1] 0.3125"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#binomial-probability-distribution-7",
     "href": "files/slides/STA6349-06-24-random-variables.html#binomial-probability-distribution-7",
     "title": "Random Variables and their Distributions",
     "section": "3.4: Binomial Probability Distribution",
-    "text": "3.4: Binomial Probability Distribution\n\nThe manufacturer of a dairy drink wishes to compare a new formula (B) with that of the standard formula (A). Each of four judges perform a blinded taste test and report which glass he or she most enjoyed. Suppose that the two formulas are equally attractive.\nUse R to find:\n\nP[X &lt; 4] = P[X \\le 3]\n\n\n\npbinom(q = 3, size = 4, prob = 0.5)\n\n[1] 0.9375"
+    "text": "3.4: Binomial Probability Distribution\n\nThe manufacturer of a dairy drink wishes to compare a new formula (\\(B\\)) with that of the standard formula (\\(A\\)). Each of four judges perform a blinded taste test and report which glass he or she most enjoyed. Suppose that the two formulas are equally attractive.\nUse R to find:\n\n\\(P[X &lt; 4] = P[X \\le 3]\\)\n\n\n\npbinom(q = 3, size = 4, prob = 0.5)\n\n[1] 0.9375"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#poisson-probability-distribution",
     "href": "files/slides/STA6349-06-24-random-variables.html#poisson-probability-distribution",
     "title": "Random Variables and their Distributions",
     "section": "3.8: Poisson Probability Distribution",
-    "text": "3.8: Poisson Probability Distribution\n\nWe often use the Poisson distribution to model count data.\nA random variable Y is said to have a Poisson probability distribution iff\n\n\np(y) = \\frac{\\lambda^y}{y!}e^{-\\lambda}, \\text{ where } y=0,1,2,..., \\text{ and } \\lambda &gt; 0\n\n\nIf Y is a random variable with a Poisson distribution with parameter \\lambda, then\n\n\nE[Y] = \\mu = \\lambda \\text{ and } V[Y] = \\sigma^2 = \\lambda\n\n\nSee Wackerly pg. 134 for derivation."
+    "text": "3.8: Poisson Probability Distribution\n\nWe often use the Poisson distribution to model count data.\nA random variable \\(Y\\) is said to have a Poisson probability distribution iff\n\n\\[\np(y) = \\frac{\\lambda^y}{y!}e^{-\\lambda}, \\text{ where } y=0,1,2,..., \\text{ and } \\lambda &gt; 0\n\\]\n\nIf \\(Y\\) is a random variable with a Poisson distribution with parameter \\(\\lambda\\), then\n\n\\[\nE[Y] = \\mu = \\lambda \\text{ and } V[Y] = \\sigma^2 = \\lambda\n\\]\n\nSee Wackerly pg. 134 for derivation."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#poisson-probability-distribution-1",
     "href": "files/slides/STA6349-06-24-random-variables.html#poisson-probability-distribution-1",
     "title": "Random Variables and their Distributions",
     "section": "3.8: Poisson Probability Distribution",
-    "text": "3.8: Poisson Probability Distribution\n\nWe can use R to find information related to the Poisson distribution.\n\nP[X = x]: dpois(x, lambda)\n\nP[X \\le x]: ppois(q, lambda)\n\nP[X &gt; x]: ppois(q, lambda, lower.tail = FALSE)\n\nIn the functions:\n\nx or q is the value of X we are interested in\n\nlambda is the rate of occurrence\nlower.tail has two options:\n\nTRUE (default) returns P[X \\le x]\n\nFALSE returns P[X &gt; x]"
+    "text": "3.8: Poisson Probability Distribution\n\nWe can use R to find information related to the Poisson distribution.\n\n\\(P[X = x]\\): dpois(x, lambda)\n\n\\(P[X \\le x]\\): ppois(q, lambda)\n\n\\(P[X &gt; x]\\): ppois(q, lambda, lower.tail = FALSE)\n\nIn the functions:\n\nx or q is the value of \\(X\\) we are interested in\n\nlambda is the rate of occurrence\nlower.tail has two options:\n\nTRUE (default) returns \\(P[X \\le x]\\)\n\nFALSE returns \\(P[X &gt; x]\\)"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#poisson-probability-distribution-2",
@@ -599,49 +599,49 @@
     "href": "files/slides/STA6349-06-24-random-variables.html#probability-distributions-for-continuous-rv",
     "title": "Random Variables and their Distributions",
     "section": "4.2: Probability Distributions for Continuous RV",
-    "text": "4.2: Probability Distributions for Continuous RV\n\nThe distribution function of Y (any random varaible), denoted by F(y), is such that\n\nF(y) = P[Y \\le y] \\text{ for } -\\infty &lt; y &lt; \\infty\n\nTheorem: Properties of a Distribution Function\n\nIf F(y) is a distribution function, then\n\nF(-\\infty)   \\equiv \\underset{y \\to -\\infty}{\\lim} F(y) = 0\nF(\\infty)    \\equiv \\underset{y \\to \\infty}{\\lim} F(y) = 1\nF(y) is a nondecreasing function of y.\n\nIf y_1 and y_2 are any values such that y_1 &lt; y_2, then F(y_1) \\le F(y_2)."
+    "text": "4.2: Probability Distributions for Continuous RV\n\nThe distribution function of \\(Y\\) (any random varaible), denoted by \\(F(y)\\), is such that\n\n\\[F(y) = P[Y \\le y] \\text{ for } -\\infty &lt; y &lt; \\infty\\]\n\nTheorem: Properties of a Distribution Function\n\nIf \\(F(y)\\) is a distribution function, then\n\n\\(F(-\\infty)   \\equiv \\underset{y \\to -\\infty}{\\lim} F(y) = 0\\)\n\\(F(\\infty)    \\equiv \\underset{y \\to \\infty}{\\lim} F(y) = 1\\)\n\\(F(y)\\) is a nondecreasing function of \\(y\\).\n\nIf \\(y_1\\) and \\(y_2\\) are any values such that \\(y_1 &lt; y_2\\), then \\(F(y_1) \\le F(y_2)\\)."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#probability-distributions-for-continuous-rv-1",
     "href": "files/slides/STA6349-06-24-random-variables.html#probability-distributions-for-continuous-rv-1",
     "title": "Random Variables and their Distributions",
     "section": "4.2: Probability Distributions for Continuous RV",
-    "text": "4.2: Probability Distributions for Continuous RV\n\nContinuous random variable:\n\nA random variable Y with distribution function F(y) is said to be continuous if F(y) is continuous for -\\infty &lt; y &lt; \\infty.\n\nIf Y is a continuous random variable, then for any real number y, P[Y = y] = 0.\n\ni.e., we must remember to find the probability of an interval."
+    "text": "4.2: Probability Distributions for Continuous RV\n\nContinuous random variable:\n\nA random variable \\(Y\\) with distribution function \\(F(y)\\) is said to be continuous if \\(F(y)\\) is continuous for \\(-\\infty &lt; y &lt; \\infty\\).\n\nIf \\(Y\\) is a continuous random variable, then for any real number \\(y\\), \\(P[Y = y] = 0\\).\n\ni.e., we must remember to find the probability of an interval."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#probability-distributions-for-continuous-rv-2",
     "href": "files/slides/STA6349-06-24-random-variables.html#probability-distributions-for-continuous-rv-2",
     "title": "Random Variables and their Distributions",
     "section": "4.2: Probability Distributions for Continuous RV",
-    "text": "4.2: Probability Distributions for Continuous RV\n\nProbability density function:\n\nLet F(y) be the cumulative density function for a continuous random variable, Y. Then\n\n\np[Y = y] = f(y) = \\frac{dF(y)}{dy} = F'(y).\n\nTheorem: Properties of a Density Function\n\nIf f(y) is a density function for a continuous random variable, then\n\nf(y) \\ge 0 \\ \\forall y, \\ -\\infty &lt; y &lt; \\infty.\n\\int_{-\\infty}^{\\infty} f(y) dy = 1."
+    "text": "4.2: Probability Distributions for Continuous RV\n\nProbability density function:\n\nLet \\(F(y)\\) be the cumulative density function for a continuous random variable, \\(Y\\). Then\n\n\n\\[p[Y = y] = f(y) = \\frac{dF(y)}{dy} = F'(y).\\]\n\nTheorem: Properties of a Density Function\n\nIf \\(f(y)\\) is a density function for a continuous random variable, then\n\n\\(f(y) \\ge 0 \\ \\forall y, \\ -\\infty &lt; y &lt; \\infty\\).\n\\(\\int_{-\\infty}^{\\infty} f(y) dy = 1\\)."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#probability-distributions-for-continuous-rv-3",
     "href": "files/slides/STA6349-06-24-random-variables.html#probability-distributions-for-continuous-rv-3",
     "title": "Random Variables and their Distributions",
     "section": "4.2: Probability Distributions for Continuous RV",
-    "text": "4.2: Probability Distributions for Continuous RV\n\nCumulative density function:\n\nLet f(y) be the probability density function for a continuous random variable, Y. Then\n\n\nP[Y \\le y] = F(y) = \\int_{-\\infty}^y f(t) dt, \\text{ for } y \\in {\\rm I\\!R}."
+    "text": "4.2: Probability Distributions for Continuous RV\n\nCumulative density function:\n\nLet \\(f(y)\\) be the probability density function for a continuous random variable, \\(Y\\). Then\n\n\n\\[P[Y \\le y] = F(y) = \\int_{-\\infty}^y f(t) dt, \\text{ for } y \\in {\\rm I\\!R}.\\]"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#probability-distributions-for-continuous-rv-4",
     "href": "files/slides/STA6349-06-24-random-variables.html#probability-distributions-for-continuous-rv-4",
     "title": "Random Variables and their Distributions",
     "section": "4.2: Probability Distributions for Continuous RV",
-    "text": "4.2: Probability Distributions for Continuous RV\n\nTheorem\n\nIf the random variable Y has density function f(y) and a &lt; b, then the probability that Y falls in the interval [a, b] is\n\n\n\nP[a \\le Y \\le b] = \\int_a^b f(y) dy."
+    "text": "4.2: Probability Distributions for Continuous RV\n\nTheorem\n\nIf the random variable \\(Y\\) has density function \\(f(y)\\) and \\(a &lt; b\\), then the probability that \\(Y\\) falls in the interval \\([a, b]\\) is\n\n\n\\[\nP[a \\le Y \\le b] = \\int_a^b f(y) dy.\n\\]"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#expected-values-for-continuous-rv",
     "href": "files/slides/STA6349-06-24-random-variables.html#expected-values-for-continuous-rv",
     "title": "Random Variables and their Distributions",
     "section": "4.3: Expected Values for Continuous RV",
-    "text": "4.3: Expected Values for Continuous RV\n\nExpected value:\n\nThe expected value of a continuous variable Y is\n\n\n\nE[Y] = \\int_{-\\infty}^{\\infty} y f(y) \\ dy\n\n\nThis is the continuous version of the expected value for a discrete random variable,\n\n\nE[Y] = \\sum_y y p(y)"
+    "text": "4.3: Expected Values for Continuous RV\n\nExpected value:\n\nThe expected value of a continuous variable \\(Y\\) is\n\n\n\\[\nE[Y] = \\int_{-\\infty}^{\\infty} y f(y) \\ dy\n\\]\n\nThis is the continuous version of the expected value for a discrete random variable,\n\n\\[\nE[Y] = \\sum_y y p(y)\n\\]"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#expected-values-for-continuous-rv-1",
     "href": "files/slides/STA6349-06-24-random-variables.html#expected-values-for-continuous-rv-1",
     "title": "Random Variables and their Distributions",
     "section": "4.3: Expected Values for Continuous RV",
-    "text": "4.3: Expected Values for Continuous RV\n\nTheorem:\n\nLet g(Y) be a function of Y; then the expected value of g(Y) is given by\n\n\n\nE\\left[ g(Y) \\right] = \\int_{-\\infty}^{\\infty} g(y) f(y) \\ dy\n\n\nTheorem:\n\nLet c be a constant and let g(Y), g_1(Y), g_2(Y), …, g_k(Y) be functions of a continuous random variable, Y. Then the following results hold:\n\nE[c] = c\nE\\left[cg(Y)] = cE[g(Y)\\right]\nE\\left[g_1(Y)+...+g_k(Y)\\right] = E\\left[ g_1(Y) \\right] + ... + E\\left[ g_k(Y) \\right]"
+    "text": "4.3: Expected Values for Continuous RV\n\nTheorem:\n\nLet \\(g(Y)\\) be a function of \\(Y\\); then the expected value of \\(g(Y)\\) is given by\n\n\n\\[\nE\\left[ g(Y) \\right] = \\int_{-\\infty}^{\\infty} g(y) f(y) \\ dy\n\\]\n\nTheorem:\n\nLet \\(c\\) be a constant and let \\(g(Y)\\), \\(g_1(Y)\\), \\(g_2(Y)\\), …, \\(g_k(Y)\\) be functions of a continuous random variable, \\(Y\\). Then the following results hold:\n\n\\(E[c] = c\\)\n\\(E\\left[cg(Y)] = cE[g(Y)\\right]\\)\n\\(E\\left[g_1(Y)+...+g_k(Y)\\right] = E\\left[ g_1(Y) \\right] + ... + E\\left[ g_k(Y) \\right]\\)"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#uniform-probability-distribution",
@@ -655,49 +655,49 @@
     "href": "files/slides/STA6349-06-24-random-variables.html#uniform-probability-distribution-1",
     "title": "Random Variables and their Distributions",
     "section": "4.4: Uniform Probability Distribution",
-    "text": "4.4: Uniform Probability Distribution\n\nA random variable Y is said to have a uniform distribution iff\n\n\nf(y) = \\frac{1}{\\theta_2 - \\theta_1}, \\ \\theta_1 \\le y \\le \\theta_2\n\n\nIf \\theta_1 &lt; \\theta_2 and Y is a uniformly distributed r.v. on the interval (\\theta_1, \\theta_2), then\n\n\nE[Y] = \\mu = \\frac{\\theta_1+\\theta_2}{2} \\ \\ \\ \\text{and} \\ \\ \\ V[Y] = \\sigma^2 = \\frac{(\\theta_2-\\theta_1)^2}{12}\n\n\nSee Wackerly pg. 176 for derivation."
+    "text": "4.4: Uniform Probability Distribution\n\nA random variable \\(Y\\) is said to have a uniform distribution iff\n\n\\[\nf(y) = \\frac{1}{\\theta_2 - \\theta_1}, \\ \\theta_1 \\le y \\le \\theta_2\n\\]\n\nIf \\(\\theta_1 &lt; \\theta_2\\) and \\(Y\\) is a uniformly distributed r.v. on the interval \\((\\theta_1, \\theta_2)\\), then\n\n\\[\nE[Y] = \\mu = \\frac{\\theta_1+\\theta_2}{2} \\ \\ \\ \\text{and} \\ \\ \\ V[Y] = \\sigma^2 = \\frac{(\\theta_2-\\theta_1)^2}{12}\n\\]\n\nSee Wackerly pg. 176 for derivation."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#uniform-probability-distribution-2",
     "href": "files/slides/STA6349-06-24-random-variables.html#uniform-probability-distribution-2",
     "title": "Random Variables and their Distributions",
     "section": "4.4: Uniform Probability Distribution",
-    "text": "4.4: Uniform Probability Distribution\n\nAn industrial psychologist has determined that it takes a worker between 9 and 15 minutes to complete a task on an automobile assembly line. If the time to complete the task is uniformly distributed over the interval 9 \\le y \\le 15, then determine:\n\nThe probability distribution. \nThe mean of the distribution. \nThe variance and standard deviation of the distribution."
+    "text": "4.4: Uniform Probability Distribution\n\nAn industrial psychologist has determined that it takes a worker between 9 and 15 minutes to complete a task on an automobile assembly line. If the time to complete the task is uniformly distributed over the interval \\(9 \\le y \\le 15\\), then determine:\n\nThe probability distribution. \nThe mean of the distribution. \nThe variance and standard deviation of the distribution."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#uniform-probability-distribution-3",
     "href": "files/slides/STA6349-06-24-random-variables.html#uniform-probability-distribution-3",
     "title": "Random Variables and their Distributions",
     "section": "4.4: Uniform Probability Distribution",
-    "text": "4.4: Uniform Probability Distribution\n\nWe can use R to find information related to the uniform distribution:\n\nP[X \\le x]: punif(q, min, max)\n\nP[X \\ge x]: punif(q, min, max, lower.tail = FALSE)\n\nIn the functions:\n\nq is the value of X we are interested in\n\nmin is the lower bound of the distribution\n\nmax is the upper bound of the distribution\n\nlower.tail has two options:\n\nTRUE (default) returns P[X \\le x]\n\nFALSE returns P[X \\ge x]"
+    "text": "4.4: Uniform Probability Distribution\n\nWe can use R to find information related to the uniform distribution:\n\n\\(P[X \\le x]\\): punif(q, min, max)\n\n\\(P[X \\ge x]\\): punif(q, min, max, lower.tail = FALSE)\n\nIn the functions:\n\nq is the value of \\(X\\) we are interested in\n\nmin is the lower bound of the distribution\n\nmax is the upper bound of the distribution\n\nlower.tail has two options:\n\nTRUE (default) returns \\(P[X \\le x]\\)\n\nFALSE returns \\(P[X \\ge x]\\)"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#uniform-probability-distribution-4",
     "href": "files/slides/STA6349-06-24-random-variables.html#uniform-probability-distribution-4",
     "title": "Random Variables and their Distributions",
     "section": "4.4: Uniform Probability Distribution",
-    "text": "4.4: Uniform Probability Distribution\n\nAn industrial psychologist has determined that it takes a worker between 9 and 15 minutes to complete a task on an automobile assembly line. If the time to complete the task is uniformly distributed over the interval 9 \\le y \\le 15, then determine the following probabilities:\n\nA worker takes fewer than 13 minutes.\nA worker takes at least 11 minutes.\nA worker takes between 14 and 15 minutes."
+    "text": "4.4: Uniform Probability Distribution\n\nAn industrial psychologist has determined that it takes a worker between 9 and 15 minutes to complete a task on an automobile assembly line. If the time to complete the task is uniformly distributed over the interval \\(9 \\le y \\le 15\\), then determine the following probabilities:\n\nA worker takes fewer than 13 minutes.\nA worker takes at least 11 minutes.\nA worker takes between 14 and 15 minutes."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#uniform-probability-distribution-5",
     "href": "files/slides/STA6349-06-24-random-variables.html#uniform-probability-distribution-5",
     "title": "Random Variables and their Distributions",
     "section": "4.4: Uniform Probability Distribution",
-    "text": "4.4: Uniform Probability Distribution\n\nAn industrial psychologist has determined that it takes a worker between 9 and 15 minutes to complete a task on an automobile assembly line. If the time to complete the task is uniformly distributed over the interval 9 \\le y \\le 15, then determine the following probabilities:\n\nA worker takes fewer than 13 minutes.\n\n\n\npunif(13, 9, 15)\n\n[1] 0.6666667"
+    "text": "4.4: Uniform Probability Distribution\n\nAn industrial psychologist has determined that it takes a worker between 9 and 15 minutes to complete a task on an automobile assembly line. If the time to complete the task is uniformly distributed over the interval \\(9 \\le y \\le 15\\), then determine the following probabilities:\n\nA worker takes fewer than 13 minutes.\n\n\n\npunif(13, 9, 15)\n\n[1] 0.6666667"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#uniform-probability-distribution-6",
     "href": "files/slides/STA6349-06-24-random-variables.html#uniform-probability-distribution-6",
     "title": "Random Variables and their Distributions",
     "section": "4.4: Uniform Probability Distribution",
-    "text": "4.4: Uniform Probability Distribution\n\nAn industrial psychologist has determined that it takes a worker between 9 and 15 minutes to complete a task on an automobile assembly line. If the time to complete the task is uniformly distributed over the interval 9 \\le y \\le 15, then determine the following probabilities:\n\nA worker takes at least 11 minutes.\n\n\n\npunif(11, 9, 15, lower.tail = TRUE)\n\n[1] 0.3333333"
+    "text": "4.4: Uniform Probability Distribution\n\nAn industrial psychologist has determined that it takes a worker between 9 and 15 minutes to complete a task on an automobile assembly line. If the time to complete the task is uniformly distributed over the interval \\(9 \\le y \\le 15\\), then determine the following probabilities:\n\nA worker takes at least 11 minutes.\n\n\n\npunif(11, 9, 15, lower.tail = TRUE)\n\n[1] 0.3333333"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#uniform-probability-distribution-7",
     "href": "files/slides/STA6349-06-24-random-variables.html#uniform-probability-distribution-7",
     "title": "Random Variables and their Distributions",
     "section": "4.4: Uniform Probability Distribution",
-    "text": "4.4: Uniform Probability Distribution\n\nAn industrial psychologist has determined that it takes a worker between 9 and 15 minutes to complete a task on an automobile assembly line. If the time to complete the task is uniformly distributed over the interval 9 \\le y \\le 15, then determine the following probabilities:\n\nA worker takes between 14 and 15 minutes.\n\n\n\npunif(15, 9, 15) - punif(14, 9, 15)\n\n[1] 0.1666667"
+    "text": "4.4: Uniform Probability Distribution\n\nAn industrial psychologist has determined that it takes a worker between 9 and 15 minutes to complete a task on an automobile assembly line. If the time to complete the task is uniformly distributed over the interval \\(9 \\le y \\le 15\\), then determine the following probabilities:\n\nA worker takes between 14 and 15 minutes.\n\n\n\npunif(15, 9, 15) - punif(14, 9, 15)\n\n[1] 0.1666667"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#normal-probability-distribution",
@@ -711,63 +711,63 @@
     "href": "files/slides/STA6349-06-24-random-variables.html#normal-probability-distribution-1",
     "title": "Random Variables and their Distributions",
     "section": "4.5: Normal Probability Distribution",
-    "text": "4.5: Normal Probability Distribution\n\nA random variable Y is said to have a normal distribution iff, for \\sigma &gt; 0 and -\\infty &lt; \\mu &lt; \\infty,\n\n\nf(y) = \\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-(y-\\mu)^2/(2\\sigma^2)}\n\n\nIf Y is a random variable normally distributed with parameters \\mu and \\sigma, then\n\n\nE[Y] = \\mu =  \\ \\ \\ \\text{and} \\ \\ \\ V[Y] = \\sigma^2"
+    "text": "4.5: Normal Probability Distribution\n\nA random variable \\(Y\\) is said to have a normal distribution iff, for \\(\\sigma &gt; 0\\) and \\(-\\infty &lt; \\mu &lt; \\infty\\),\n\n\\[\nf(y) = \\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-(y-\\mu)^2/(2\\sigma^2)}\n\\]\n\nIf \\(Y\\) is a random variable normally distributed with parameters \\(\\mu\\) and \\(\\sigma\\), then\n\n\\[\nE[Y] = \\mu =  \\ \\ \\ \\text{and} \\ \\ \\ V[Y] = \\sigma^2\n\\]"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#normal-probability-distribution-2",
     "href": "files/slides/STA6349-06-24-random-variables.html#normal-probability-distribution-2",
     "title": "Random Variables and their Distributions",
     "section": "4.5: Normal Probability Distribution",
-    "text": "4.5: Normal Probability Distribution\n\nWe can use R to find information related to the normal distribution.\n\nP[X \\le x]: pnorm(q, mean, sd)\n\nP[X \\ge x]: pnorm(q, mean, sd, lower.tail = FALSE)\n\nIn the functions:\n\nq is the value of X we are interested in\n\nmean is the population mean \\mu\n\nsd is the standard deviation \\sigma\n\nlower.tail has two options:\n\nTRUE (default) returns P[X \\le x]\n\nFALSE returns P[X \\ge x]"
+    "text": "4.5: Normal Probability Distribution\n\nWe can use R to find information related to the normal distribution.\n\n\\(P[X \\le x]\\): pnorm(q, mean, sd)\n\n\\(P[X \\ge x]\\): pnorm(q, mean, sd, lower.tail = FALSE)\n\nIn the functions:\n\nq is the value of \\(X\\) we are interested in\n\nmean is the population mean \\(\\mu\\)\n\nsd is the standard deviation \\(\\sigma\\)\n\nlower.tail has two options:\n\nTRUE (default) returns \\(P[X \\le x]\\)\n\nFALSE returns \\(P[X \\ge x]\\)"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#normal-probability-distribution-3",
     "href": "files/slides/STA6349-06-24-random-variables.html#normal-probability-distribution-3",
     "title": "Random Variables and their Distributions",
     "section": "4.5: Normal Probability Distribution",
-    "text": "4.5: Normal Probability Distribution\n\nA random variable Y is said to have a standard normal distribution iff\n\n\nY \\sim N(\\mu=0,\\sigma=1)\n\n\nThe normal distribution is then simplified to\n\n\nf(y) = \\frac{1}{\\sqrt{2\\pi}} e^{-y^2/2}\n\n\nNote that in all cases of the normal distribution, we assume -\\infty &lt; y &lt; \\infty."
+    "text": "4.5: Normal Probability Distribution\n\nA random variable \\(Y\\) is said to have a standard normal distribution iff\n\n\\[\nY \\sim N(\\mu=0,\\sigma=1)\n\\]\n\nThe normal distribution is then simplified to\n\n\\[\nf(y) = \\frac{1}{\\sqrt{2\\pi}} e^{-y^2/2}\n\\]\n\nNote that in all cases of the normal distribution, we assume \\(-\\infty &lt; y &lt; \\infty\\)."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#normal-probability-distribution-4",
     "href": "files/slides/STA6349-06-24-random-variables.html#normal-probability-distribution-4",
     "title": "Random Variables and their Distributions",
     "section": "4.5: Normal Probability Distribution",
-    "text": "4.5: Normal Probability Distribution\n\nWhen using pnorm(), the default values for mean and sd are 1 and 0.\nThus, if we have the standard normal our R functions simplify to:\n\nP[Z \\le z]: pnorm(z)\n\nP[Z \\ge z]: pnorm(z, lower.tail = FALSE)\n\nIn the functions:\n\nq is the z-score value of interest\n\nlower.tail = TRUE returns P[Z \\le z]\n\nlower.tail = FALSE returns P[Z \\ge z]"
+    "text": "4.5: Normal Probability Distribution\n\nWhen using pnorm(), the default values for mean and sd are 1 and 0.\nThus, if we have the standard normal our R functions simplify to:\n\n\\(P[Z \\le z]\\): pnorm(z)\n\n\\(P[Z \\ge z]\\): pnorm(z, lower.tail = FALSE)\n\nIn the functions:\n\nq is the z-score value of interest\n\nlower.tail = TRUE returns \\(P[Z \\le z]\\)\n\nlower.tail = FALSE returns \\(P[Z \\ge z]\\)"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#normal-probability-distribution-5",
     "href": "files/slides/STA6349-06-24-random-variables.html#normal-probability-distribution-5",
     "title": "Random Variables and their Distributions",
     "section": "4.5: Normal Probability Distribution",
-    "text": "4.5: Normal Probability Distribution\n\nA geneticist working for a seed company develops a new carrot for growing in heavy clay soil. After measuring 5000 of these carrots, it can be said that the carrot length, Y, is normally distributed with \\mu = 11.5 cm and \\sigma = 1.15 cm. Determine\n\nThe probability distribution. \nThe mean of the distribution. \nThe variance and standard deviation of the distribution."
+    "text": "4.5: Normal Probability Distribution\n\nA geneticist working for a seed company develops a new carrot for growing in heavy clay soil. After measuring 5000 of these carrots, it can be said that the carrot length, \\(Y\\), is normally distributed with \\(\\mu = 11.5\\) cm and \\(\\sigma = 1.15\\) cm. Determine\n\nThe probability distribution. \nThe mean of the distribution. \nThe variance and standard deviation of the distribution."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#normal-probability-distribution-6",
     "href": "files/slides/STA6349-06-24-random-variables.html#normal-probability-distribution-6",
     "title": "Random Variables and their Distributions",
     "section": "4.5: Normal Probability Distribution",
-    "text": "4.5: Normal Probability Distribution\n\nA geneticist working for a seed company develops a new carrot for growing in heavy clay soil. After measuring 5000 of these carrots, it can be said that the carrot length, Y, is normally distributed with \\mu = 11.5 cm and \\sigma = 1.15 cm.\n\nWhat is the probability that a carrot will be between 10 and 13 cm?\nWhat is the probability that a carrot will be less than 9 cm?\nWhat is the probability that a carrot will be 12 cm or larger?"
+    "text": "4.5: Normal Probability Distribution\n\nA geneticist working for a seed company develops a new carrot for growing in heavy clay soil. After measuring 5000 of these carrots, it can be said that the carrot length, \\(Y\\), is normally distributed with \\(\\mu = 11.5\\) cm and \\(\\sigma = 1.15\\) cm.\n\nWhat is the probability that a carrot will be between 10 and 13 cm?\nWhat is the probability that a carrot will be less than 9 cm?\nWhat is the probability that a carrot will be 12 cm or larger?"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#normal-probability-distribution-7",
     "href": "files/slides/STA6349-06-24-random-variables.html#normal-probability-distribution-7",
     "title": "Random Variables and their Distributions",
     "section": "4.5: Normal Probability Distribution",
-    "text": "4.5: Normal Probability Distribution\n\nA geneticist working for a seed company develops a new carrot for growing in heavy clay soil. After measuring 5000 of these carrots, it can be said that the carrot length, Y, is normally distributed with \\mu = 11.5 cm and \\sigma = 1.15 cm.\n\nWhat is the probability that a carrot will be between 10 and 13 cm?\n\n\n\npnorm(q = 13, mean = 11.5, sd = 1.15) - pnorm(q = 10, mean = 11.5, sd = 1.15)\n\n[1] 0.807885"
+    "text": "4.5: Normal Probability Distribution\n\nA geneticist working for a seed company develops a new carrot for growing in heavy clay soil. After measuring 5000 of these carrots, it can be said that the carrot length, \\(Y\\), is normally distributed with \\(\\mu = 11.5\\) cm and \\(\\sigma = 1.15\\) cm.\n\nWhat is the probability that a carrot will be between 10 and 13 cm?\n\n\n\npnorm(q = 13, mean = 11.5, sd = 1.15) - pnorm(q = 10, mean = 11.5, sd = 1.15)\n\n[1] 0.807885"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#normal-probability-distribution-8",
     "href": "files/slides/STA6349-06-24-random-variables.html#normal-probability-distribution-8",
     "title": "Random Variables and their Distributions",
     "section": "4.5: Normal Probability Distribution",
-    "text": "4.5: Normal Probability Distribution\n\nA geneticist working for a seed company develops a new carrot for growing in heavy clay soil. After measuring 5000 of these carrots, it can be said that the carrot length, Y, is normally distributed with \\mu = 11.5 cm and \\sigma = 1.15 cm.\n\nWhat is the probability that a carrot will be less than 9 cm?\n\n\n\npnorm(q = 9, mean = 11.5, sd = 1.15)\n\n[1] 0.01485583"
+    "text": "4.5: Normal Probability Distribution\n\nA geneticist working for a seed company develops a new carrot for growing in heavy clay soil. After measuring 5000 of these carrots, it can be said that the carrot length, \\(Y\\), is normally distributed with \\(\\mu = 11.5\\) cm and \\(\\sigma = 1.15\\) cm.\n\nWhat is the probability that a carrot will be less than 9 cm?\n\n\n\npnorm(q = 9, mean = 11.5, sd = 1.15)\n\n[1] 0.01485583"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#normal-probability-distribution-9",
     "href": "files/slides/STA6349-06-24-random-variables.html#normal-probability-distribution-9",
     "title": "Random Variables and their Distributions",
     "section": "4.5: Normal Probability Distribution",
-    "text": "4.5: Normal Probability Distribution\n\nA geneticist working for a seed company develops a new carrot for growing in heavy clay soil. After measuring 5000 of these carrots, it can be said that the carrot length, Y, is normally distributed with \\mu = 11.5 cm and \\sigma = 1.15 cm.\n\nWhat is the probability that a carrot will be 12 cm or larger?\n\n\n\npnorm(q = 12, mean = 11.5, sd = 1.15, lower.tail = FALSE)\n\n[1] 0.3318601"
+    "text": "4.5: Normal Probability Distribution\n\nA geneticist working for a seed company develops a new carrot for growing in heavy clay soil. After measuring 5000 of these carrots, it can be said that the carrot length, \\(Y\\), is normally distributed with \\(\\mu = 11.5\\) cm and \\(\\sigma = 1.15\\) cm.\n\nWhat is the probability that a carrot will be 12 cm or larger?\n\n\n\npnorm(q = 12, mean = 11.5, sd = 1.15, lower.tail = FALSE)\n\n[1] 0.3318601"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#gamma-probability-distribution",
@@ -781,42 +781,42 @@
     "href": "files/slides/STA6349-06-24-random-variables.html#gamma-probability-distribution-1",
     "title": "Random Variables and their Distributions",
     "section": "4.6: Gamma Probability Distribution",
-    "text": "4.6: Gamma Probability Distribution\n\nA random variable Y is said to have a gamma distribution with parameters \\alpha &gt; 0 and \\beta &gt; 0 iff,\n\n\nf(y) = \\frac{y^{\\alpha-1} e^{-y/\\beta}}{\\beta^{\\alpha} \\Gamma(\\alpha)}, \\ 0 \\le y &lt; \\infty\n\n\nNote that \\Gamma(\\alpha) = \\int_{0}^{\\infty} y^{\\alpha-1} e^{-y} \\ dy.\nIf Y has a gamma distribution with parameters \\alpha and \\beta, then\n\n\nE[Y] = \\mu = \\alpha\\beta \\ \\ \\ \\text{and} \\ \\ \\ V[Y] = \\sigma^2  = \\alpha\\beta^2\n\n\nSee Wackerly pg. 187 for derivation."
+    "text": "4.6: Gamma Probability Distribution\n\nA random variable \\(Y\\) is said to have a gamma distribution with parameters \\(\\alpha &gt; 0\\) and \\(\\beta &gt; 0\\) iff,\n\n\\[\nf(y) = \\frac{y^{\\alpha-1} e^{-y/\\beta}}{\\beta^{\\alpha} \\Gamma(\\alpha)}, \\ 0 \\le y &lt; \\infty\n\\]\n\nNote that \\(\\Gamma(\\alpha) = \\int_{0}^{\\infty} y^{\\alpha-1} e^{-y} \\ dy\\).\nIf \\(Y\\) has a gamma distribution with parameters \\(\\alpha\\) and \\(\\beta\\), then\n\n\\[\nE[Y] = \\mu = \\alpha\\beta \\ \\ \\ \\text{and} \\ \\ \\ V[Y] = \\sigma^2  = \\alpha\\beta^2\n\\]\n\nSee Wackerly pg. 187 for derivation."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#gamma-probability-distribution-2",
     "href": "files/slides/STA6349-06-24-random-variables.html#gamma-probability-distribution-2",
     "title": "Random Variables and their Distributions",
     "section": "4.6: Gamma Probability Distribution",
-    "text": "4.6: Gamma Probability Distribution\n\nWe can use R to find information related to the Gamma distribution.\n\nP[X \\le x]: pgamma(q, shape, rate)\n\nP[X \\ge x]: pgamma(q, shape, rate, lower.tail = FALSE)\n\nIn the functions:\n\nq is the value of X we are interested in\n\nshape is the shape parameter, \\alpha\n\nscale is the scale parameter, \\beta\n\nAlternatively, can parameterize with rate = 1/\\beta, rate = 1 / scale\n\nlower.tail has two options:\n\nTRUE (default) returns P[X \\le x]\n\nFALSE returns P[X \\ge x]"
+    "text": "4.6: Gamma Probability Distribution\n\nWe can use R to find information related to the Gamma distribution.\n\n\\(P[X \\le x]\\): pgamma(q, shape, rate)\n\n\\(P[X \\ge x]\\): pgamma(q, shape, rate, lower.tail = FALSE)\n\nIn the functions:\n\nq is the value of \\(X\\) we are interested in\n\nshape is the shape parameter, \\(\\alpha\\)\n\nscale is the scale parameter, \\(\\beta\\)\n\nAlternatively, can parameterize with rate = \\(1/\\beta\\), rate = 1 / scale\n\nlower.tail has two options:\n\nTRUE (default) returns \\(P[X \\le x]\\)\n\nFALSE returns \\(P[X \\ge x]\\)"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#gamma-probability-distribution-3",
     "href": "files/slides/STA6349-06-24-random-variables.html#gamma-probability-distribution-3",
     "title": "Random Variables and their Distributions",
     "section": "4.6: Gamma Probability Distribution",
-    "text": "4.6: Gamma Probability Distribution\n\nAnnual incomes for heads of household in an affluent section of a city have approximately a gamma distribution with \\alpha=32 and \\beta=2500. Determine:\n\nThe probability distribution. \nThe mean of the distribution. \nThe variance and standard deviation of the distribution."
+    "text": "4.6: Gamma Probability Distribution\n\nAnnual incomes for heads of household in an affluent section of a city have approximately a gamma distribution with \\(\\alpha=32\\) and \\(\\beta=2500\\). Determine:\n\nThe probability distribution. \nThe mean of the distribution. \nThe variance and standard deviation of the distribution."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#gamma-probability-distribution-4",
     "href": "files/slides/STA6349-06-24-random-variables.html#gamma-probability-distribution-4",
     "title": "Random Variables and their Distributions",
     "section": "4.6: Gamma Probability Distribution",
-    "text": "4.6: Gamma Probability Distribution\n\nAnnual incomes for heads of household in an affluent section of a city have approximately a gamma distribution with \\alpha=32 and \\beta=2500.\n\nWhat proportion have incomes in excess of $100,000?\nWhat proportion have incomes between $75,000 and $150,000?"
+    "text": "4.6: Gamma Probability Distribution\n\nAnnual incomes for heads of household in an affluent section of a city have approximately a gamma distribution with \\(\\alpha=32\\) and \\(\\beta=2500\\).\n\nWhat proportion have incomes in excess of $100,000?\nWhat proportion have incomes between $75,000 and $150,000?"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#gamma-probability-distribution-5",
     "href": "files/slides/STA6349-06-24-random-variables.html#gamma-probability-distribution-5",
     "title": "Random Variables and their Distributions",
     "section": "4.6: Gamma Probability Distribution",
-    "text": "4.6: Gamma Probability Distribution\n\nAnnual incomes for heads of household in a section of a city have approximately a gamma distribution with \\alpha=32 and \\beta=2500.\n\nWhat proportion have incomes in excess of $30,000?\n\n\n\npgamma(q = 100000, shape = 32, scale = 2500, lower.tail = FALSE)\n\n[1] 0.08552057"
+    "text": "4.6: Gamma Probability Distribution\n\nAnnual incomes for heads of household in a section of a city have approximately a gamma distribution with \\(\\alpha=32\\) and \\(\\beta=2500\\).\n\nWhat proportion have incomes in excess of $30,000?\n\n\n\npgamma(q = 100000, shape = 32, scale = 2500, lower.tail = FALSE)\n\n[1] 0.08552057"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#gamma-probability-distribution-6",
     "href": "files/slides/STA6349-06-24-random-variables.html#gamma-probability-distribution-6",
     "title": "Random Variables and their Distributions",
     "section": "4.6: Gamma Probability Distribution",
-    "text": "4.6: Gamma Probability Distribution\n\nAnnual incomes for heads of household in an affluent section of a city have approximately a gamma distribution with \\alpha=32 and \\beta=2500.\n\nWhat proportion have incomes between $75,000 and $150,000?\n\n\n\npgamma(q = 150000, shape = 32, scale = 2500) - pgamma(q = 75000, shape = 32, scale = 2500)\n\n[1] 0.6186147"
+    "text": "4.6: Gamma Probability Distribution\n\nAnnual incomes for heads of household in an affluent section of a city have approximately a gamma distribution with \\(\\alpha=32\\) and \\(\\beta=2500\\).\n\nWhat proportion have incomes between $75,000 and $150,000?\n\n\n\npgamma(q = 150000, shape = 32, scale = 2500) - pgamma(q = 75000, shape = 32, scale = 2500)\n\n[1] 0.6186147"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#beta-probability-distribution",
@@ -830,49 +830,49 @@
     "href": "files/slides/STA6349-06-24-random-variables.html#beta-probability-distribution-1",
     "title": "Random Variables and their Distributions",
     "section": "4.7: Beta Probability Distribution",
-    "text": "4.7: Beta Probability Distribution\n\nA random variable Y is said to have a beta distribution with parameters \\alpha &gt; 0 and \\beta &gt; 0 iff,\n\n\nf(y) = \\frac{y^{\\alpha-1}(1-y)^{\\beta-1}}{B(\\alpha,\\beta)}, \\ 0 \\le y \\le 1\n\n\nNote: B(\\alpha,\\beta) = \\int_0^1 y^{\\alpha-1}(1-y)^{\\beta-1} \\ dy = \\frac{\\Gamma(\\alpha) \\Gamma(\\beta)}{\\Gamma(\\alpha+\\beta)}.\nIf Y has a beta distribution with parameters \\alpha &gt; 0 and \\beta &gt; 0, then\n\n\nE[Y] = \\mu = \\frac{\\alpha}{\\alpha+\\beta} \\ \\ \\ \\text{and} \\ \\ \\ V[Y] = \\sigma^2  = \\frac{\\alpha\\beta}{(\\alpha+\\beta)^2(\\alpha+\\beta+1)}"
+    "text": "4.7: Beta Probability Distribution\n\nA random variable \\(Y\\) is said to have a beta distribution with parameters \\(\\alpha &gt; 0\\) and \\(\\beta &gt; 0\\) iff,\n\n\\[\nf(y) = \\frac{y^{\\alpha-1}(1-y)^{\\beta-1}}{B(\\alpha,\\beta)}, \\ 0 \\le y \\le 1\n\\]\n\nNote: \\(B(\\alpha,\\beta) = \\int_0^1 y^{\\alpha-1}(1-y)^{\\beta-1} \\ dy = \\frac{\\Gamma(\\alpha) \\Gamma(\\beta)}{\\Gamma(\\alpha+\\beta)}.\\)\nIf \\(Y\\) has a beta distribution with parameters \\(\\alpha &gt; 0\\) and \\(\\beta &gt; 0\\), then\n\n\\[\nE[Y] = \\mu = \\frac{\\alpha}{\\alpha+\\beta} \\ \\ \\ \\text{and} \\ \\ \\ V[Y] = \\sigma^2  = \\frac{\\alpha\\beta}{(\\alpha+\\beta)^2(\\alpha+\\beta+1)}\n\\]"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#beta-probability-distribution-2",
     "href": "files/slides/STA6349-06-24-random-variables.html#beta-probability-distribution-2",
     "title": "Random Variables and their Distributions",
     "section": "4.7: Beta Probability Distribution",
-    "text": "4.7: Beta Probability Distribution\n\nWe can use R to find information related to the Beta distribution.\n\nP[X \\le x]: pbeta(q, shape1, shape2)\n\nP[X \\ge x]: pbeta(q, shape1, shape2, lower.tail = FALSE)\n\nIn the functions:\n\nq is the value of X we are interested in – must be in [0, 1]!\nshape1 is the first shape parameter, \\alpha\n\nshape2 is the second shape parameter, \\beta\n\nlower.tail has two options:\n\nTRUE (default) returns P[X \\le x]\n\nFALSE returns P[X \\ge x]"
+    "text": "4.7: Beta Probability Distribution\n\nWe can use R to find information related to the Beta distribution.\n\n\\(P[X \\le x]\\): pbeta(q, shape1, shape2)\n\n\\(P[X \\ge x]\\): pbeta(q, shape1, shape2, lower.tail = FALSE)\n\nIn the functions:\n\nq is the value of \\(X\\) we are interested in – must be in [0, 1]!\nshape1 is the first shape parameter, \\(\\alpha\\)\n\nshape2 is the second shape parameter, \\(\\beta\\)\n\nlower.tail has two options:\n\nTRUE (default) returns \\(P[X \\le x]\\)\n\nFALSE returns \\(P[X \\ge x]\\)"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#beta-probability-distribution-3",
     "href": "files/slides/STA6349-06-24-random-variables.html#beta-probability-distribution-3",
     "title": "Random Variables and their Distributions",
     "section": "4.7: Beta Probability Distribution",
-    "text": "4.7: Beta Probability Distribution\n\nIn a survey of cupcake preferences, 8 respondents liked the new cupcake flavor and 2 did not. We will model the proportion of all respondents who would like the cupcake flavor using a Beta distribution with \\alpha = 8 and \\beta = 2. Determine:\n\nThe probability distribution. \nThe mean of the distribution. \nThe variance and standard deviation of the distribution."
+    "text": "4.7: Beta Probability Distribution\n\nIn a survey of cupcake preferences, 8 respondents liked the new cupcake flavor and 2 did not. We will model the proportion of all respondents who would like the cupcake flavor using a Beta distribution with \\(\\alpha = 8\\) and \\(\\beta = 2\\). Determine:\n\nThe probability distribution. \nThe mean of the distribution. \nThe variance and standard deviation of the distribution."
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#beta-probability-distribution-4",
     "href": "files/slides/STA6349-06-24-random-variables.html#beta-probability-distribution-4",
     "title": "Random Variables and their Distributions",
     "section": "4.7: Beta Probability Distribution",
-    "text": "4.7: Beta Probability Distribution\n\nIn a survey of cupcake preferences, 8 respondents liked the new cupcake flavor and 2 did not. We will model the proportion of all respondents who would like the cupcake flavor using a Beta distribution with \\alpha = 8 and \\beta = 2. What is the probability that:\n\nfewer than 60% of respondents like the new flavor?\nmore than 90% of respondents like the new flavor?\nsomewhere between 70% and 90% of respondents like the new flavor?"
+    "text": "4.7: Beta Probability Distribution\n\nIn a survey of cupcake preferences, 8 respondents liked the new cupcake flavor and 2 did not. We will model the proportion of all respondents who would like the cupcake flavor using a Beta distribution with \\(\\alpha = 8\\) and \\(\\beta = 2\\). What is the probability that:\n\nfewer than 60% of respondents like the new flavor?\nmore than 90% of respondents like the new flavor?\nsomewhere between 70% and 90% of respondents like the new flavor?"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#beta-probability-distribution-5",
     "href": "files/slides/STA6349-06-24-random-variables.html#beta-probability-distribution-5",
     "title": "Random Variables and their Distributions",
     "section": "4.7: Beta Probability Distribution",
-    "text": "4.7: Beta Probability Distribution\n\nIn a survey of cupcake preferences, 8 respondents liked the new cupcake flavor and 2 did not. We will model the proportion of all respondents who would like the cupcake flavor using a Beta distribution with \\alpha = 8 and \\beta = 2. What is the probability that:\n\nfewer than 60% of respondents like the new flavor?\n\n\n\npbeta(q = 0.6, shape1 = 8, shape2 = 2)\n\n[1] 0.07054387"
+    "text": "4.7: Beta Probability Distribution\n\nIn a survey of cupcake preferences, 8 respondents liked the new cupcake flavor and 2 did not. We will model the proportion of all respondents who would like the cupcake flavor using a Beta distribution with \\(\\alpha = 8\\) and \\(\\beta = 2\\). What is the probability that:\n\nfewer than 60% of respondents like the new flavor?\n\n\n\npbeta(q = 0.6, shape1 = 8, shape2 = 2)\n\n[1] 0.07054387"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#beta-probability-distribution-6",
     "href": "files/slides/STA6349-06-24-random-variables.html#beta-probability-distribution-6",
     "title": "Random Variables and their Distributions",
     "section": "4.7: Beta Probability Distribution",
-    "text": "4.7: Beta Probability Distribution\n\nIn a survey of cupcake preferences, 8 respondents liked the new cupcake flavor and 2 did not. We will model the proportion of all respondents who would like the cupcake flavor using a Beta distribution with \\alpha = 8 and \\beta = 2. What is the probability that:\n\nmore than 90% of respondents like the new flavor?\n\n\n\npbeta(q = 0.9, shape1 = 8, shape2 = 2, lower.tail = FALSE)\n\n[1] 0.225159"
+    "text": "4.7: Beta Probability Distribution\n\nIn a survey of cupcake preferences, 8 respondents liked the new cupcake flavor and 2 did not. We will model the proportion of all respondents who would like the cupcake flavor using a Beta distribution with \\(\\alpha = 8\\) and \\(\\beta = 2\\). What is the probability that:\n\nmore than 90% of respondents like the new flavor?\n\n\n\npbeta(q = 0.9, shape1 = 8, shape2 = 2, lower.tail = FALSE)\n\n[1] 0.225159"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#beta-probability-distribution-7",
     "href": "files/slides/STA6349-06-24-random-variables.html#beta-probability-distribution-7",
     "title": "Random Variables and their Distributions",
     "section": "4.7: Beta Probability Distribution",
-    "text": "4.7: Beta Probability Distribution\n\nIn a survey of cupcake preferences, 8 respondents liked the new cupcake flavor and 2 did not. We will model the proportion of all respondents who would like the cupcake flavor using a Beta distribution with \\alpha = 8 and \\beta = 2. What is the probability that:\n\nsomewhere between 70% and 90% of respondents like the new flavor?\n\n\n\npbeta(q = 0.9, shape1 = 8, shape2 = 2) - pbeta(q = 0.7, shape1 = 8, shape2 = 2)\n\n[1] 0.5788377"
+    "text": "4.7: Beta Probability Distribution\n\nIn a survey of cupcake preferences, 8 respondents liked the new cupcake flavor and 2 did not. We will model the proportion of all respondents who would like the cupcake flavor using a Beta distribution with \\(\\alpha = 8\\) and \\(\\beta = 2\\). What is the probability that:\n\nsomewhere between 70% and 90% of respondents like the new flavor?\n\n\n\npbeta(q = 0.9, shape1 = 8, shape2 = 2) - pbeta(q = 0.7, shape1 = 8, shape2 = 2)\n\n[1] 0.5788377"
   },
   {
     "objectID": "files/slides/STA6349-06-24-random-variables.html#homework-discrete-random-variables",
@@ -894,5 +894,124 @@
     "title": "Abbreviated Syllabus",
     "section": "",
     "text": "Note: this is an abbreviated syllabus. The full syllabus is available through Classmate and/or Canvas.\n\nInstructor Information\n\nDr. Samantha Seals\nOffice: 4/344\n\n\n\nMeeting Times and Location\n\nTR 2:00 pm–4:40 pm\n\n2:00 pm–3:15 pm: Lecture\n3:30 pm–4:30 pm: Daily practice\n\nPhysical classroom: 4/406\nZoom classroom: see Canvas or full syllabus for link\n\n\n\nOffice Hours\n\nMonday: 2:00–4:00 pm (Central)\nWednesday: 2:00–4:00 pm (Central)\nOther times by appointment\n\n\n\nGrading and Evaluation\nThe course grade will be determined as follows:\n\nAssignments (25%): Every module will finish with an assignment to demonstrate the knowledge gained. These will be like the daily practice, but putting together. The resulting .html file should be submitted to the designated dropbox on Canvas by 11:59 pm on the specified date (see Canvas).\nProjects (50%): There are two group projects in this course. The first project will result in a recorded presentation while the second project will result in a live presentation. Students are required to attend class during live presentations on July 31, 2025.\nFinal Exam (25%): The final exam will be a timed, concepts-based exam. While there may be some calculations needed, you will not be processing raw data. The final exam will be on Canvas on August 5, 2025. All students will have 3 hours to complete the exam.\n\n\n\nLate Policy\nAssigments have due dates, however, the dropboxes will not close until the end of the semester. All students are automatically granted “extensions” without question. Note that if there is not a submission when I go to grade (after the initial deadline), I will assign a zero (0) and request that you submit the assignment when you are able to. This is only for record keeping purposes. There is no penalty for submitting late and a full grade will be given upon review of your submission.\nExtensions are not available for projects or the final exam."
+  },
+  {
+    "objectID": "files/slides/STA6349-06-24-bayes-theorem.html#introduction",
+    "href": "files/slides/STA6349-06-24-bayes-theorem.html#introduction",
+    "title": "Introduction to Bayes’ Theorem",
+    "section": "",
+    "text": "Last week we began with covering probaiblity theory.\nToday we will continue talking about conditional probability, Bayes’ Theorem, and its application.\nAfter formal lecture, we will have an “introduction to R and Quarto” informal lecture."
+  },
+  {
+    "objectID": "files/slides/STA6349-06-24-bayes-theorem.html#conditional-probability",
+    "href": "files/slides/STA6349-06-24-bayes-theorem.html#conditional-probability",
+    "title": "Introduction to Bayes’ Theorem",
+    "section": "Conditional Probability",
+    "text": "Conditional Probability\n\nConditional probability of an event \\(A\\) given that an event \\(B\\) has occurred is as follows\n\n\\[\nP[A|B] = \\frac{P[A \\cap B]}{P[B]},\n\\]\n\nso long as \\(P[B] &gt; 0\\).\nAlgebraically equivalent,\n\n\\[\nP[A \\cap B] = P[A|B] \\times P[B] \\ \\ \\ \\ \\ \\& \\ \\ \\ \\ \\ P[B] = \\frac{P[A \\cap B]}{P[A|B]}\n\\]"
+  },
+  {
+    "objectID": "files/slides/STA6349-06-24-bayes-theorem.html#conditional-probability-1",
+    "href": "files/slides/STA6349-06-24-bayes-theorem.html#conditional-probability-1",
+    "title": "Introduction to Bayes’ Theorem",
+    "section": "Conditional Probability",
+    "text": "Conditional Probability\n\nInitech employees sometimes forget TPS cover sheets. In fact, those in charge claim that 30% of TPS reports are missing their cover sheet.\nMilton is famous for forgetting his cover sheets – when a cover sheet is missing, Milton is the responsible employee 60% of the time.\nWhat is the proability that a cover sheet is missing and Milton was the author?"
+  },
+  {
+    "objectID": "files/slides/STA6349-06-24-bayes-theorem.html#conditional-probability-2",
+    "href": "files/slides/STA6349-06-24-bayes-theorem.html#conditional-probability-2",
+    "title": "Introduction to Bayes’ Theorem",
+    "section": "Conditional Probability",
+    "text": "Conditional Probability\n\nInitech employees are also late – 40% of the employees were late during the last quarter.\nLooking at individual employee records, we can see that Peter is late to work 80% of the time.\nIf an employee shows up late, what is the probability that the employee in question is Peter?"
+  },
+  {
+    "objectID": "files/slides/STA6349-06-24-bayes-theorem.html#bayes-theorem",
+    "href": "files/slides/STA6349-06-24-bayes-theorem.html#bayes-theorem",
+    "title": "Introduction to Bayes’ Theorem",
+    "section": "Bayes’ Theorem",
+    "text": "Bayes’ Theorem\n\nThe general idea of Bayes’ Theorem (and Bayesian analysis in general) is that we will update our beliefs based on new evidence.\n\n\\[\\text{current belief} \\to \\text{new evidence} \\to \\text{new belief}\\]\n\nBayes’ Theorem:\n\n\\[P[A|B] = \\frac{P[B|A]\\times P[A]}{P[B]}\\]"
+  },
+  {
+    "objectID": "files/slides/STA6349-06-24-bayes-theorem.html#bayes-theorem-1",
+    "href": "files/slides/STA6349-06-24-bayes-theorem.html#bayes-theorem-1",
+    "title": "Introduction to Bayes’ Theorem",
+    "section": "Bayes’ Theorem",
+    "text": "Bayes’ Theorem\n\nBayes’ Theorem:\n\n\\[P[A|B] = \\frac{P[B|A]\\times P[A]}{P[B]}\\]\n\nwhere\n\n\\(P[A|B]\\) = posterior probability = probability that hypothesis A is true given the evidence B.\n\\(P[B|A]\\) = likelihood = the probability of observing evidence B given that hypothesis A is true.\n\\(P[A]\\) = prior probability = our initial belief about the probability of hypothesis A being true without considering new evidence.\n\\(P[B]\\) = evidence probability = the overall probability of observing evidence B."
+  },
+  {
+    "objectID": "files/slides/STA6349-06-24-bayes-theorem.html#bayes-theorem-2",
+    "href": "files/slides/STA6349-06-24-bayes-theorem.html#bayes-theorem-2",
+    "title": "Introduction to Bayes’ Theorem",
+    "section": "Bayes’ Theorem",
+    "text": "Bayes’ Theorem\n\nInitech leadership wants to revisit the missing cover sheet problem. They’ve discovered:\n\nMilton is assigned 10% of TPS reports and forgets cover sheets 80% of the time.\nPeter is assigned 70% of TPS reports and forgets cover sheets 10% of the time.\nSamir is assigned 20% of TPS reports and forgets cover sheets 30% of the time.\n\nWhat is the probability that Milton forgot a cover sheet, given that one was missing?"
+  },
+  {
+    "objectID": "files/slides/STA6349-06-24-bayes-theorem.html#bayes-theorem-3",
+    "href": "files/slides/STA6349-06-24-bayes-theorem.html#bayes-theorem-3",
+    "title": "Introduction to Bayes’ Theorem",
+    "section": "Bayes’ Theorem",
+    "text": "Bayes’ Theorem\n\nInitech has two departments: Accounting and Engineering.\n60% of TPS reports come from Accounting.\n\nIn the Accounting Department, Milton writes 25% of Accounting TPS reports but forgets the cover sheet 90% of the time, while other Accounting employees forget the TPS cover sheet 15% of the time.\n\n40% of TPS reports come from Engineering.\n\nIn the Engineering Department, Peter writes 50% of Engineering TPS reports but forgets the cover sheet 20% of the time, while other Engineering employees forget the cover sheet 5% of the time.\n\nIf a TPS report is found without a cover sheet, what is the probability that Milton was the author?"
+  },
+  {
+    "objectID": "files/slides/STA6349-06-24-bayes-theorem.html#bayes-theorem-4",
+    "href": "files/slides/STA6349-06-24-bayes-theorem.html#bayes-theorem-4",
+    "title": "Introduction to Bayes’ Theorem",
+    "section": "Bayes’ Theorem",
+    "text": "Bayes’ Theorem\n\nIf a TPS report is found without a cover sheet, what is the probability that Milton was the author?"
+  },
+  {
+    "objectID": "files/slides/STA6349-06-24-bayes-theorem.html#bayes-theorem-5",
+    "href": "files/slides/STA6349-06-24-bayes-theorem.html#bayes-theorem-5",
+    "title": "Introduction to Bayes’ Theorem",
+    "section": "Bayes’ Theorem",
+    "text": "Bayes’ Theorem\n\nYour turn!\nIf a TPS report is found without a cover sheet, what is the probability that Peter was the author?"
+  },
+  {
+    "objectID": "files/slides/STA6349-06-24-bayes-theorem.html#bayes-theorem-6",
+    "href": "files/slides/STA6349-06-24-bayes-theorem.html#bayes-theorem-6",
+    "title": "Introduction to Bayes’ Theorem",
+    "section": "Bayes’ Theorem",
+    "text": "Bayes’ Theorem\n\nIf a TPS report is found without a cover sheet, what is the probability that Peter was the author?"
+  },
+  {
+    "objectID": "files/slides/STA6349-06-24-bayes-theorem.html#wrap-up",
+    "href": "files/slides/STA6349-06-24-bayes-theorem.html#wrap-up",
+    "title": "Introduction to Bayes’ Theorem",
+    "section": "Wrap Up",
+    "text": "Wrap Up\n\nNo additional homework than what was in the slides from last week.\nThis is “only” the first portion of class today.\nWe will take a 15 minute break, then return for an Introduction to R, RStudio, and Quarto.\n\nSee .qmd file on Canvas for today’s activity."
+  },
+  {
+    "objectID": "files/assignments/assignment_0_GTKY.html",
+    "href": "files/assignments/assignment_0_GTKY.html",
+    "title": "Introduction to Quarto",
+    "section": "",
+    "text": "1. What is your name as it appears on my roster?\nReplace this with your answer\n2. Is there a different name you would like to go by?\nReplace this with your answer\n3. What are your pronouns?\nReplace this with your answer\n4. What is your undergraduate degree in?\nReplace this with your answer\n5. Are you “done” with school after this degree?\nReplace this with your answer\n6. What is your current career?\nReplace this with your answer\n7. What are your plans when school is “done”? (Are you eyeing a new career or promotion? Maybe a PhD program?)\nReplace this with your answer\n8. What is your favorite movie?\nReplace this with your answer\n9. What is your favorite TV show?\nReplace this with your answer\n10. What advice would you give undergraduate non-math majors learning R in an applied statistics course this summer?\nReplace this with your answer"
+  },
+  {
+    "objectID": "files/slides/STA6349-06-17-probability.html",
+    "href": "files/slides/STA6349-06-17-probability.html",
+    "title": "Introduction to Probability",
+    "section": "",
+    "text": "The first few lectures come from Mathematical Statistics with Applications, by Wackerly.\n\nWe must understand the underlying probability and random variable theory before moving into the Bayesian world.\n\nWe will be covering the following chapters:\n\nChapter 2: probability theory\nChapter 3: discrete random variables\nChapter 4: continuous random variables"
+  },
+  {
+    "objectID": "files/slides/STA6349-06-24-random-variables.html",
+    "href": "files/slides/STA6349-06-24-random-variables.html",
+    "title": "Random Variables and their Distributions",
+    "section": "",
+    "text": "The first few lectures come from Mathematical Statistics with Applications, by Wackerly.\n\nWe must understand the underlying probability and random variable theory before moving into the Bayesian world.\n\nWe will be covering the following chapters:\n\nChapter 2: probability theory\nChapter 3: discrete random variables\nChapter 4: continuous random variables"
+  },
+  {
+    "objectID": "files/slides/STA6349-06-24-bayes-theorem.html",
+    "href": "files/slides/STA6349-06-24-bayes-theorem.html",
+    "title": "Introduction to Bayes’ Theorem",
+    "section": "",
+    "text": "Last week we began with covering probaiblity theory.\nToday we will continue talking about conditional probability, Bayes’ Theorem, and its application.\nAfter formal lecture, we will have an “introduction to R and Quarto” informal lecture."
+  },
+  {
+    "objectID": "files/assignments/key/assignment_0_KEY.html",
+    "href": "files/assignments/key/assignment_0_KEY.html",
+    "title": "Introduction to Quarto",
+    "section": "",
+    "text": "1. What is your name as it appears on my roster?\nDr. Seals\n2. Is there a different name you would like to go by?\nDr. Seals\n3. What are your pronouns?\nShe/her/hers\n4. What is your undergraduate degree in?\nBS-Mathematics, UWF\n5. Are you “done” with school after this degree?\nI am forever learning to give my students marketable skills.\n6. What is your current career?\nWhen people ask, I will give different responses depending on how chatty I feel and the context of the situation:\n\nI am a biostatistician\n\n“When you see clinical trial results on the news, for example, that salt is bad for your blood pressure… I am the person that calculates how bad salt is.”\n\nI am a professor\n\n“I teach at UWF… I’m in Mathematics & Statistics… I teach statistics…”\n\n\n7. What are your plans when school is “done”? (Are you eyeing a new career or promotion? Maybe a PhD program?)\nWhen I was a master’s student, I wanted to teach at PJC (now PSC). Then the chair asked me to teach a section of MAC1105 (College Algebra) for him and the rest is history. I realized I really enjoyed teaching at the university level… but would really like to teach folks majoring in math. When I was a PhD student (and subsequentially a postdoc), I wanted to come back to UWF to teach. :)\n8. What is your favorite movie?\nDisney’s Robin Hood, but I play the original Star Wars trilogy for background noise.\n9. What is your favorite TV show?\nWe have been enjoying rewatching 90’s/early 00’s television with our 12 year old daughter. She has seen all of Boy Meets World, Step By Step, and the OC. We recently began working our way through One Tree Hill. When she is older, we can’t wait to watch Veronica Mars with her.\n10. What advice would you give undergraduate non-math majors learning R in an applied statistics course this summer?\nI am looking forward to y’all’s answers here. Please give them encouragement :)"
   }
 ]

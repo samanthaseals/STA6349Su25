@@ -1,0 +1,125 @@
+---
+title: "Introduction to Bayes' Theorem"
+subtitle: "June 24, 2025<br>Tuesday"
+execute:
+  echo: true
+  warning: false
+  message: false
+format: 
+  revealjs:
+    theme: default
+    css: mlp2.css
+    self-contained: true
+    slide-number: true
+    footer: "STA6349 - Applied Bayesian Analysis - Summer 2025"
+    width: 1600
+    height: 900
+    df-print: paged
+    html-math-method: katex
+    code-fold: false
+    code-tools: false
+    incremental: false
+editor: source
+---
+
+## Introduction
+
+- Last week we began with covering probaiblity theory.
+
+- Today we will continue talking about conditional probability, Bayes' Theorem, and its application.
+
+- After formal lecture, we will have an "introduction to R and Quarto" informal lecture.
+
+## Conditional Probability
+
+- *Conditional probability* of an event $A$ given that an event $B$ has occurred is as follows
+
+$$
+P[A|B] = \frac{P[A \cap B]}{P[B]},
+$$
+
+- so long as $P[B] > 0$.
+
+- Algebraically equivalent,
+
+$$
+P[A \cap B] = P[A|B] \times P[B] \ \ \ \ \ \& \ \ \ \ \ P[B] = \frac{P[A \cap B]}{P[A|B]}
+$$
+
+## Conditional Probability
+
+- Initech employees sometimes forget TPS cover sheets. In fact, those in charge claim that 30% of TPS reports are missing their cover sheet.
+
+- Milton is famous for forgetting his cover sheets -- when a cover sheet is missing, Milton is the responsible employee 60% of the time.
+
+- What is the proability that a cover sheet is missing and Milton was the author?
+
+## Conditional Probability
+
+- Initech employees are also late -- 40% of the employees were late during the last quarter. 
+
+- Looking at individual employee records, we can see that Peter is late to work 80% of the time.
+
+- If an employee shows up late, what is the probability that the employee in question is Peter?
+
+## Bayes' Theorem
+
+- The general idea of Bayes' Theorem (and Bayesian analysis in general) is that we will update our beliefs based on new evidence.
+
+$$\text{current belief} \to \text{new evidence} \to \text{new belief}$$
+
+- **Bayes' Theorem:**
+
+$$P[A|B] = \frac{P[B|A]\times P[A]}{P[B]}$$
+
+## Bayes' Theorem
+
+- **Bayes' Theorem:**
+
+$$P[A|B] = \frac{P[B|A]\times P[A]}{P[B]}$$
+
+- where
+    - $P[A|B]$ = posterior probability = probability that hypothesis A is true given the evidence B. 
+    - $P[B|A]$ = likelihood = the probability of observing evidence B given that hypothesis A is true.
+    - $P[A]$ = prior probability = our initial belief about the probability of hypothesis A being true without considering new evidence. 
+    - $P[B]$ = evidence probability = the overall probability of observing evidence B.
+
+## Bayes' Theorem
+
+- Initech leadership wants to revisit the missing cover sheet problem. They've discovered:
+    - Milton is assigned 10% of TPS reports and forgets cover sheets 80% of the time.
+    - Peter is assigned 70% of TPS reports and forgets cover sheets 10% of the time.
+    - Samir is assigned 20% of TPS reports and forgets cover sheets 30% of the time.
+    
+- What is the probability that Milton forgot a cover sheet, given that one was missing? 
+
+## Bayes' Theorem
+
+- Initech has two departments: Accounting and Engineering.
+
+- 60% of TPS reports come from Accounting.
+    - In the Accounting Department, Milton writes 25% of Accounting TPS reports but forgets the cover sheet 90% of the time, while other Accounting employees forget the TPS cover sheet 15% of the time.
+    
+- 40% of TPS reports come from Engineering.
+    - In the Engineering Department, Peter writes 50% of Engineering TPS reports but forgets the cover sheet 20% of the time, while other Engineering employees forget the cover sheet 5% of the time.
+
+- If a TPS report is found without a cover sheet, what is the probability that Milton was the author?
+
+## Bayes' Theorem
+
+- If a TPS report is found without a cover sheet, what is the probability that Milton was the author?
+
+## Bayes' Theorem
+
+- Your turn!
+
+- If a TPS report is found without a cover sheet, what is the probability that Peter was the author?
+
+## Wrap Up
+
+- No additional homework than what was in the slides from last week.
+
+- This is "only" the first portion of class today.
+
+- We will take a 15 minute break, then return for an Introduction to R, RStudio, and Quarto.
+    - See .qmd file on Canvas for today's activity.

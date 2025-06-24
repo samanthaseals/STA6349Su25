@@ -1,0 +1,54 @@
+---
+title: "Introduction to Quarto"
+author: "Your name here"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: true
+format: 
+  html:
+    self-contained: true
+editor: source
+---
+
+**1. What is your name as it appears on my roster?**
+
+Replace this with your answer
+
+**2. Is there a different name you would like to go by?**
+
+Replace this with your answer
+
+**3. What are your pronouns?**
+
+Replace this with your answer
+
+**4. What is your undergraduate degree in?**
+
+Replace this with your answer
+
+**5. Are you "done" with school after this degree?**
+
+Replace this with your answer
+
+**6. What is your current career?**
+
+Replace this with your answer
+
+**7. What are your plans when school is "done"? (Are you eyeing a new career or promotion? Maybe a PhD program?)**
+
+Replace this with your answer
+
+**8. What is your favorite movie?**
+
+Replace this with your answer
+
+**9. What is your favorite TV show?**
+
+Replace this with your answer
+
+**10. What advice would you give undergraduate non-math majors learning R in an applied statistics course this summer?**
+
+Replace this with your answer
+
