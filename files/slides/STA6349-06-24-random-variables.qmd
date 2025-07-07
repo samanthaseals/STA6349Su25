@@ -1,6 +1,6 @@
 ---
 title: "Random Variables and their Distributions"
-subtitle: "June 24, 2025<br>Tuesday"
+subtitle: "June 26, 2025<br>Thursday"
 execute:
   echo: true
   warning: false

@@ -24,7 +24,7 @@ editor: source
 
 ## Introduction
 
-- Last week we began with covering probaiblity theory.
+- Last week we began with covering probability theory.
 
 - Today we will continue talking about conditional probability, Bayes' Theorem, and its application.
 
