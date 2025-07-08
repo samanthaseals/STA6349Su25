@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Random Variables and their Distributions – STA6349 - Applied Bayesian Analysis - Summer 2025</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-530bf8e59df25186f8bffdc63bad3503.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="../../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="../../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">STA6349 - Applied Bayesian Analysis - Summer 2025</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../schedule.html"> 
+<span class="menu-text">Schedule</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="STA6349-06-24-random-variables.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Random Variables and their Distributions</h1>
+<p class="subtitle lead">June 26, 2025<br>Thursday</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction"><strong>Introduction</strong></h2>
+<ul>
+<li>The first few lectures come from <a href="https://www.cengage.com/c/mathematical-statistics-with-applications-7e-wackerly/9780495110811/">Mathematical Statistics with Applications</a>, by Wackerly.
+<ul>
+<li>We must understand the underlying probability and random variable theory before moving into the Bayesian world.</li>
+</ul></li>
+<li>We will be covering the following chapters:
+<ul>
+<li>Chapter 2: probability theory</li>
+<li><font color="#965dc7">Chapter 3: discrete random variables</font></li>
+<li><font color="#965dc7">Chapter 4: continuous random variables</font></li>
+</ul></li>
+</ul>
+</section>
+<section id="basic-definitions" class="level2">
+<h2 class="anchored" data-anchor-id="basic-definitions">3.1: Basic Definitions</h2>
+<ul>
+<li><p><strong>Discrete random variable</strong>: a variable that can assume only a finite or countably infinite number of distinct values.</p></li>
+<li><p><strong>Probability distribution of a random variable</strong>: collection of probabilities for each value of the random variable.</p></li>
+<li><p>Notation:</p>
+<ul>
+<li>Uppercase letter (e.g., <span class="math inline">\(Y\)</span>) denotes a random variable.</li>
+<li>Lowercase letter (e.g., <span class="math inline">\(y\)</span>) denotes a particular value that the random variable may assume.
+<ul>
+<li>The specific observed value, <span class="math inline">\(y\)</span>, is not random.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="probability-distributions-for-discrete-rv" class="level2">
+<h2 class="anchored" data-anchor-id="probability-distributions-for-discrete-rv">3.2: Probability Distributions for Discrete RV</h2>
+<ul>
+<li><p><strong>Probability function for <span class="math inline">\(\boldsymbol Y\)</span></strong>: sum of the the probabilities of all sample points in <span class="math inline">\(S\)</span> that are assigned the value <span class="math inline">\(y\)</span></p>
+<ul>
+<li><span class="math inline">\(P[Y = y] = p(y)\)</span>: the probability that <span class="math inline">\(Y\)</span> takes on the value <span class="math inline">\(y\)</span>.</li>
+</ul></li>
+<li><p><strong>Probability distribution for <span class="math inline">\(\boldsymbol Y\)</span></strong>: a formula, table, or graph that provides <span class="math inline">\(p(y) \ \forall \ y\)</span>.</p></li>
+<li><p><strong>Theorem</strong>:</p>
+<ul>
+<li>For any discrete probability distribution, the following must be true:
+<ul>
+<li><span class="math inline">\(0 \le p(y) \le 1 \  \forall \ y\)</span></li>
+<li><span class="math inline">\(\sum_y p(y) = 1 \ \forall \ p(y) &gt; 0\)</span>.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="expected-values-for-discrete-rv" class="level2">
+<h2 class="anchored" data-anchor-id="expected-values-for-discrete-rv">3.3: Expected Values for Discrete RV</h2>
+<ul>
+<li><strong>Expected value</strong>: Let <span class="math inline">\(Y\)</span> be a discrete random variable with probability function <span class="math inline">\(p(y)\)</span>. Then the <em>expected value</em> of <span class="math inline">\(Y\)</span>, <span class="math inline">\(E[Y]\)</span>, is defined to be</li>
+</ul>
+<p><span class="math display">\[
+E(Y) = \sum_{y} y p(y)
+\]</span></p>
+<ul>
+<li>When <span class="math inline">\(p(y)\)</span> is an accurate characterization of the population frequency distribution, then the expected value is the population mean.</li>
+</ul>
+<p><span class="math display">\[
+E[Y] = \mu
+\]</span></p>
+</section>
+<section id="expected-values-for-discrete-rv-1" class="level2">
+<h2 class="anchored" data-anchor-id="expected-values-for-discrete-rv-1">3.3: Expected Values for Discrete RV</h2>
+<ul>
+<li><p><strong>Theorem</strong>:</p>
+<ul>
+<li>Let <span class="math inline">\(Y\)</span> be a discrete random variable with probability function <span class="math inline">\(p(y)\)</span> and <span class="math inline">\(g(Y)\)</span> be a real-valued function of <span class="math inline">\(Y\)</span> (i.e., a <em>transformed</em> variable). Then the expected value of <span class="math inline">\(g(Y)\)</span> is given by</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+E[g(Y)] = \sum_{y} g(y) p(y)
+\]</span></p>
+</section>
+<section id="expected-values-for-discrete-rv-2" class="level2">
+<h2 class="anchored" data-anchor-id="expected-values-for-discrete-rv-2">3.3: Expected Values for Discrete RV</h2>
+<ul>
+<li><strong>Variance</strong>: if <span class="math inline">\(Y\)</span> is a random variable with mean <span class="math inline">\(E[Y] = \mu\)</span>, the variance of a random variable <span class="math inline">\(Y\)</span> is defined to be the expected value of <span class="math inline">\((Y-\mu)^2\)</span>.</li>
+</ul>
+<p><span class="math display">\[
+V[Y] = E\left[ (Y-\mu)^2 \right]
+\]</span></p>
+<ul>
+<li>If <span class="math inline">\(p(y)\)</span> is an accurate characterization of the population frequency distribution, then <span class="math inline">\(V(Y)\)</span> is the population variance,</li>
+</ul>
+<p><span class="math display">\[
+V[Y] = \sigma^2
+\]</span></p>
+<ul>
+<li><em>Standard deviation</em>: the positive square root of <span class="math inline">\(V[Y]\)</span>.</li>
+</ul>
+</section>
+<section id="expected-values" class="level2">
+<h2 class="anchored" data-anchor-id="expected-values">3.3: Expected Values</h2>
+<ul>
+<li>The probability distribution for a random variable <span class="math inline">\(Y\)</span> is given below.</li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(y\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p(y)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1/8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1/4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3/8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1/4</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Find the mean of <span class="math inline">\(Y\)</span>.</li>
+</ul>
+</section>
+<section id="expected-values-1" class="level2">
+<h2 class="anchored" data-anchor-id="expected-values-1">3.3: Expected Values</h2>
+<ul>
+<li>The probability distribution for a random variable <span class="math inline">\(Y\)</span> is given below.</li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(y\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p(y)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1/8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1/4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3/8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1/4</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Find the variance and standard deviation of <span class="math inline">\(Y\)</span>.</li>
+</ul>
+</section>
+<section id="expected-values-2" class="level2">
+<h2 class="anchored" data-anchor-id="expected-values-2">3.3: Expected Values</h2>
+<ul>
+<li><p><strong>Theorem</strong>:</p>
+<ul>
+<li>Let <span class="math inline">\(Y\)</span> be a discrete random variable with probability function <span class="math inline">\(p(y)\)</span> and <span class="math inline">\(c\)</span> be a constant. Then,</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[E(c) = c\]</span></p>
+<ul>
+<li><p><strong>Theorem</strong>:</p>
+<ul>
+<li>Let <span class="math inline">\(Y\)</span> be a discrete random variable with probability function <span class="math inline">\(p(y)\)</span>, <span class="math inline">\(g(Y)\)</span> be a function of <span class="math inline">\(Y\)</span>, and <span class="math inline">\(c\)</span> be a constant. Then,</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[E[cg(Y)] = cE[g(Y)]\]</span></p>
+</section>
+<section id="expected-values-3" class="level2">
+<h2 class="anchored" data-anchor-id="expected-values-3">3.3: Expected Values</h2>
+<ul>
+<li><p><strong>Theorem</strong>:</p>
+<ul>
+<li>Let <span class="math inline">\(Y\)</span> be a discrete random variable with probability function <span class="math inline">\(p(y)\)</span>, and <span class="math inline">\(g_1(Y), g_2(Y), ..., g_k(Y)\)</span> be <span class="math inline">\(k\)</span> functions of <span class="math inline">\(Y\)</span>. Then,</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[E[g_1(Y) + g_2(Y) + ... + g_k(Y)] = E[g_1(Y)] + E[g_2(Y)] + ... + E[g_k(Y)]\]</span></p>
+<ul>
+<li><p>Why do we need these theorems? To get here –</p></li>
+<li><p><strong>Theorem</strong>:</p>
+<ul>
+<li>Let <span class="math inline">\(Y\)</span> be a discrete random variable with probability function <span class="math inline">\(p(y)\)</span> and mean <span class="math inline">\(E[Y] = \mu\)</span>. Then,</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[V[Y] = \sigma^2 = E\left[(Y-\mu)^2\right] = E\left[Y^2\right] - \mu^2 \]</span></p>
+</section>
+<section id="expected-values-4" class="level2">
+<h2 class="anchored" data-anchor-id="expected-values-4">3.3: Expected Values</h2>
+<ul>
+<li>The probability distribution for a random variable <span class="math inline">\(Y\)</span> is given below.</li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(y\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p(y)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1/8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1/4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3/8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1/4</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Use the previous theorem to find <span class="math inline">\(V[Y]\)</span> and compare to our previous answer.</p>
+<ul>
+<li>Recall that <span class="math inline">\(\mu=1.75\)</span>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="binomial-probability-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="binomial-probability-distribution">3.4: Binomial Probability Distribution</h2>
+<ul>
+<li><p><em>Binomial experiment</em>:</p>
+<ol type="1">
+<li><p>The experiment consists of a fixed number, <span class="math inline">\(n\)</span>, of identical trials.</p></li>
+<li><p>Each trial results in one of two outcomes: success (<span class="math inline">\(S\)</span>) or failure (<span class="math inline">\(F\)</span>).</p></li>
+<li><p>The probability of success on a single trial is equal to some value <span class="math inline">\(p\)</span> and remains the same from trial to trial.</p>
+<ul>
+<li>The probability of failure is equal to <span class="math inline">\(q = (1-p)\)</span>.</li>
+</ul></li>
+<li><p>The trials are independent.</p></li>
+<li><p>The random variable of interest is <span class="math inline">\(Y\)</span>, the number of successes observed during the <span class="math inline">\(n\)</span> trials.</p></li>
+</ol></li>
+</ul>
+</section>
+<section id="binomial-probability-distribution-1" class="level2">
+<h2 class="anchored" data-anchor-id="binomial-probability-distribution-1">3.4: Binomial Probability Distribution</h2>
+<ul>
+<li>A random variable <span class="math inline">\(Y\)</span> is said to have a <em>binomial distribution</em> based on <span class="math inline">\(n\)</span> trials with success probability <span class="math inline">\(p\)</span> <a href="https://en.wikipedia.org/wiki/If_and_only_if">iff</a></li>
+</ul>
+<p><span class="math display">\[
+p(y) = {n \choose y}p^y q^{n-y}, \text{ where } y = 0, 1, 2, ..., n, \text{ and } 0 \le p \le1
+\]</span></p>
+<ul>
+<li>Let <span class="math inline">\(Y\)</span> be a binomial random variable based on n trials and success probability <span class="math inline">\(p\)</span>. Then</li>
+</ul>
+<p><span class="math display">\[
+E[Y] = \mu = np \ \ \ \text{and} \ \ \ V[Y] = \sigma^2 = npq
+\]</span></p>
+<ul>
+<li>See Wackerly pg. 107 for derivation.</li>
+</ul>
+</section>
+<section id="binomial-probability-distribution-2" class="level2">
+<h2 class="anchored" data-anchor-id="binomial-probability-distribution-2">3.4: Binomial Probability Distribution</h2>
+<ul>
+<li>We can use R to find information related to the binomial distribution.
+<ul>
+<li><span class="math inline">\(P[X = x]\)</span>: <code>dbinom(x, size, prob)</code></li>
+<li><span class="math inline">\(P[X \le x]\)</span>: <code>pbinom(q, size, prob)</code></li>
+<li><span class="math inline">\(P[X &gt; x]\)</span>: <code>pbinom(q, size, prob, lower.tail = FALSE)</code></li>
+</ul></li>
+<li>In the functions,
+<ul>
+<li><code>x</code> or <code>q</code> is the value of <span class="math inline">\(X\)</span> we are interested in</li>
+<li><code>size</code> is the sample size (<span class="math inline">\(n\)</span>)</li>
+<li><code>prob</code> is the probability of success, <span class="math inline">\(\pi\)</span></li>
+<li><code>lower.tail</code> has two options:
+<ul>
+<li><code>TRUE</code> (default) returns <span class="math inline">\(P[X \le x]\)</span></li>
+<li><code>FALSE</code> returns <span class="math inline">\(P[X &gt; x]\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="binomial-probability-distribution-3" class="level2">
+<h2 class="anchored" data-anchor-id="binomial-probability-distribution-3">3.4: Binomial Probability Distribution</h2>
+<ul>
+<li>The manufacturer of a dairy drink wishes to compare a new formula (<span class="math inline">\(B\)</span>) with that of the standard formula (<span class="math inline">\(A\)</span>). Each of four judges perform a blinded taste test and report which glass he or she most enjoyed. Suppose that the two formulas are equally attractive.
+<ol type="a">
+<li>What is the probability distribution? <br><br><br><br><br></li>
+<li>What is the mean of the distribution? <br><br><br></li>
+<li>What is the variance of the distribution?</li>
+</ol></li>
+</ul>
+</section>
+<section id="binomial-probability-distribution-4" class="level2">
+<h2 class="anchored" data-anchor-id="binomial-probability-distribution-4">3.4: Binomial Probability Distribution</h2>
+<ul>
+<li><p>The manufacturer of a dairy drink wishes to compare a new formula (<span class="math inline">\(B\)</span>) with that of the standard formula (<span class="math inline">\(A\)</span>). Each of four judges perform a blinded taste test and report which glass he or she most enjoyed. Suppose that the two formulas are equally attractive.</p></li>
+<li><p>Use R to find:</p>
+<ol type="a">
+<li><span class="math inline">\(P[X = 2]\)</span></li>
+<li><span class="math inline">\(P[X &gt; 2]\)</span></li>
+<li><span class="math inline">\(P[X &lt; 4]\)</span></li>
+</ol></li>
+</ul>
+</section>
+<section id="binomial-probability-distribution-5" class="level2">
+<h2 class="anchored" data-anchor-id="binomial-probability-distribution-5">3.4: Binomial Probability Distribution</h2>
+<ul>
+<li><p>The manufacturer of a dairy drink wishes to compare a new formula (<span class="math inline">\(B\)</span>) with that of the standard formula (<span class="math inline">\(A\)</span>). Each of four judges perform a blinded taste test and report which glass he or she most enjoyed. Suppose that the two formulas are equally attractive.</p></li>
+<li><p>Use R to find:</p>
+<ol type="a">
+<li><span class="math inline">\(P[X = 2]\)</span></li>
+</ol></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="at">x =</span> <span class="dv">2</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.375</code></pre>
+</div>
+</div>
+</section>
+<section id="binomial-probability-distribution-6" class="level2">
+<h2 class="anchored" data-anchor-id="binomial-probability-distribution-6">3.4: Binomial Probability Distribution</h2>
+<ul>
+<li><p>The manufacturer of a dairy drink wishes to compare a new formula (<span class="math inline">\(B\)</span>) with that of the standard formula (<span class="math inline">\(A\)</span>). Each of four judges perform a blinded taste test and report which glass he or she most enjoyed. Suppose that the two formulas are equally attractive.</p></li>
+<li><p>Use R to find:</p>
+<ol start="2" type="a">
+<li><span class="math inline">\(P[X &gt; 2]\)</span></li>
+</ol></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pbinom</span>(<span class="at">q =</span> <span class="dv">2</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">prob =</span> <span class="fl">0.5</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.3125</code></pre>
+</div>
+</div>
+</section>
+<section id="binomial-probability-distribution-7" class="level2">
+<h2 class="anchored" data-anchor-id="binomial-probability-distribution-7">3.4: Binomial Probability Distribution</h2>
+<ul>
+<li><p>The manufacturer of a dairy drink wishes to compare a new formula (<span class="math inline">\(B\)</span>) with that of the standard formula (<span class="math inline">\(A\)</span>). Each of four judges perform a blinded taste test and report which glass he or she most enjoyed. Suppose that the two formulas are equally attractive.</p></li>
+<li><p>Use R to find:</p>
+<ol start="3" type="a">
+<li><span class="math inline">\(P[X &lt; 4] = P[X \le 3]\)</span></li>
+</ol></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pbinom</span>(<span class="at">q =</span> <span class="dv">3</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9375</code></pre>
+</div>
+</div>
+</section>
+<section id="poisson-probability-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="poisson-probability-distribution">3.8: Poisson Probability Distribution</h2>
+<ul>
+<li><p>We often use the Poisson distribution to model count data.</p></li>
+<li><p>A random variable <span class="math inline">\(Y\)</span> is said to have a <em>Poisson probability distribution</em> <a href="https://en.wikipedia.org/wiki/If_and_only_if">iff</a></p></li>
+</ul>
+<p><span class="math display">\[
+p(y) = \frac{\lambda^y}{y!}e^{-\lambda}, \text{ where } y=0,1,2,..., \text{ and } \lambda &gt; 0
+\]</span></p>
+<ul>
+<li>If <span class="math inline">\(Y\)</span> is a random variable with a Poisson distribution with parameter <span class="math inline">\(\lambda\)</span>, then</li>
+</ul>
+<p><span class="math display">\[
+E[Y] = \mu = \lambda \text{ and } V[Y] = \sigma^2 = \lambda
+\]</span></p>
+<ul>
+<li>See Wackerly pg. 134 for derivation.</li>
+</ul>
+</section>
+<section id="poisson-probability-distribution-1" class="level2">
+<h2 class="anchored" data-anchor-id="poisson-probability-distribution-1">3.8: Poisson Probability Distribution</h2>
+<ul>
+<li>We can use R to find information related to the Poisson distribution.
+<ul>
+<li><span class="math inline">\(P[X = x]\)</span>: <code>dpois(x, lambda)</code><br>
+</li>
+<li><span class="math inline">\(P[X \le x]\)</span>: <code>ppois(q, lambda)</code><br>
+</li>
+<li><span class="math inline">\(P[X &gt; x]\)</span>: <code>ppois(q, lambda, lower.tail = FALSE)</code></li>
+</ul></li>
+<li>In the functions:
+<ul>
+<li><code>x</code> or <code>q</code> is the value of <span class="math inline">\(X\)</span> we are interested in<br>
+</li>
+<li><code>lambda</code> is the rate of occurrence</li>
+<li><code>lower.tail</code> has two options:
+<ul>
+<li><code>TRUE</code> (default) returns <span class="math inline">\(P[X \le x]\)</span><br>
+</li>
+<li><code>FALSE</code> returns <span class="math inline">\(P[X &gt; x]\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="poisson-probability-distribution-2" class="level2">
+<h2 class="anchored" data-anchor-id="poisson-probability-distribution-2">3.8: Poisson Probability Distribution</h2>
+<ul>
+<li>Customers arrive at a checkout counter in a department store according to a Poisson distribution at an average of seven per hour.
+<ol type="a">
+<li>What is the probability distribution? <br><br><br><br><br></li>
+<li>What is the mean of the distribution? <br><br><br></li>
+<li>What is the variance of the distribution?</li>
+</ol></li>
+</ul>
+</section>
+<section id="poisson-probability-distribution-3" class="level2">
+<h2 class="anchored" data-anchor-id="poisson-probability-distribution-3">3.8: Poisson Probability Distribution</h2>
+<ul>
+<li>Customers arrive at a checkout counter in a department store according to a Poisson distribution at an average of seven per hour. Use R to find the following probabilities.
+<ol type="a">
+<li>No more than three customers arrive.</li>
+<li>At least two customers arrive.</li>
+<li>Exactly five customers arrive.</li>
+</ol></li>
+</ul>
+</section>
+<section id="poisson-probability-distribution-4" class="level2">
+<h2 class="anchored" data-anchor-id="poisson-probability-distribution-4">3.8: Poisson Probability Distribution</h2>
+<ul>
+<li>Customers arrive at a checkout counter in a department store according to a Poisson distribution at an average of seven per hour. Use R to find the following probabilities.
+<ol type="a">
+<li>No more than three customers arrive.</li>
+</ol></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ppois</span>(<span class="at">q =</span> <span class="dv">3</span>, <span class="at">lambda =</span> <span class="dv">7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.08176542</code></pre>
+</div>
+</div>
+</section>
+<section id="poisson-probability-distribution-5" class="level2">
+<h2 class="anchored" data-anchor-id="poisson-probability-distribution-5">3.8: Poisson Probability Distribution</h2>
+<ul>
+<li>Customers arrive at a checkout counter in a department store according to a Poisson distribution at an average of seven per hour. Use R to find the following probabilities.
+<ol start="2" type="a">
+<li>At least two customers arrive.</li>
+</ol></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ppois</span>(<span class="at">q =</span> <span class="dv">1</span>, <span class="at">lambda =</span> <span class="dv">7</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9927049</code></pre>
+</div>
+</div>
+</section>
+<section id="poisson-probability-distribution-6" class="level2">
+<h2 class="anchored" data-anchor-id="poisson-probability-distribution-6">3.8: Poisson Probability Distribution</h2>
+<ul>
+<li>Customers arrive at a checkout counter in a department store according to a Poisson distribution at an average of seven per hour. Use R to find the following probabilities.
+<ol start="3" type="a">
+<li>Exactly five customers arrive.</li>
+</ol></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dpois</span>(<span class="at">x =</span> <span class="dv">5</span>, <span class="at">lambda =</span> <span class="dv">7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1277167</code></pre>
+</div>
+</div>
+</section>
+<section id="probability-distributions-for-continuous-rv" class="level2">
+<h2 class="anchored" data-anchor-id="probability-distributions-for-continuous-rv">4.2: Probability Distributions for Continuous RV</h2>
+<ul>
+<li>The <em>distribution function</em> of <span class="math inline">\(Y\)</span> (any random varaible), denoted by <span class="math inline">\(F(y)\)</span>, is such that</li>
+</ul>
+<p><span class="math display">\[F(y) = P[Y \le y] \text{ for } -\infty &lt; y &lt; \infty\]</span></p>
+<ul>
+<li><strong>Theorem</strong>: Properties of a Distribution Function
+<ul>
+<li>If <span class="math inline">\(F(y)\)</span> is a distribution function, then
+<ul>
+<li><span class="math inline">\(F(-\infty)   \equiv \underset{y \to -\infty}{\lim} F(y) = 0\)</span></li>
+<li><span class="math inline">\(F(\infty)    \equiv \underset{y \to \infty}{\lim} F(y) = 1\)</span></li>
+<li><span class="math inline">\(F(y)\)</span> is a nondecreasing function of <span class="math inline">\(y\)</span>.
+<ul>
+<li>If <span class="math inline">\(y_1\)</span> and <span class="math inline">\(y_2\)</span> are any values such that <span class="math inline">\(y_1 &lt; y_2\)</span>, then <span class="math inline">\(F(y_1) \le F(y_2)\)</span>.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="probability-distributions-for-continuous-rv-1" class="level2">
+<h2 class="anchored" data-anchor-id="probability-distributions-for-continuous-rv-1">4.2: Probability Distributions for Continuous RV</h2>
+<ul>
+<li><em>Continuous random variable</em>:
+<ul>
+<li>A random variable <span class="math inline">\(Y\)</span> with distribution function <span class="math inline">\(F(y)\)</span> is said to be <em>continuous</em> if <span class="math inline">\(F(y)\)</span> is continuous for <span class="math inline">\(-\infty &lt; y &lt; \infty\)</span>.</li>
+</ul></li>
+<li>If <span class="math inline">\(Y\)</span> is a continuous random variable, then for any real number <span class="math inline">\(y\)</span>, <span class="math inline">\(P[Y = y] = 0\)</span>.
+<ul>
+<li>i.e., we must remember to find the probability of an interval.</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/W04-L1-a.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="probability-distributions-for-continuous-rv-2" class="level2">
+<h2 class="anchored" data-anchor-id="probability-distributions-for-continuous-rv-2">4.2: Probability Distributions for Continuous RV</h2>
+<ul>
+<li><p><em>Probability density function</em>:</p>
+<ul>
+<li>Let <span class="math inline">\(F(y)\)</span> be the cumulative density function for a continuous random variable, <span class="math inline">\(Y\)</span>. Then</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[p[Y = y] = f(y) = \frac{dF(y)}{dy} = F'(y).\]</span></p>
+<ul>
+<li><strong>Theorem</strong>: Properties of a Density Function
+<ul>
+<li>If <span class="math inline">\(f(y)\)</span> is a density function for a continuous random variable, then
+<ul>
+<li><span class="math inline">\(f(y) \ge 0 \ \forall y, \ -\infty &lt; y &lt; \infty\)</span>.</li>
+<li><span class="math inline">\(\int_{-\infty}^{\infty} f(y) dy = 1\)</span>.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="probability-distributions-for-continuous-rv-3" class="level2">
+<h2 class="anchored" data-anchor-id="probability-distributions-for-continuous-rv-3">4.2: Probability Distributions for Continuous RV</h2>
+<ul>
+<li><p><em>Cumulative density function</em>:</p>
+<ul>
+<li>Let <span class="math inline">\(f(y)\)</span> be the probability density function for a continuous random variable, <span class="math inline">\(Y\)</span>. Then</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[P[Y \le y] = F(y) = \int_{-\infty}^y f(t) dt, \text{ for } y \in {\rm I\!R}.\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/W04-L1-b.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="probability-distributions-for-continuous-rv-4" class="level2">
+<h2 class="anchored" data-anchor-id="probability-distributions-for-continuous-rv-4">4.2: Probability Distributions for Continuous RV</h2>
+<ul>
+<li><p><strong>Theorem</strong></p>
+<ul>
+<li>If the random variable <span class="math inline">\(Y\)</span> has density function <span class="math inline">\(f(y)\)</span> and <span class="math inline">\(a &lt; b\)</span>, then the probability that <span class="math inline">\(Y\)</span> falls in the interval <span class="math inline">\([a, b]\)</span> is</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+P[a \le Y \le b] = \int_a^b f(y) dy.
+\]</span></p>
+<center>
+<img src="images/W04-L1-c.png" class="img-fluid quarto-figure quarto-figure-center" style="width:50.0%">
+</center>
+</section>
+<section id="expected-values-for-continuous-rv" class="level2">
+<h2 class="anchored" data-anchor-id="expected-values-for-continuous-rv">4.3: Expected Values for Continuous RV</h2>
+<ul>
+<li><p><em>Expected value</em>:</p>
+<ul>
+<li>The expected value of a continuous variable <span class="math inline">\(Y\)</span> is</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+E[Y] = \int_{-\infty}^{\infty} y f(y) \ dy
+\]</span></p>
+<ul>
+<li>This is the continuous version of the expected value for a discrete random variable,</li>
+</ul>
+<p><span class="math display">\[
+E[Y] = \sum_y y p(y)
+\]</span></p>
+</section>
+<section id="expected-values-for-continuous-rv-1" class="level2">
+<h2 class="anchored" data-anchor-id="expected-values-for-continuous-rv-1">4.3: Expected Values for Continuous RV</h2>
+<ul>
+<li><p><strong>Theorem</strong>:</p>
+<ul>
+<li>Let <span class="math inline">\(g(Y)\)</span> be a function of <span class="math inline">\(Y\)</span>; then the expected value of <span class="math inline">\(g(Y)\)</span> is given by</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+E\left[ g(Y) \right] = \int_{-\infty}^{\infty} g(y) f(y) \ dy
+\]</span></p>
+<ul>
+<li><strong>Theorem</strong>:
+<ul>
+<li>Let <span class="math inline">\(c\)</span> be a constant and let <span class="math inline">\(g(Y)\)</span>, <span class="math inline">\(g_1(Y)\)</span>, <span class="math inline">\(g_2(Y)\)</span>, …, <span class="math inline">\(g_k(Y)\)</span> be functions of a continuous random variable, <span class="math inline">\(Y\)</span>. Then the following results hold:
+<ul>
+<li><span class="math inline">\(E[c] = c\)</span></li>
+<li><span class="math inline">\(E\left[cg(Y)] = cE[g(Y)\right]\)</span></li>
+<li><span class="math inline">\(E\left[g_1(Y)+...+g_k(Y)\right] = E\left[ g_1(Y) \right] + ... + E\left[ g_k(Y) \right]\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="uniform-probability-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="uniform-probability-distribution">4.4: Uniform Probability Distribution</h2>
+<ul>
+<li><strong>Uniform Distribution</strong></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/W04-L2-a.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="uniform-probability-distribution-1" class="level2">
+<h2 class="anchored" data-anchor-id="uniform-probability-distribution-1">4.4: Uniform Probability Distribution</h2>
+<ul>
+<li>A random variable <span class="math inline">\(Y\)</span> is said to have a <em>uniform distribution</em> <a href="https://en.wikipedia.org/wiki/If_and_only_if">iff</a></li>
+</ul>
+<p><span class="math display">\[
+f(y) = \frac{1}{\theta_2 - \theta_1}, \ \theta_1 \le y \le \theta_2
+\]</span></p>
+<ul>
+<li>If <span class="math inline">\(\theta_1 &lt; \theta_2\)</span> and <span class="math inline">\(Y\)</span> is a uniformly distributed r.v. on the interval <span class="math inline">\((\theta_1, \theta_2)\)</span>, then</li>
+</ul>
+<p><span class="math display">\[
+E[Y] = \mu = \frac{\theta_1+\theta_2}{2} \ \ \ \text{and} \ \ \ V[Y] = \sigma^2 = \frac{(\theta_2-\theta_1)^2}{12}
+\]</span></p>
+<ul>
+<li>See Wackerly pg. 176 for derivation.</li>
+</ul>
+</section>
+<section id="uniform-probability-distribution-2" class="level2">
+<h2 class="anchored" data-anchor-id="uniform-probability-distribution-2">4.4: Uniform Probability Distribution</h2>
+<ul>
+<li>An industrial psychologist has determined that it takes a worker between 9 and 15 minutes to complete a task on an automobile assembly line. If the time to complete the task is uniformly distributed over the interval <span class="math inline">\(9 \le y \le 15\)</span>, then determine:
+<ol type="a">
+<li>The probability distribution. <br><br><br><br></li>
+<li>The mean of the distribution. <br><br><br></li>
+<li>The variance and standard deviation of the distribution.</li>
+</ol></li>
+</ul>
+</section>
+<section id="uniform-probability-distribution-3" class="level2">
+<h2 class="anchored" data-anchor-id="uniform-probability-distribution-3">4.4: Uniform Probability Distribution</h2>
+<ul>
+<li>We can use R to find information related to the uniform distribution:
+<ul>
+<li><span class="math inline">\(P[X \le x]\)</span>: <code>punif(q, min, max)</code><br>
+</li>
+<li><span class="math inline">\(P[X \ge x]\)</span>: <code>punif(q, min, max, lower.tail = FALSE)</code></li>
+</ul></li>
+<li>In the functions:
+<ul>
+<li><code>q</code> is the value of <span class="math inline">\(X\)</span> we are interested in<br>
+</li>
+<li><code>min</code> is the lower bound of the distribution<br>
+</li>
+<li><code>max</code> is the upper bound of the distribution<br>
+</li>
+<li><code>lower.tail</code> has two options:
+<ul>
+<li><code>TRUE</code> (default) returns <span class="math inline">\(P[X \le x]\)</span><br>
+</li>
+<li><code>FALSE</code> returns <span class="math inline">\(P[X \ge x]\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="uniform-probability-distribution-4" class="level2">
+<h2 class="anchored" data-anchor-id="uniform-probability-distribution-4">4.4: Uniform Probability Distribution</h2>
+<ul>
+<li>An industrial psychologist has determined that it takes a worker between 9 and 15 minutes to complete a task on an automobile assembly line. If the time to complete the task is uniformly distributed over the interval <span class="math inline">\(9 \le y \le 15\)</span>, then determine the following probabilities:
+<ol type="a">
+<li>A worker takes fewer than 13 minutes.</li>
+<li>A worker takes at least 11 minutes.</li>
+<li>A worker takes between 14 and 15 minutes.</li>
+</ol></li>
+</ul>
+</section>
+<section id="uniform-probability-distribution-5" class="level2">
+<h2 class="anchored" data-anchor-id="uniform-probability-distribution-5">4.4: Uniform Probability Distribution</h2>
+<ul>
+<li>An industrial psychologist has determined that it takes a worker between 9 and 15 minutes to complete a task on an automobile assembly line. If the time to complete the task is uniformly distributed over the interval <span class="math inline">\(9 \le y \le 15\)</span>, then determine the following probabilities:
+<ol type="a">
+<li>A worker takes fewer than 13 minutes.</li>
+</ol></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">punif</span>(<span class="dv">13</span>, <span class="dv">9</span>, <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.6666667</code></pre>
+</div>
+</div>
+</section>
+<section id="uniform-probability-distribution-6" class="level2">
+<h2 class="anchored" data-anchor-id="uniform-probability-distribution-6">4.4: Uniform Probability Distribution</h2>
+<ul>
+<li>An industrial psychologist has determined that it takes a worker between 9 and 15 minutes to complete a task on an automobile assembly line. If the time to complete the task is uniformly distributed over the interval <span class="math inline">\(9 \le y \le 15\)</span>, then determine the following probabilities:
+<ol start="2" type="a">
+<li>A worker takes at least 11 minutes.</li>
+</ol></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">punif</span>(<span class="dv">11</span>, <span class="dv">9</span>, <span class="dv">15</span>, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.3333333</code></pre>
+</div>
+</div>
+</section>
+<section id="uniform-probability-distribution-7" class="level2">
+<h2 class="anchored" data-anchor-id="uniform-probability-distribution-7">4.4: Uniform Probability Distribution</h2>
+<ul>
+<li>An industrial psychologist has determined that it takes a worker between 9 and 15 minutes to complete a task on an automobile assembly line. If the time to complete the task is uniformly distributed over the interval <span class="math inline">\(9 \le y \le 15\)</span>, then determine the following probabilities:
+<ol start="3" type="a">
+<li>A worker takes between 14 and 15 minutes.</li>
+</ol></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">punif</span>(<span class="dv">15</span>, <span class="dv">9</span>, <span class="dv">15</span>) <span class="sc">-</span> <span class="fu">punif</span>(<span class="dv">14</span>, <span class="dv">9</span>, <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1666667</code></pre>
+</div>
+</div>
+</section>
+<section id="normal-probability-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="normal-probability-distribution">4.5: Normal Probability Distribution</h2>
+<ul>
+<li><strong>Normal Distribution</strong></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/W04-L2-b.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="normal-probability-distribution-1" class="level2">
+<h2 class="anchored" data-anchor-id="normal-probability-distribution-1">4.5: Normal Probability Distribution</h2>
+<ul>
+<li>A random variable <span class="math inline">\(Y\)</span> is said to have a <em>normal distribution</em> <a href="https://en.wikipedia.org/wiki/If_and_only_if">iff</a>, for <span class="math inline">\(\sigma &gt; 0\)</span> and <span class="math inline">\(-\infty &lt; \mu &lt; \infty\)</span>,</li>
+</ul>
+<p><span class="math display">\[
+f(y) = \frac{1}{\sigma \sqrt{2\pi}} e^{-(y-\mu)^2/(2\sigma^2)}
+\]</span></p>
+<ul>
+<li>If <span class="math inline">\(Y\)</span> is a random variable normally distributed with parameters <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span>, then</li>
+</ul>
+<p><span class="math display">\[
+E[Y] = \mu =  \ \ \ \text{and} \ \ \ V[Y] = \sigma^2
+\]</span></p>
+</section>
+<section id="normal-probability-distribution-2" class="level2">
+<h2 class="anchored" data-anchor-id="normal-probability-distribution-2">4.5: Normal Probability Distribution</h2>
+<ul>
+<li>We can use R to find information related to the normal distribution.
+<ul>
+<li><span class="math inline">\(P[X \le x]\)</span>: <code>pnorm(q, mean, sd)</code><br>
+</li>
+<li><span class="math inline">\(P[X \ge x]\)</span>: <code>pnorm(q, mean, sd, lower.tail = FALSE)</code></li>
+</ul></li>
+<li>In the functions:
+<ul>
+<li><code>q</code> is the value of <span class="math inline">\(X\)</span> we are interested in<br>
+</li>
+<li><code>mean</code> is the population mean <span class="math inline">\(\mu\)</span><br>
+</li>
+<li><code>sd</code> is the standard deviation <span class="math inline">\(\sigma\)</span><br>
+</li>
+<li><code>lower.tail</code> has two options:
+<ul>
+<li><code>TRUE</code> (default) returns <span class="math inline">\(P[X \le x]\)</span><br>
+</li>
+<li><code>FALSE</code> returns <span class="math inline">\(P[X \ge x]\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="normal-probability-distribution-3" class="level2">
+<h2 class="anchored" data-anchor-id="normal-probability-distribution-3">4.5: Normal Probability Distribution</h2>
+<ul>
+<li>A random variable <span class="math inline">\(Y\)</span> is said to have a <em>standard normal distribution</em> <a href="https://en.wikipedia.org/wiki/If_and_only_if">iff</a></li>
+</ul>
+<p><span class="math display">\[
+Y \sim N(\mu=0,\sigma=1)
+\]</span></p>
+<ul>
+<li>The normal distribution is then simplified to</li>
+</ul>
+<p><span class="math display">\[
+f(y) = \frac{1}{\sqrt{2\pi}} e^{-y^2/2}
+\]</span></p>
+<ul>
+<li>Note that in all cases of the normal distribution, we assume <span class="math inline">\(-\infty &lt; y &lt; \infty\)</span>.</li>
+</ul>
+</section>
+<section id="normal-probability-distribution-4" class="level2">
+<h2 class="anchored" data-anchor-id="normal-probability-distribution-4">4.5: Normal Probability Distribution</h2>
+<ul>
+<li><p>When using <code>pnorm()</code>, the default values for <code>mean</code> and <code>sd</code> are 1 and 0.</p></li>
+<li><p>Thus, if we have the standard normal our R functions simplify to:</p>
+<ul>
+<li><span class="math inline">\(P[Z \le z]\)</span>: <code>pnorm(z)</code><br>
+</li>
+<li><span class="math inline">\(P[Z \ge z]\)</span>: <code>pnorm(z, lower.tail = FALSE)</code></li>
+</ul></li>
+<li><p>In the functions:</p>
+<ul>
+<li><code>q</code> is the z-score value of interest<br>
+</li>
+<li><code>lower.tail = TRUE</code> returns <span class="math inline">\(P[Z \le z]\)</span><br>
+</li>
+<li><code>lower.tail = FALSE</code> returns <span class="math inline">\(P[Z \ge z]\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="normal-probability-distribution-5" class="level2">
+<h2 class="anchored" data-anchor-id="normal-probability-distribution-5">4.5: Normal Probability Distribution</h2>
+<ul>
+<li>A geneticist working for a seed company develops a new carrot for growing in heavy clay soil. After measuring 5000 of these carrots, it can be said that the carrot length, <span class="math inline">\(Y\)</span>, is normally distributed with <span class="math inline">\(\mu = 11.5\)</span> cm and <span class="math inline">\(\sigma = 1.15\)</span> cm. Determine
+<ol type="a">
+<li>The probability distribution. <br><br><br><br></li>
+<li>The mean of the distribution. <br><br><br></li>
+<li>The variance and standard deviation of the distribution.</li>
+</ol></li>
+</ul>
+</section>
+<section id="normal-probability-distribution-6" class="level2">
+<h2 class="anchored" data-anchor-id="normal-probability-distribution-6">4.5: Normal Probability Distribution</h2>
+<ul>
+<li>A geneticist working for a seed company develops a new carrot for growing in heavy clay soil. After measuring 5000 of these carrots, it can be said that the carrot length, <span class="math inline">\(Y\)</span>, is normally distributed with <span class="math inline">\(\mu = 11.5\)</span> cm and <span class="math inline">\(\sigma = 1.15\)</span> cm.
+<ol type="a">
+<li>What is the probability that a carrot will be between 10 and 13 cm?</li>
+<li>What is the probability that a carrot will be less than 9 cm?</li>
+<li>What is the probability that a carrot will be 12 cm or larger?</li>
+</ol></li>
+</ul>
+</section>
+<section id="normal-probability-distribution-7" class="level2">
+<h2 class="anchored" data-anchor-id="normal-probability-distribution-7">4.5: Normal Probability Distribution</h2>
+<ul>
+<li>A geneticist working for a seed company develops a new carrot for growing in heavy clay soil. After measuring 5000 of these carrots, it can be said that the carrot length, <span class="math inline">\(Y\)</span>, is normally distributed with <span class="math inline">\(\mu = 11.5\)</span> cm and <span class="math inline">\(\sigma = 1.15\)</span> cm.
+<ol type="a">
+<li>What is the probability that a carrot will be between 10 and 13 cm?</li>
+</ol></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">13</span>, <span class="at">mean =</span> <span class="fl">11.5</span>, <span class="at">sd =</span> <span class="fl">1.15</span>) <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">10</span>, <span class="at">mean =</span> <span class="fl">11.5</span>, <span class="at">sd =</span> <span class="fl">1.15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.807885</code></pre>
+</div>
+</div>
+</section>
+<section id="normal-probability-distribution-8" class="level2">
+<h2 class="anchored" data-anchor-id="normal-probability-distribution-8">4.5: Normal Probability Distribution</h2>
+<ul>
+<li>A geneticist working for a seed company develops a new carrot for growing in heavy clay soil. After measuring 5000 of these carrots, it can be said that the carrot length, <span class="math inline">\(Y\)</span>, is normally distributed with <span class="math inline">\(\mu = 11.5\)</span> cm and <span class="math inline">\(\sigma = 1.15\)</span> cm.
+<ol start="2" type="a">
+<li>What is the probability that a carrot will be less than 9 cm?</li>
+</ol></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">9</span>, <span class="at">mean =</span> <span class="fl">11.5</span>, <span class="at">sd =</span> <span class="fl">1.15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.01485583</code></pre>
+</div>
+</div>
+</section>
+<section id="normal-probability-distribution-9" class="level2">
+<h2 class="anchored" data-anchor-id="normal-probability-distribution-9">4.5: Normal Probability Distribution</h2>
+<ul>
+<li>A geneticist working for a seed company develops a new carrot for growing in heavy clay soil. After measuring 5000 of these carrots, it can be said that the carrot length, <span class="math inline">\(Y\)</span>, is normally distributed with <span class="math inline">\(\mu = 11.5\)</span> cm and <span class="math inline">\(\sigma = 1.15\)</span> cm.
+<ol start="3" type="a">
+<li>What is the probability that a carrot will be 12 cm or larger?</li>
+</ol></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">12</span>, <span class="at">mean =</span> <span class="fl">11.5</span>, <span class="at">sd =</span> <span class="fl">1.15</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.3318601</code></pre>
+</div>
+</div>
+</section>
+<section id="gamma-probability-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="gamma-probability-distribution">4.6: Gamma Probability Distribution</h2>
+<ul>
+<li><strong>Gamma Distribution</strong></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/W04-L2-c.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="gamma-probability-distribution-1" class="level2">
+<h2 class="anchored" data-anchor-id="gamma-probability-distribution-1">4.6: Gamma Probability Distribution</h2>
+<ul>
+<li>A random variable <span class="math inline">\(Y\)</span> is said to have a <em>gamma distribution</em> with parameters <span class="math inline">\(\alpha &gt; 0\)</span> and <span class="math inline">\(\beta &gt; 0\)</span> <a href="https://en.wikipedia.org/wiki/If_and_only_if">iff</a>,</li>
+</ul>
+<p><span class="math display">\[
+f(y) = \frac{y^{\alpha-1} e^{-y/\beta}}{\beta^{\alpha} \Gamma(\alpha)}, \ 0 \le y &lt; \infty
+\]</span></p>
+<ul>
+<li><p>Note that <span class="math inline">\(\Gamma(\alpha) = \int_{0}^{\infty} y^{\alpha-1} e^{-y} \ dy\)</span>.</p></li>
+<li><p>If <span class="math inline">\(Y\)</span> has a gamma distribution with parameters <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>, then</p></li>
+</ul>
+<p><span class="math display">\[
+E[Y] = \mu = \alpha\beta \ \ \ \text{and} \ \ \ V[Y] = \sigma^2  = \alpha\beta^2
+\]</span></p>
+<ul>
+<li>See Wackerly pg. 187 for derivation.</li>
+</ul>
+</section>
+<section id="gamma-probability-distribution-2" class="level2">
+<h2 class="anchored" data-anchor-id="gamma-probability-distribution-2">4.6: Gamma Probability Distribution</h2>
+<ul>
+<li>We can use R to find information related to the Gamma distribution.
+<ul>
+<li><span class="math inline">\(P[X \le x]\)</span>: <code>pgamma(q, shape, rate)</code><br>
+</li>
+<li><span class="math inline">\(P[X \ge x]\)</span>: <code>pgamma(q, shape, rate, lower.tail = FALSE)</code></li>
+</ul></li>
+<li>In the functions:
+<ul>
+<li><code>q</code> is the value of <span class="math inline">\(X\)</span> we are interested in<br>
+</li>
+<li><code>shape</code> is the shape parameter, <span class="math inline">\(\alpha\)</span><br>
+</li>
+<li><code>scale</code> is the scale parameter, <span class="math inline">\(\beta\)</span>
+<ul>
+<li>Alternatively, can parameterize with rate = <span class="math inline">\(1/\beta\)</span>, <code>rate = 1 / scale</code></li>
+</ul></li>
+<li><code>lower.tail</code> has two options:
+<ul>
+<li><code>TRUE</code> (default) returns <span class="math inline">\(P[X \le x]\)</span><br>
+</li>
+<li><code>FALSE</code> returns <span class="math inline">\(P[X \ge x]\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="gamma-probability-distribution-3" class="level2">
+<h2 class="anchored" data-anchor-id="gamma-probability-distribution-3">4.6: Gamma Probability Distribution</h2>
+<ul>
+<li>Annual incomes for heads of household in an affluent section of a city have approximately a gamma distribution with <span class="math inline">\(\alpha=32\)</span> and <span class="math inline">\(\beta=2500\)</span>. Determine:
+<ol type="a">
+<li>The probability distribution. <br><br><br><br></li>
+<li>The mean of the distribution. <br><br><br></li>
+<li>The variance and standard deviation of the distribution.</li>
+</ol></li>
+</ul>
+</section>
+<section id="gamma-probability-distribution-4" class="level2">
+<h2 class="anchored" data-anchor-id="gamma-probability-distribution-4">4.6: Gamma Probability Distribution</h2>
+<ul>
+<li>Annual incomes for heads of household in an affluent section of a city have approximately a gamma distribution with <span class="math inline">\(\alpha=32\)</span> and <span class="math inline">\(\beta=2500\)</span>.
+<ol type="a">
+<li>What proportion have incomes in excess of $100,000?</li>
+<li>What proportion have incomes between $75,000 and $150,000?</li>
+</ol></li>
+</ul>
+</section>
+<section id="gamma-probability-distribution-5" class="level2">
+<h2 class="anchored" data-anchor-id="gamma-probability-distribution-5">4.6: Gamma Probability Distribution</h2>
+<ul>
+<li>Annual incomes for heads of household in a section of a city have approximately a gamma distribution with <span class="math inline">\(\alpha=32\)</span> and <span class="math inline">\(\beta=2500\)</span>.
+<ol type="a">
+<li>What proportion have incomes in excess of $30,000?</li>
+</ol></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pgamma</span>(<span class="at">q =</span> <span class="dv">100000</span>, <span class="at">shape =</span> <span class="dv">32</span>, <span class="at">scale =</span> <span class="dv">2500</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.08552057</code></pre>
+</div>
+</div>
+</section>
+<section id="gamma-probability-distribution-6" class="level2">
+<h2 class="anchored" data-anchor-id="gamma-probability-distribution-6">4.6: Gamma Probability Distribution</h2>
+<ul>
+<li>Annual incomes for heads of household in an affluent section of a city have approximately a gamma distribution with <span class="math inline">\(\alpha=32\)</span> and <span class="math inline">\(\beta=2500\)</span>.
+<ol start="2" type="a">
+<li>What proportion have incomes between $75,000 and $150,000?</li>
+</ol></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pgamma</span>(<span class="at">q =</span> <span class="dv">150000</span>, <span class="at">shape =</span> <span class="dv">32</span>, <span class="at">scale =</span> <span class="dv">2500</span>) <span class="sc">-</span> <span class="fu">pgamma</span>(<span class="at">q =</span> <span class="dv">75000</span>, <span class="at">shape =</span> <span class="dv">32</span>, <span class="at">scale =</span> <span class="dv">2500</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.6186147</code></pre>
+</div>
+</div>
+</section>
+<section id="beta-probability-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="beta-probability-distribution">4.7: Beta Probability Distribution</h2>
+<ul>
+<li><strong>Beta Distribution</strong></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/W04-L2-d.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="beta-probability-distribution-1" class="level2">
+<h2 class="anchored" data-anchor-id="beta-probability-distribution-1">4.7: Beta Probability Distribution</h2>
+<ul>
+<li>A random variable <span class="math inline">\(Y\)</span> is said to have a <em>beta distribution</em> with parameters <span class="math inline">\(\alpha &gt; 0\)</span> and <span class="math inline">\(\beta &gt; 0\)</span> <a href="https://en.wikipedia.org/wiki/If_and_only_if">iff</a>,</li>
+</ul>
+<p><span class="math display">\[
+f(y) = \frac{y^{\alpha-1}(1-y)^{\beta-1}}{B(\alpha,\beta)}, \ 0 \le y \le 1
+\]</span></p>
+<ul>
+<li><p>Note: <span class="math inline">\(B(\alpha,\beta) = \int_0^1 y^{\alpha-1}(1-y)^{\beta-1} \ dy = \frac{\Gamma(\alpha) \Gamma(\beta)}{\Gamma(\alpha+\beta)}.\)</span></p></li>
+<li><p>If <span class="math inline">\(Y\)</span> has a beta distribution with parameters <span class="math inline">\(\alpha &gt; 0\)</span> and <span class="math inline">\(\beta &gt; 0\)</span>, then</p></li>
+</ul>
+<p><span class="math display">\[
+E[Y] = \mu = \frac{\alpha}{\alpha+\beta} \ \ \ \text{and} \ \ \ V[Y] = \sigma^2  = \frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}
+\]</span></p>
+</section>
+<section id="beta-probability-distribution-2" class="level2">
+<h2 class="anchored" data-anchor-id="beta-probability-distribution-2">4.7: Beta Probability Distribution</h2>
+<ul>
+<li>We can use R to find information related to the Beta distribution.
+<ul>
+<li><span class="math inline">\(P[X \le x]\)</span>: <code>pbeta(q, shape1, shape2)</code><br>
+</li>
+<li><span class="math inline">\(P[X \ge x]\)</span>: <code>pbeta(q, shape1, shape2, lower.tail = FALSE)</code></li>
+</ul></li>
+<li>In the functions:
+<ul>
+<li><code>q</code> is the value of <span class="math inline">\(X\)</span> we are interested in – must be in [0, 1]!</li>
+<li><code>shape1</code> is the first shape parameter, <span class="math inline">\(\alpha\)</span><br>
+</li>
+<li><code>shape2</code> is the second shape parameter, <span class="math inline">\(\beta\)</span><br>
+</li>
+<li><code>lower.tail</code> has two options:
+<ul>
+<li><code>TRUE</code> (default) returns <span class="math inline">\(P[X \le x]\)</span><br>
+</li>
+<li><code>FALSE</code> returns <span class="math inline">\(P[X \ge x]\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="beta-probability-distribution-3" class="level2">
+<h2 class="anchored" data-anchor-id="beta-probability-distribution-3">4.7: Beta Probability Distribution</h2>
+<ul>
+<li>In a survey of cupcake preferences, 8 respondents liked the new cupcake flavor and 2 did not. We will model the proportion of all respondents who would like the cupcake flavor using a Beta distribution with <span class="math inline">\(\alpha = 8\)</span> and <span class="math inline">\(\beta = 2\)</span>. Determine:
+<ol type="a">
+<li>The probability distribution. <br><br><br><br></li>
+<li>The mean of the distribution. <br><br><br></li>
+<li>The variance and standard deviation of the distribution.</li>
+</ol></li>
+</ul>
+</section>
+<section id="beta-probability-distribution-4" class="level2">
+<h2 class="anchored" data-anchor-id="beta-probability-distribution-4">4.7: Beta Probability Distribution</h2>
+<ul>
+<li>In a survey of cupcake preferences, 8 respondents liked the new cupcake flavor and 2 did not. We will model the proportion of all respondents who would like the cupcake flavor using a Beta distribution with <span class="math inline">\(\alpha = 8\)</span> and <span class="math inline">\(\beta = 2\)</span>. What is the probability that:
+<ol type="a">
+<li>fewer than 60% of respondents like the new flavor?</li>
+<li>more than 90% of respondents like the new flavor?</li>
+<li>somewhere between 70% and 90% of respondents like the new flavor?</li>
+</ol></li>
+</ul>
+</section>
+<section id="beta-probability-distribution-5" class="level2">
+<h2 class="anchored" data-anchor-id="beta-probability-distribution-5">4.7: Beta Probability Distribution</h2>
+<ul>
+<li>In a survey of cupcake preferences, 8 respondents liked the new cupcake flavor and 2 did not. We will model the proportion of all respondents who would like the cupcake flavor using a Beta distribution with <span class="math inline">\(\alpha = 8\)</span> and <span class="math inline">\(\beta = 2\)</span>. What is the probability that:
+<ol type="a">
+<li>fewer than 60% of respondents like the new flavor?</li>
+</ol></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pbeta</span>(<span class="at">q =</span> <span class="fl">0.6</span>, <span class="at">shape1 =</span> <span class="dv">8</span>, <span class="at">shape2 =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.07054387</code></pre>
+</div>
+</div>
+</section>
+<section id="beta-probability-distribution-6" class="level2">
+<h2 class="anchored" data-anchor-id="beta-probability-distribution-6">4.7: Beta Probability Distribution</h2>
+<ul>
+<li>In a survey of cupcake preferences, 8 respondents liked the new cupcake flavor and 2 did not. We will model the proportion of all respondents who would like the cupcake flavor using a Beta distribution with <span class="math inline">\(\alpha = 8\)</span> and <span class="math inline">\(\beta = 2\)</span>. What is the probability that:
+<ol start="2" type="a">
+<li>more than 90% of respondents like the new flavor?</li>
+</ol></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pbeta</span>(<span class="at">q =</span> <span class="fl">0.9</span>, <span class="at">shape1 =</span> <span class="dv">8</span>, <span class="at">shape2 =</span> <span class="dv">2</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.225159</code></pre>
+</div>
+</div>
+</section>
+<section id="beta-probability-distribution-7" class="level2">
+<h2 class="anchored" data-anchor-id="beta-probability-distribution-7">4.7: Beta Probability Distribution</h2>
+<ul>
+<li>In a survey of cupcake preferences, 8 respondents liked the new cupcake flavor and 2 did not. We will model the proportion of all respondents who would like the cupcake flavor using a Beta distribution with <span class="math inline">\(\alpha = 8\)</span> and <span class="math inline">\(\beta = 2\)</span>. What is the probability that:
+<ol start="3" type="a">
+<li>somewhere between 70% and 90% of respondents like the new flavor?</li>
+</ol></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pbeta</span>(<span class="at">q =</span> <span class="fl">0.9</span>, <span class="at">shape1 =</span> <span class="dv">8</span>, <span class="at">shape2 =</span> <span class="dv">2</span>) <span class="sc">-</span> <span class="fu">pbeta</span>(<span class="at">q =</span> <span class="fl">0.7</span>, <span class="at">shape1 =</span> <span class="dv">8</span>, <span class="at">shape2 =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5788377</code></pre>
+</div>
+</div>
+</section>
+<section id="homework-discrete-random-variables" class="level2">
+<h2 class="anchored" data-anchor-id="homework-discrete-random-variables"><strong>Homework: Discrete Random Variables</strong></h2>
+<ul>
+<li>3.6</li>
+<li>3.10</li>
+<li>3.15</li>
+<li>3.22</li>
+<li>3.34</li>
+<li>3.60</li>
+<li>3.128</li>
+<li>3.129</li>
+<li>3.136</li>
+</ul>
+</section>
+<section id="homework-continuous-random-variables" class="level2">
+<h2 class="anchored" data-anchor-id="homework-continuous-random-variables"><strong>Homework: Continuous Random Variables</strong></h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[ 0.5, -0.05, 0.45 ]">
+<div class="quarto-layout-row">
+<div id="first-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li>4.11</li>
+<li>4.14</li>
+<li>4.17</li>
+<li>4.21</li>
+<li>4.28</li>
+<li>4.45</li>
+<li>4.46</li>
+<li>4.48</li>
+<li>4.68</li>
+</ul>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div id="second-column" class="quarto-layout-cell" style="flex-basis: 45.0%;justify-content: flex-start;">
+<ul>
+<li>4.69</li>
+<li>4.70</li>
+<li>4.97</li>
+<li>4.98</li>
+<li>4.102</li>
+<li>4.124</li>
+<li>4.125</li>
+<li>4.128</li>
+<li>4.131</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+
+<script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
+
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
+
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
