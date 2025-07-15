@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Your name here">
+<meta name="author" content="Your Name Here">
 
-<title>Introduction to Quarto – STA6349 - Applied Bayesian Analysis - Summer 2025</title>
+<title>Assignment 2 - Summer 2025 – STA6349 - Applied Bayesian Analysis - Summer 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -4709,6 +4709,65 @@ vertical-align: -.125em;
   }
 }</script>
 
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var head = document.getElementsByTagName("head")[0];
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css";
+      head.appendChild(link);
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js";
+      script.async = false;
+      script.addEventListener('load', function() {
+        var mathElements = document.getElementsByClassName("math");
+          var macros = [];
+          for (var i = 0; i < mathElements.length; i++) {
+            var texText = mathElements[i].firstChild;
+            if (mathElements[i].tagName == "SPAN") {
+              window.katex.render(texText.data, mathElements[i], {
+                displayMode: mathElements[i].classList.contains('display'),
+                throwOnError: false,
+                macros: macros,
+                fleqn: false
+              });
+            }
+          }
+      });
+      head.appendChild(script);
+    });
+  </script>
+  
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <style type="text/css">
 
@@ -4790,7 +4849,7 @@ box-shadow: 0 0 0px rgba(0, 0, 0, 0.02);
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction to Quarto</h1>
+<h1 class="title">Assignment 2 - Summer 2025</h1>
 </div>
 
 
@@ -4800,7 +4859,7 @@ box-shadow: 0 0 0px rgba(0, 0, 0, 0.02);
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Your name here </p>
+             <p>Your Name Here </p>
           </div>
   </div>
     
@@ -4813,26 +4872,114 @@ box-shadow: 0 0 0px rgba(0, 0, 0, 0.02);
 </header>
 
 
-<p><strong>1. What is your name as it appears on my roster?</strong></p>
-<p>Replace this with your answer</p>
-<p><strong>2. Is there a different name you would like to go by?</strong></p>
-<p>Replace this with your answer</p>
-<p><strong>3. What are your pronouns?</strong></p>
-<p>Replace this with your answer</p>
-<p><strong>4. What is your undergraduate degree in?</strong></p>
-<p>Replace this with your answer</p>
-<p><strong>5. Are you “done” with school after this degree?</strong></p>
-<p>Replace this with your answer</p>
-<p><strong>6. What is your current career?</strong></p>
-<p>Replace this with your answer</p>
-<p><strong>7. What are your plans when school is “done”? (Are you eyeing a new career or promotion? Maybe a PhD program?)</strong></p>
-<p>Replace this with your answer</p>
-<p><strong>8. What is your favorite movie?</strong></p>
-<p>Replace this with your answer</p>
-<p><strong>9. What is your favorite TV show?</strong></p>
-<p>Replace this with your answer</p>
-<p><strong>10. What advice would you give undergraduate non-math majors learning R in an applied statistics course this summer?</strong></p>
-<p>Replace this with your answer</p>
+<p><strong>Situation 1: Buzz Lightyear is trying to determine how accurate a new toy blaster is at Toy Story Mania. The blaster’s manufacturer claims that it has a certain chance of hitting a moving target, but this accuracy might vary due to hardware issues or rider skill. Let <span class="math inline">\pi</span> be the probability the blaster hits a target. You believe the blaster has one of three possible accuracy levels, with prior probabilities:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\pi</span></th>
+<th style="text-align: center;"><span class="math inline">f(\pi)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0.3</td>
+<td style="text-align: center;">0.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.6</td>
+<td style="text-align: center;">0.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.9</td>
+<td style="text-align: center;">0.3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>A rider just played a round and hit 2 out of 5 moving targets.</strong></p>
+<p><strong>1. What is the appropriate data model?</strong></p>
+<p>Replace with your answer</p>
+<p><strong>2. Compute the likelihood of observing 2 hits under each value of <span class="math inline">\pi</span>.</strong></p>
+<p>Replace with your answer</p>
+<p><strong>3. Multiply the prior by the likelihood to get the unnormalized posterior.</strong></p>
+<p>Replace with your answer</p>
+<p><strong>4. Compute the normalizing constant.</strong></p>
+<p>Replace with your answer</p>
+<p><strong>5. Calculate the posterior probability of each <span class="math inline">\pi</span>.</strong></p>
+<p>Replace with your answer</p>
+<p><strong>6. Based on the observed hits, which accuracy level is now most plausible?</strong></p>
+<p>Replace with your answer</p>
+<p><strong>Situation 2: Disney operations managers are trying to estimate the true reliability of Rise of the Resistance, which is known to experience technical difficulties. Suppose <span class="math inline">\pi</span> represents the probability that the ride operates smoothly (i.e., does not go down) during a given hour of park operation. The team believes there are three possible reliability levels, with prior probabilities:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\pi</span></th>
+<th style="text-align: center;"><span class="math inline">f(\pi)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0.75</td>
+<td style="text-align: center;">0.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.85</td>
+<td style="text-align: center;">0.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.95</td>
+<td style="text-align: center;">0.1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>They monitor the ride for 4 hours and observe that it operated without breaking down in only 1 of those hours.</strong></p>
+<p><strong>1. What is the appropriate data model?</strong></p>
+<p>Replace with your answer</p>
+<p><strong>2. Compute the likelihood of observing 3 breakdowns under each value of <span class="math inline">\pi</span>.</strong></p>
+<p>Replace with your answer</p>
+<p><strong>3. Multiply the prior by the likelihood to get the unnormalized posterior.</strong></p>
+<p>Replace with your answer</p>
+<p><strong>4. Compute the normalizing constant.</strong></p>
+<p>Replace with your answer</p>
+<p><strong>5. Calculate the posterior probability of each <span class="math inline">\pi</span>.</strong></p>
+<p>Replace with your answer</p>
+<p><strong>6. Based on the observed breakdowns, which accuracy level is now most plausible?</strong></p>
+<p>Replace with your answer</p>
+<p><strong>Situation 3: Guests love spotting Chuuby, the adorable yellow bird who appears at the end of Mickey &amp; Minnie’s Runaway Railway. However, sometimes Chuuby doesn’t show up properly due to animation glitches. Let <span class="math inline">\pi</span> be the probability that a guest sees Chuuby during their ride. You work in guest experience and want to model this probability to determine how reliable the Chuuby animation is. Based on maintenance logs and guest reports, you believe the probability could be one of the following:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\pi</span></th>
+<th style="text-align: center;"><span class="math inline">f(\pi)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0.40</td>
+<td style="text-align: center;">0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.70</td>
+<td style="text-align: center;">0.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.95</td>
+<td style="text-align: center;">0.4</td>
+</tr>
+</tbody>
+</table>
+<p><strong>You survey 5 guests who just exited the ride. Unfortunately, only 2 of them reported seeing Chuuby.</strong></p>
+<p><strong>1. What is the appropriate data model?</strong></p>
+<p>Replace with your answer</p>
+<p><strong>2. Compute the likelihood of 2 guests seeing Chuuby under each value of <span class="math inline">\pi</span>.</strong></p>
+<p>Replace with your answer</p>
+<p><strong>3. Multiply the prior by the likelihood to get the unnormalized posterior.</strong></p>
+<p>Replace with your answer</p>
+<p><strong>4. Compute the normalizing constant.</strong></p>
+<p>Replace with your answer</p>
+<p><strong>5. Calculate the posterior probability of each <span class="math inline">\pi</span>.</strong></p>
+<p>Replace with your answer</p>
+<p><strong>6. Based on the observed Chuuby sightings, which accuracy level is now most plausible?</strong></p>
+<p>Replace with your answer</p>
 
 
 

@@ -1,0 +1,123 @@
+---
+title: "Assignment 2 - Summer 2025"
+author: "Your Name Here"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: true
+format: 
+  html:
+    df-print: paged
+    self-contained: true
+    html-math-method: katex
+    code-fold: false
+    code-tools: false
+    incremental: false
+editor: source
+---
+
+**Situation 1: Buzz Lightyear is trying to determine how accurate a new toy blaster is at Toy Story Mania. The blaster's manufacturer claims that it has a certain chance of hitting a moving target, but this accuracy might vary due to hardware issues or rider skill. Let $\pi$ be the probability the blaster hits a target. You believe the blaster has one of three possible accuracy levels, with prior probabilities:**
+
+| $\pi$ | $f(\pi)$ |
+|:-----:|:--------:|
+| 0.3 | 0.2 |
+| 0.6 | 0.5 |
+| 0.9 | 0.3 |
+
+**A rider just played a round and hit 2 out of 5 moving targets.**
+
+**1. What is the appropriate data model?**
+
+Replace with your answer
+
+**2. Compute the likelihood of observing 2 hits under each value of $\pi$.**
+
+Replace with your answer
+
+**3. Multiply the prior by the likelihood to get the unnormalized posterior.**
+
+Replace with your answer
+
+**4. Compute the normalizing constant.**
+
+Replace with your answer
+
+**5. Calculate the posterior probability of each $\pi$.**
+
+Replace with your answer
+
+**6. Based on the observed hits, which accuracy level is now most plausible?**
+
+Replace with your answer
+
+**Situation 2: Disney operations managers are trying to estimate the true reliability of Rise of the Resistance, which is known to experience technical difficulties. Suppose $\pi$ represents the probability that the ride operates smoothly (i.e., does not go down) during a given hour of park operation. The team believes there are three possible reliability levels, with prior probabilities:**
+
+| $\pi$ | $f(\pi)$ |
+|:-----:|:--------:|
+| 0.75 | 0.3 |
+| 0.85 | 0.6 |
+| 0.95 | 0.1 |
+
+**They monitor the ride for 4 hours and observe that it operated without breaking down in only 1 of those hours.**
+
+**1. What is the appropriate data model?**
+
+Replace with your answer
+
+**2. Compute the likelihood of observing 3 breakdowns under each value of $\pi$.**
+
+Replace with your answer
+
+**3. Multiply the prior by the likelihood to get the unnormalized posterior.**
+
+Replace with your answer
+
+**4. Compute the normalizing constant.**
+
+Replace with your answer
+
+**5. Calculate the posterior probability of each $\pi$.**
+
+Replace with your answer
+
+**6. Based on the observed breakdowns, which accuracy level is now most plausible?**
+
+Replace with your answer
+
+
+**Situation 3: Guests love spotting Chuuby, the adorable yellow bird who appears at the end of Mickey & Minnie's Runaway Railway. However, sometimes Chuuby doesn't show up properly due to animation glitches. Let $\pi$ be the probability that a guest sees Chuuby during their ride. You work in guest experience and want to model this probability to determine how reliable the Chuuby animation is. Based on maintenance logs and guest reports, you believe the probability could be one of the following:**
+
+| $\pi$ | $f(\pi)$ |
+|:-----:|:--------:|
+| 0.40 | 0.1 |
+| 0.70 | 0.5 |
+| 0.95 | 0.4 |
+
+**You survey 5 guests who just exited the ride. Unfortunately, only 2 of them reported seeing Chuuby.**
+
+**1. What is the appropriate data model?**
+
+Replace with your answer
+
+**2. Compute the likelihood of 2 guests seeing Chuuby under each value of $\pi$.**
+
+Replace with your answer
+
+**3. Multiply the prior by the likelihood to get the unnormalized posterior.**
+
+Replace with your answer
+
+**4. Compute the normalizing constant.**
+
+Replace with your answer
+
+**5. Calculate the posterior probability of each $\pi$.**
+
+Replace with your answer
+
+**6. Based on the observed Chuuby sightings, which accuracy level is now most plausible?**
+
+Replace with your answer
+
+

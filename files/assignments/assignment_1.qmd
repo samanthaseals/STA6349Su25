@@ -1,6 +1,6 @@
 ---
 title: "Assignment 1 - Summer 2025"
-author: "Dr. Seals"
+author: "Your Name Here"
 execute:
   echo: true
   warning: false

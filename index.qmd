@@ -9,4 +9,4 @@ Each class meeting will be split between lecture and practice. Attending live is
 
 **The final exam will be available on Canvas on Tuesday, August 5, 2025.**
 
-This project was supported by the 2023 [BATS program](https://www.stat.uci.edu/bayes-bats/), funded by NSF IUSE: EHR program with award numbers 2215879, 2215920, and 2215709.
+The initial development of this course was supported by the 2023 [BATS program](https://www.stat.uci.edu/bayes-bats/), funded by NSF IUSE: EHR program with award numbers 2215879, 2215920, and 2215709.

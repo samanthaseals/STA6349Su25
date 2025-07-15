@@ -1,0 +1,208 @@
+---
+title: "Assignment 3 - Summer 2025"
+author: "Your Name Here"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: true
+format: 
+  html:
+    df-print: paged
+    self-contained: true
+    html-math-method: katex
+    code-fold: false
+    code-tools: false
+    incremental: false
+editor: source
+---
+
+## Part 1
+
+**Letty is running a series of underground street races in Los Angeles. She's noticed that different crews tend to bring along racers with varying skill levels, and she wants to model the uncertainty in the probability of winning for a new racer joining Dom's crew.**
+
+**Letty reviews historical data and sees that new recruits to Dom’s team have varying success rates in their first 10 races, with some winning almost all and others struggling to win any. She believes that the probability of a new racer winning any single race, denoted by $\pi$, is not fixed, but instead varies from racer to racer due to differences in driving experience, car quality, and nerves under pressure.**
+
+**Brian is a new recruit and has raced 10 times, of which, Letty observed 6 wins.**
+
+**1.  What model is appropriate? Why?**
+
+Replace with your answer.
+
+**2.  Graph your chosen prior.**
+
+```{r}
+
+```
+
+**3.  Explain why you chose the prior you chose.**
+
+Replace with your answer.
+
+**4.  After including Brian's information, what is the posterior distribution?**
+
+```{r}
+
+```
+
+Remember to state what the resulting posterior distribution is.
+
+**5.  Graph the prior, likelihood, and posterior distributions on the same graph.**
+
+```{r}
+
+```
+
+**6.  Explain how your belief changed after including Brian's data.**
+
+Replace with your answer.
+
+**7. Construct the 95% credible interval for Brian's win probability, $\pi$.**
+
+```{r}
+
+```
+
+Remember to state what the resulting credible interval is.
+
+**8. Interpret this interval in the context of Brian's performance.**
+
+Replace with your answer.
+
+**9. Construct the appropriate hypothesis test (in the Bayesian framework) to determine if Brian is *better than average*.**
+
+```{r}
+
+```
+
+Remember to state your hypotheses and conclusion.
+
+**10. Write a brief summary paragraph for Letty. What do we observe in Brian's driving?**
+
+Replace with your answer.
+
+## Part 2
+
+**Tej is tracking how often street racers show up for weekly underground races in Miami. While some racers are regulars, others only appear once in a while, depending on things like car trouble, law enforcement heat, or rival crew activity.**
+
+**Tej wants to model the number of races a given racer, say Roman, enters in a week. He knows that this count varies not just randomly, but also systematically across racers. That is, some racers are just more active than others.**
+
+**Over the last 4 weeks, Roman entered a total of 18 races. Tej uses this information to update his beliefs and predict how many races Roman might enter next week or to compare him to new racers.**
+
+**1.	What model is appropriate? Why?**
+
+Replace with your answer.
+
+**2.	Graph your chosen prior.**
+
+```{r}
+
+```
+
+**3.	Explain why you chose the prior you chose.**
+
+Replace with your answer.
+
+**4.	After including Roman’s information, what is the posterior distribution?**
+
+```{r}
+
+```
+
+Remember to state what the resulting posterior distribution is.
+
+**5.	Graph the prior, likelihood (Poisson), and posterior distributions on the same graph.**
+
+```{r}
+
+```
+
+**6.	Explain how your belief about Roman's weekly racing rate changed after including his data.**
+
+Replace with your answer.
+
+**7.	Construct the 95% credible interval for Roman’s race rate, $\lambda$.**
+
+```{r}
+
+```
+
+Remember to state what the resulting credible interval is.
+
+**8.	Interpret this interval in the context of Roman's participation in weekly races.**
+
+Replace with your answer.
+
+**9.	Construct the appropriate hypothesis test (in the Bayesian framework) to determine if Roman is a high-frequency racer, defined as more than 4 races per week.**
+
+```{r}
+
+```
+
+Remember to state your hypotheses and conclusion.
+
+**10.	Write a brief summary paragraph for Tej. What do we observe about Roman's race frequency and what might Tej conclude about assigning him to high-stakes missions?**
+
+Replace with your answer.
+
+# Part 3
+
+**Dominic Toretto is evaluating the reaction times of new recruits joining his crew. Quick reactions are crucial at the start line, and Dom has seen that elite drivers tend to have average reaction times around 0.25 seconds, but there's some variation (let's assume $\sigma=0.03$). Dom believes that each recruit has their own true mean reaction time, but he doesn't know it exactly.**
+
+**Let's consider a new driver, Elena. Dom has a prior belief that her average reaction time is about 0.25 seconds, with a prior standard deviation of 0.05 seconds (i.e., he's moderately uncertain). Dom then measures Elena's reaction times in 5 time trials, resulting in the following values (in seconds): 0.22, 0.28, 0.26, 0.24, 0.30.**
+
+**1.	What model is appropriate? Why?**
+
+Replace with your answer.
+
+**2.	Graph the given prior.**
+
+```{r}
+
+```
+
+**3.	Describe the prior belief, using the graph above.**
+
+Replace with your answer.
+
+**4.	After including Elena's data, what is the posterior distribution for her mean reaction time?**
+
+```{r}
+
+```
+
+Remember to state what the resulting posterior distribution is.
+
+**5.	Graph the prior, likelihood, and posterior distributions on the same graph.**
+
+```{r}
+
+```
+
+**6.	Explain how your belief about Elena's reaction time changed after including her data.**
+
+Replace with your answer.
+
+**7.	Construct the 95% credible interval for Elena's average reaction time, $\mu$.**
+
+```{r}
+
+```
+
+Remember to state what the resulting credible interval is.
+
+**8.	Interpret this interval in the context of Elena's starting performance.**
+
+Replace with your answer.
+
+**9.	Construct the appropriate hypothesis test (in the Bayesian framework) to determine if Elena is faster than average, defined as 0.25 seconds.**
+
+```{r}
+
+```
+
+Remember to state your hypotheses and conclusion.
+
+**10.	Write a brief summary paragraph for Dom. What do we observe about Elena’s reaction times, and what might this mean for her potential role in the crew?**
+
+Replace with your answer.

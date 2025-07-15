@@ -21,13 +21,15 @@ format: html
 #### **Tuesday, 06/24**
 
 - **Lecture:** 
-    - Random Variables and Their Distributions: <a href="files/slides/STA6349-06-24-random-variables.html">html (view)</a> &  <a href="https://github.com/samanthaseals/STA6349Su25/blob/main/files/slides/STA6349-06-24-random-variables.qmd">qmd (code)</a>
+    - Bayes' Theorem: <a href="files/slides/STA6349-06-24-bayes-theorem.html">html (view)</a> &  <a href="https://github.com/samanthaseals/STA6349Su25/blob/main/files/slides/STA6349-06-24-bayes-theorem.qmd">qmd (code)</a>
+    
+- **Deliverables:**
+    - Assignment 0: Get to Know You (due M 06/30) - see Canvas    
 
 #### **Thursday, 06/28**
 
-- **Deliverables:**
-    - Assignment 1: Random Variables (due M 06/31)
-  
+- **Lecture:**
+    - Random Variables and Their Distributions: <a href="files/slides/STA6349-06-26-random-variables.html">html (view)</a> &  <a href="https://github.com/samanthaseals/STA6349Su25/blob/main/files/slides/STA6349-06-26-random-variables.qmd">qmd (code)</a>
 
 :::
 
@@ -35,15 +37,13 @@ format: html
 
 #### **Tuesday, 07/01**
 
-- **Lecture:**
-    - Thinking Like a Bayesian
-    - The Beta-Binomial Model
+- **Deliverables:**
+    - Assignment 1: Random Variables (due M 07/07) - <a href="files/assignments/assignment_1.html">html (view)</a> & <a href="https://github.com/samanthaseals/STA6349Su25/blob/main/files/assignments/assignment_1.qmd">qmd (code)</a>
+
 
 #### **Thursday, 07/03**
 
-- **Lecture:**
-    - Conjugate families
-    - Balance and sequentiality
+- **No class: Independence Day Holiday**
 
 :::
 
@@ -51,14 +51,17 @@ format: html
 
 #### **Tuesday, 07/08**
 
+- **Lecture:**
+    - Thinking Like a Bayesian: <a href="files/slides/STA6349-07-08-thinking-bayesian.html">html (view)</a> &  <a href="https://github.com/samanthaseals/STA6349Su25/blob/main/files/slides/STA6349-07-08-thinking-bayesian.qmd">qmd (code)</a>
+
 - **Deliverables:**
-    - Assignment 2: Conjugate families (due M 07/07)
+    - Assignment 2: Thinking Like a Bayesian (due M 07/14) - <a href="files/assignments/assignment_2.html">html (view)</a> & <a href="https://github.com/samanthaseals/STA6349Su25/blob/main/files/assignments/assignment_2.qmd">qmd (code)</a>
 
 #### **Thursday, 07/10**
 
 - **Lecture:**
-    - Approximating the posterior
-    - Posterior inference and prediction
+    - Conjugate Families: <a href="files/slides/STA6349-07-10-conjugate-families.html">html (view)</a> &  <a href="https://github.com/samanthaseals/STA6349Su25/blob/main/files/slides/STA6349-07-10-conjugate-families.qmd">qmd (code)</a>
+  
 
 :::
 
@@ -66,13 +69,21 @@ format: html
 
 #### **Tuesday, 07/15**
 
-- **Project 1, in class work/planning**
+
+- **Lecture:**
+    - Posterior inference and prediction: <a href="files/slides/STA6349-07-15-bayesian-inference.html">html (view)</a> &  <a href="https://github.com/samanthaseals/STA6349Su25/blob/main/files/slides/STA6349-07-15-bayesian-inference.qmd">qmd (code)</a>
+    
 - **Deliverables:**
-    - Recording of project 1 presentation (due M 07/21)
-    - Evaluation of other groups (due M 07/19)
+    - Assignment 3: Conjugate Families & Inference - <a href="files/assignments/assignment_3.html">html (view)</a> & <a href="https://github.com/samanthaseals/STA6349Su25/blob/main/files/assignments/assignment_3.qmd">qmd (code)</a>
 
 #### **Thursday, 07/17**
 
+(note -- the schedule is not accurate from this point on; check back for updates next week!)
+
+
+- **Deliverables:**
+    - Recording of project 1 presentation (due M 07/21)
+    - Evaluation of other groups (due M 07/19)
 - **Lecture:**
     - Simple normal regression
     - Evaluating regression models
