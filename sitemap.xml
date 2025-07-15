@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://samanthaseals.github.io/STA6349Su25/schedule.html</loc>
-    <lastmod>2025-07-11T20:01:41.632Z</lastmod>
+    <lastmod>2025-07-15T15:16:06.761Z</lastmod>
   </url>
   <url>
     <loc>https://samanthaseals.github.io/STA6349Su25/files/slides/STA6349-06-17-probability.html</loc>
@@ -13,24 +13,28 @@
     <lastmod>2025-07-08T15:36:31.425Z</lastmod>
   </url>
   <url>
-    <loc>https://samanthaseals.github.io/STA6349Su25/files/slides/STA6349-07-10-conjugate-families.html</loc>
-    <lastmod>2025-07-11T19:53:57.134Z</lastmod>
+    <loc>https://samanthaseals.github.io/STA6349Su25/files/slides/STA6349-07-15-bayesian-inference.html</loc>
+    <lastmod>2025-07-15T15:15:26.080Z</lastmod>
   </url>
   <url>
-    <loc>https://samanthaseals.github.io/STA6349Su25/files/assignments/key/assignment_0_KEY.html</loc>
-    <lastmod>2025-06-24T14:46:32.554Z</lastmod>
-  </url>
-  <url>
-    <loc>https://samanthaseals.github.io/STA6349Su25/assignments/assignment_1.html</loc>
-    <lastmod>2025-06-30T20:07:56.463Z</lastmod>
+    <loc>https://samanthaseals.github.io/STA6349Su25/files/assignments/assignment_0_GTKY.html</loc>
+    <lastmod>2025-06-24T05:27:03.156Z</lastmod>
   </url>
   <url>
     <loc>https://samanthaseals.github.io/STA6349Su25/index.html</loc>
     <lastmod>2025-07-11T19:57:52.668Z</lastmod>
   </url>
   <url>
-    <loc>https://samanthaseals.github.io/STA6349Su25/files/assignments/assignment_0_GTKY.html</loc>
-    <lastmod>2025-06-24T05:27:03.156Z</lastmod>
+    <loc>https://samanthaseals.github.io/STA6349Su25/assignments/assignment_1.html</loc>
+    <lastmod>2025-06-30T20:07:56.463Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA6349Su25/files/assignments/key/assignment_0_KEY.html</loc>
+    <lastmod>2025-06-24T14:46:32.554Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA6349Su25/files/slides/STA6349-07-10-conjugate-families.html</loc>
+    <lastmod>2025-07-15T14:08:17.604Z</lastmod>
   </url>
   <url>
     <loc>https://samanthaseals.github.io/STA6349Su25/files/slides/STA6349-07-08-thinking-bayesian.html</loc>
