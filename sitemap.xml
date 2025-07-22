@@ -2,51 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://samanthaseals.github.io/STA6349Su25/schedule.html</loc>
-    <lastmod>2025-07-15T20:58:55.177Z</lastmod>
+    <lastmod>2025-07-22T18:39:51.092Z</lastmod>
   </url>
   <url>
     <loc>https://samanthaseals.github.io/STA6349Su25/files/slides/STA6349-06-17-probability.html</loc>
     <lastmod>2025-06-24T04:47:54.585Z</lastmod>
   </url>
   <url>
-    <loc>https://samanthaseals.github.io/STA6349Su25/files/slides/STA6349-06-26-random-variables.html</loc>
-    <lastmod>2025-07-08T15:36:31.425Z</lastmod>
+    <loc>https://samanthaseals.github.io/STA6349Su25/files/slides/STA6349-07-22-bayesian-regression.html</loc>
+    <lastmod>2025-07-22T18:40:33.355Z</lastmod>
   </url>
   <url>
-    <loc>https://samanthaseals.github.io/STA6349Su25/files/slides/STA6349-07-15-bayesian-inference.html</loc>
-    <lastmod>2025-07-15T15:15:26.080Z</lastmod>
-  </url>
-  <url>
-    <loc>https://samanthaseals.github.io/STA6349Su25/files/assignments/assignment_0_GTKY.html</loc>
-    <lastmod>2025-06-24T05:27:03.156Z</lastmod>
-  </url>
-  <url>
-    <loc>https://samanthaseals.github.io/STA6349Su25/files/assignments/assignment_3.html</loc>
-    <lastmod>2025-07-15T15:19:47.759Z</lastmod>
-  </url>
-  <url>
-    <loc>https://samanthaseals.github.io/STA6349Su25/files/assignments/key/assignment_0_KEY.html</loc>
-    <lastmod>2025-06-24T14:46:32.554Z</lastmod>
-  </url>
-  <url>
-    <loc>https://samanthaseals.github.io/STA6349Su25/index.html</loc>
-    <lastmod>2025-07-15T20:57:27.431Z</lastmod>
-  </url>
-  <url>
-    <loc>https://samanthaseals.github.io/STA6349Su25/files/assignments/assignment_1.html</loc>
-    <lastmod>2025-07-08T05:36:16.653Z</lastmod>
-  </url>
-  <url>
-    <loc>https://samanthaseals.github.io/STA6349Su25/files/assignments/assignment_2.html</loc>
-    <lastmod>2025-07-15T15:19:26.427Z</lastmod>
+    <loc>https://samanthaseals.github.io/STA6349Su25/files/slides/STA6349-07-08-thinking-bayesian.html</loc>
+    <lastmod>2025-07-08T06:04:18.697Z</lastmod>
   </url>
   <url>
     <loc>https://samanthaseals.github.io/STA6349Su25/files/slides/STA6349-07-10-conjugate-families.html</loc>
     <lastmod>2025-07-15T14:08:17.604Z</lastmod>
   </url>
   <url>
-    <loc>https://samanthaseals.github.io/STA6349Su25/files/slides/STA6349-07-08-thinking-bayesian.html</loc>
-    <lastmod>2025-07-08T06:04:18.697Z</lastmod>
+    <loc>https://samanthaseals.github.io/STA6349Su25/files/assignments/assignment_2.html</loc>
+    <lastmod>2025-07-15T15:19:26.427Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA6349Su25/files/assignments/assignment_1.html</loc>
+    <lastmod>2025-07-08T05:36:16.653Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA6349Su25/index.html</loc>
+    <lastmod>2025-07-15T20:57:27.431Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA6349Su25/files/assignments/key/assignment_0_KEY.html</loc>
+    <lastmod>2025-06-24T14:46:32.554Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA6349Su25/files/assignments/assignment_3.html</loc>
+    <lastmod>2025-07-15T15:19:47.759Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA6349Su25/files/assignments/assignment_0_GTKY.html</loc>
+    <lastmod>2025-06-24T05:27:03.156Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA6349Su25/files/slides/STA6349-07-15-bayesian-inference.html</loc>
+    <lastmod>2025-07-21T19:47:39.795Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA6349Su25/files/slides/STA6349-06-26-random-variables.html</loc>
+    <lastmod>2025-07-08T15:36:31.425Z</lastmod>
   </url>
   <url>
     <loc>https://samanthaseals.github.io/STA6349Su25/files/slides/STA6349-06-24-bayes-theorem.html</loc>
