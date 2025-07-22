@@ -78,17 +78,9 @@ format: html
 
 #### **Thursday, 07/17**
 
-(note -- the schedule is not accurate from this point on; check back for updates next week!)
-
-
 - **Deliverables:**
     - Recording of project 1 presentation (due M 07/21)
-    - Evaluation of other groups (due M 07/19)
-- **Lecture:**
-    - Simple normal regression
-    - Evaluating regression models
-    - Categorical predictors
-    - Multiple predictors
+    - Evaluation of other groups (due F 07/25)
 
 :::
 
@@ -97,13 +89,12 @@ format: html
 #### **Tuesday, 07/22**
 
 - **Lecture:**
-    - Poisson and negative binomial regressions
-    - Logistic regression
+    - Regression in the Bayesian Framework: <a href="files/slides/STA6349-07-22-bayesian-regression.html">html (view)</a> &  <a href="https://github.com/samanthaseals/STA6349Su25/blob/main/files/slides/STA6349-07-22-bayesian-regression.qmd">qmd (code)</a>
 
 #### **Thursday, 07/24**
 
 - **Deliverables:**
-    - Assignment: regression (due M 07/28)
+    - Assignment 4: Regression Analysis
     
 :::
 
@@ -132,6 +123,7 @@ format: html
 #### **Tuesday, 08/05**
 
 - Dr. Seals is out of town at [JSM 2025](https://ww2.amstat.org/meetings/jsm/2025/).
+    - You can reach her on Discord and email if needed.
 - **Final Exam on Canvas**
     - Each student has 3 hours to complete the exam.
     - Once you open the exam, the timer will continue running.
@@ -140,6 +132,7 @@ format: html
 #### **Thursday, 08/07**
 
 - Dr. Seals is on her way back from [JSM 2025](https://ww2.amstat.org/meetings/jsm/2025/).
+    - You can reach her on Discord and email if needed. (She will be on the road & slow to respond.)
 - **Catch up**
     - Please use this class time to catch up with anything you need to catch up with.
 
